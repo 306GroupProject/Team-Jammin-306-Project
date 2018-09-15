@@ -2,15 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CharacterMovement : MonoBehaviour {
 
-	// Use this for initialization
+    [SerializeField] private float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
+    private Rigidbody2D rb; // Get the RigidBody Component of our player to access mass and force
+    private Animator anim;
+
+
 	void Start () {
-		
+        rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
+        anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
+        anim.SetBool("IsMoving", false);   
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	
+	void FixedUpdate () {
+
+        // The next two lines set the variable attached to the player animator to what the current horizontal and vertical axis values are.
+        anim.SetFloat("Vertical Movement", Input.GetAxis("Vertical"));      // Set vertical animator float value to current vertical axis
+        anim.SetFloat("Horizontal Movement", Input.GetAxis("Horizontal"));  // Set horizontal animator float value to current horizontal axis
+
+
+        // Create a vector2 object, with x being the current horizontal axis and y as the current Vertical Axis
+        Vector2 movement = new Vector2(anim.GetFloat("Horizontal Movement"), anim.GetFloat("Vertical Movement"));
+
+
+        if ((anim.GetFloat("Horizontal Movement") == 0) && (anim.GetFloat("Vertical Movement") == 0)) {
+            anim.SetBool("IsMoving", false);
+        } 
+        else {
+            anim.SetBool("IsMoving", true);
+        }
+
+
+        rb.AddForce(movement * speed);
+        
 	}
 }
