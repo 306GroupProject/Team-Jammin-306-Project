@@ -356,19 +356,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50218748838628362, guid: 07c1cea86c1cafd45b27a764cea7697a,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114809391983910174, guid: 07c1cea86c1cafd45b27a764cea7697a,
-        type: 2}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c1cea86c1cafd45b27a764cea7697a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1394924345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1757616674107786, guid: 07c1cea86c1cafd45b27a764cea7697a,
+    type: 2}
+  m_PrefabInternal: {fileID: 957202232}
 --- !u!4 &1682827537 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4612408819830798, guid: 55b646d38f06ea34a9f80c583dfa62ed,
@@ -426,7 +421,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 1394924345}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
