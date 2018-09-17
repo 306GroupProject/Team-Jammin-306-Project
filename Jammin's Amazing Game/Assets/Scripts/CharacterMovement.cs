@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking; 
+
 
 
 public class CharacterMovement : MonoBehaviour {
@@ -18,6 +20,13 @@ public class CharacterMovement : MonoBehaviour {
 	
 	
 	void FixedUpdate () {
+
+		if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
+
+			return; 
+
+
+		}
 
         // The next two lines set the variable attached to the player animator to what the current horizontal and vertical axis values are.
         anim.SetFloat("Vertical Movement", Input.GetAxis("Vertical"));      // Set vertical animator float value to current vertical axis
