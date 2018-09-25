@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 111633808244822042}
   - component: {fileID: 114725617948544176}
   - component: {fileID: 114010255073153936}
+  - component: {fileID: 114167368152740080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -240,6 +241,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114167368152740080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546190296463674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f50ce6218e639b45bfb7792a9380b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
 --- !u!114 &114725617948544176
 MonoBehaviour:
   m_ObjectHideFlags: 1

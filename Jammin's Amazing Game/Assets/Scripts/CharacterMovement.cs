@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour {
     private Animator anim;
 
 
+
 	void Start () {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
@@ -43,6 +44,7 @@ public class CharacterMovement : MonoBehaviour {
 
 
         rb.AddForce(movement * speed);
-        
+
 	}
+
 }
