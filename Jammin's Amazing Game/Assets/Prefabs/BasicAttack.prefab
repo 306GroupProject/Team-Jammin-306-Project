@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4610876353487208}
   - component: {fileID: 212373964827397212}
   - component: {fileID: 58147894680426498}
-  - component: {fileID: 114522631701004058}
-  - component: {fileID: 114508801499583428}
+  - component: {fileID: 114313268058217798}
+  - component: {fileID: 50709231635988522}
   m_Layer: 0
   m_Name: BasicAttack
   m_TagString: Untagged
@@ -43,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50709231635988522
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291852083213004}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58147894680426498
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -58,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114508801499583428
+--- !u!114 &114313268058217798
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,22 +86,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291852083213004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50bfe48fc94c5446bd5dfe3bc3fc116, type: 3}
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotTime: 0.5
---- !u!114 &114522631701004058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1291852083213004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c70fdd70f6f2b47b67f913d13ea2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 1
+    i1: 77
+    i2: 203
+    i3: 15
+    i4: 87
+    i5: 120
+    i6: 150
+    i7: 116
+    i8: 250
+    i9: 97
+    i10: 2
+    i11: 10
+    i12: 166
+    i13: 241
+    i14: 185
+    i15: 181
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &212373964827397212
 SpriteRenderer:
   m_ObjectHideFlags: 1
