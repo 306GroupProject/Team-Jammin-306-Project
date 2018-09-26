@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CustomCursor : MonoBehaviour {
+public class CustomCursor : NetworkBehaviour {
 
     public Texture2D cursor;
     public GameObject particleSprite;
@@ -22,5 +23,6 @@ public class CustomCursor : MonoBehaviour {
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
         transform.position = Vector2.Lerp(transform.position, mousePosition, followSpeed);
+        particleSprite.transform.position = transform.position;
     }
 }

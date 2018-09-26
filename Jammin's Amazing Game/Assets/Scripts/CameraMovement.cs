@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CameraMovement : MonoBehaviour {
+public class CameraMovement : NetworkBehaviour {
 
     [Range(0.1f, 1.0f)] public float smoothFactor = 0.5f;
     [SerializeField] private Transform playerPosition;
@@ -18,6 +19,8 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+     
+
         transform.position = cameraCoordinates + playerPosition.position;
 
 
