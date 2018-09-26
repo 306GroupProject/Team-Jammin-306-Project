@@ -195,6 +195,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &855291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +209,8 @@ GameObject:
   m_Layer: 0
   m_Name: Cursor
 =======
+=======
+>>>>>>> e5b87f53ce9689cfe5c37fb50a7d851070426dfb
 --- !u!1 &206947315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1096758523735070, guid: 8a56c1774f789cd49a25c763689ccd6a,
@@ -400,6 +403,9 @@ Transform:
   - {fileID: 2028185522}
   m_Father: {fileID: 1726435845}
   m_RootOrder: 1
+<<<<<<< HEAD
+>>>>>>> e5b87f53ce9689cfe5c37fb50a7d851070426dfb
+=======
 >>>>>>> e5b87f53ce9689cfe5c37fb50a7d851070426dfb
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &855427862
@@ -740,6 +746,7 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1863486151
 Prefab:
   m_ObjectHideFlags: 0
@@ -783,6 +790,8 @@ Prefab:
   m_SourcePrefab: {fileID: 100100000, guid: a29d4bbd0af4580488470e4b115fbf6e, type: 2}
   m_IsPrefabAsset: 0
 =======
+=======
+>>>>>>> e5b87f53ce9689cfe5c37fb50a7d851070426dfb
 --- !u!1 &2028185521
 GameObject:
   m_ObjectHideFlags: 0
