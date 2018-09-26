@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
 // A simple script which makes a gameObject follow the player's mouse cursor
-public class FollowMousePosition : NetworkBehaviour {
+public class FollowMousePosition : MonoBehaviour {
   
     public float followSpeed = 0.1f; // admittedly it may be better to just directly set the position to that of the mouse, but the smoothing offered by Lerp makes it look a little nicer
     public GameObject cursor;

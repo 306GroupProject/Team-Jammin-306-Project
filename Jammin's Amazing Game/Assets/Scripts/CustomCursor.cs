@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class CustomCursor : NetworkBehaviour {
+public class CustomCursor : MonoBehaviour {
 
     public Texture2D cursor;
     public GameObject particleSprite;
