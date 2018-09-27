@@ -36,6 +36,14 @@ public class CharacterMovement : MonoBehaviour {
         // if the player's velocity is greater than 0.1, animate them walking
         if ((Mathf.Abs(anim.GetFloat("Horizontal Movement")) > 0.1) || (Mathf.Abs(anim.GetFloat("Vertical Movement")) > 0.1)) {
             anim.SetBool("IsMoving", true);
+
+            // Flip
+            if (Input.GetAxisRaw("Horizontal") > 0.0) {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            if (Input.GetAxisRaw("Horizontal") < 0.0) {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         } 
         else {
             anim.SetBool("IsMoving", false);
