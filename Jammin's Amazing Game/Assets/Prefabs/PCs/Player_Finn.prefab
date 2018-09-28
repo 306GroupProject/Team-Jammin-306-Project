@@ -229,6 +229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
+    type: 2}
+  attackRate: 0.5
 --- !u!114 &114775900907896096
 MonoBehaviour:
   m_ObjectHideFlags: 1
