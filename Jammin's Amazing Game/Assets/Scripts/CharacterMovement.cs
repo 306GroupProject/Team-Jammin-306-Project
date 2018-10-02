@@ -7,9 +7,11 @@ using UnityEngine.Networking;
 
 public class CharacterMovement : NetworkBehaviour {
 
-    [SerializeField] private float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
+    [SerializeField] public float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
     private Rigidbody2D rb; // Get the RigidBody Component of our player to access mass and force
     private Animator anim;
+
+	public int plyerDmg = 4; 
 
     public GameObject attackPrefab;
     public float attackRate = 0.5f;
@@ -75,7 +77,13 @@ public class CharacterMovement : NetworkBehaviour {
         GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
         attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
 
+		attack.gameObject.tag = "basicAttack"; 
+
         NetworkServer.Spawn(attack);
+
+
+
+
 
         Destroy(attack, 1.0f);
     }

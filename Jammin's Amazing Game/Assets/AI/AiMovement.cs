@@ -7,6 +7,29 @@ public class AiMovement : NetworkBehaviour {
 
 	private GameObject playerPosition;	// this will eventually need to be changed to a array to find all the players. Yet to test with multiplayer. 
 	public float speed; 				// change this if you want AI move faster.
+	public int aiDmg = 4; 
+
+	public void OnCollisionEnter2D(Collision2D collision){
+
+
+		if (collision.gameObject.tag == "Player") {
+
+
+			playerPosition.GetComponent<playerHealth> ().Damage (aiDmg);
+
+		}
+
+	}
+
+	public void OnTriggerEnter2D(Collider2D coll){
+
+		 if (coll.gameObject.tag == "basicAttack") {
+			// we can change were damage goes later. I just put it in there for now.
+			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<CharacterMovement>().plyerDmg); 
+			
+		}
+
+	}
 
 
 	// Use this for initialization

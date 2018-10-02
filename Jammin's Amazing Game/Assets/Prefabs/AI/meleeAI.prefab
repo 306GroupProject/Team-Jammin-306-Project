@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50706529737922540}
   - component: {fileID: 61935962708083400}
   - component: {fileID: 114198676947513652}
+  - component: {fileID: 114994763983773200}
   m_Layer: 0
   m_Name: meleeAI
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7197718, y: 3.6537015, z: -0.6432247}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 1.18, y: 3.6537015, z: -0.6432247}
+  m_LocalScale: {x: 12.93, y: 12.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  aiDmg: 4
 --- !u!114 &114560031854364934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,6 +157,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114994763983773200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289061748266242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84bab987c725db4c95e25549aafa790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiHP: 16
 --- !u!212 &212466806849333570
 SpriteRenderer:
   m_ObjectHideFlags: 1
