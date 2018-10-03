@@ -15,9 +15,9 @@ public class playerHealth : NetworkBehaviour {
 
 	private GameObject playerSpawnPoint;
 	private bool isDead = false;
-	private float speedStorage; 
-	 
+	private float speedStorage;
 
+    private Animator anim;
 	
 	
 	
@@ -28,6 +28,7 @@ public class playerHealth : NetworkBehaviour {
 			
 		}
 
+        anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
 		playerHP = playerHP - dmg; 
 		this.GetComponentsInChildren<Text> () [0].text = "Health: " + playerHP; 
@@ -70,7 +71,9 @@ public class playerHealth : NetworkBehaviour {
 				playerSpawnPoint = GameObject.FindWithTag("Respawn");
 				
 				playerHP = maxHealth; 	// set the players Health back to Max.
-				this.GetComponent<CharacterMovement>().speed = speedStorage;  // restore speed of player.
+                this.GetComponentsInChildren<Text>()[0].text = "Health: " + playerHP; // set the text to display the player's new health total (should be at max)
+
+                this.GetComponent<CharacterMovement>().speed = speedStorage;  // restore speed of player.
 				
 				this.transform.position = playerSpawnPoint.transform.position;  // place player at spawn point. 
 				
@@ -84,6 +87,8 @@ public class playerHealth : NetworkBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+
+        anim = GetComponent<Animator>();
 
 		speedStorage = this.GetComponent<CharacterMovement> ().speed; 
 		this.GetComponentsInChildren<Text>()[0].text += " " + playerHP; 
