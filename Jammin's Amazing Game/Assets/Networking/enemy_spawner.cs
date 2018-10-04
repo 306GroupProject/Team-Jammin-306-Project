@@ -6,7 +6,7 @@ using UnityEngine;
 public class enemy_spawner : NetworkBehaviour {
 	
 	public GameObject aiPrefab; // Select the AI prefab you want drag and drop it into this variable in unity.
-	public Transform spawnPoint; // this is just a gameobject without a sprite. Put it where you want the AI to spawn.
+    public Transform spawnPoint; // this is just a gameobject without a sprite. Put it where you want the AI to spawn.
 	public int numAI; // how many AI do we want to spawn?
 	
 	/**

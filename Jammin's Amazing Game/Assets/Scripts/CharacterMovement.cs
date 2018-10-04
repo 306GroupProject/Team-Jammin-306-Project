@@ -13,8 +13,8 @@ public class CharacterMovement : NetworkBehaviour {
 
 	public int plyerDmg = 4; 
 
-    public GameObject attackPrefab;
-    public float attackRate = 0.5f;
+    public GameObject attackPrefab; // Select the attack prefab you want drag and drop it into this variable in unity.
+    public float attackRate = 0.5f; // cooldown for the basic attack
     private float canAttack = 0.0f;
 
 
@@ -58,6 +58,7 @@ public class CharacterMovement : NetworkBehaviour {
 
         rb.AddForce(movement * speed);
 
+        // initiates attack on left-click and starts cooldown
         if (Input.GetMouseButtonDown(0) && Time.time > canAttack)
         {
             CmdAttack();
@@ -66,25 +67,22 @@ public class CharacterMovement : NetworkBehaviour {
         
 	}
 
+    // player attack command
     [Command]
     void CmdAttack()
     {
         Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
-        Vector2 direction = target - myPos;
-        direction = direction.normalized;
+        Vector2 myPos = new Vector2(transform.position.x, transform.position.y); // gets current cursor position
+        Vector2 direction = target - myPos; // direction for the attack
+        direction = direction.normalized; // normalize attack so it doesn't matter how close the cursor is to the player
 
         GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
-        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
+        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f; // universal attack speed
 
 		attack.gameObject.tag = "basicAttack"; 
 
         NetworkServer.Spawn(attack);
 
-
-
-
-
-        Destroy(attack, 1.0f);
+        Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
     }
 }
