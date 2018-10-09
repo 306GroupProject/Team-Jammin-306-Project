@@ -40,6 +40,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 250
     height: 586
 =======
@@ -50,6 +51,10 @@ MonoBehaviour:
     width: 398
     height: 586
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    width: 250
+    height: 586
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -77,6 +82,9 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     width: 1568
     height: 586
   m_MinSize: {x: 404, y: 221}
@@ -85,6 +93,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 101
+<<<<<<< HEAD
 =======
     width: 1360
     height: 676
@@ -107,6 +116,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 114
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,6 +135,9 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     y: 586
     width: 1568
 =======
@@ -135,6 +149,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 15}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     y: 676
     width: 1360
@@ -145,6 +160,8 @@ MonoBehaviour:
 >>>>>>> Player-Prefab-Management-Test
 =======
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_Panes:
   - {fileID: 15}
   - {fileID: 19}
@@ -170,6 +187,9 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     width: 1568
     height: 947
   m_MinSize: {x: 404, y: 492}
@@ -178,6 +198,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 100
+<<<<<<< HEAD
 =======
     width: 1360
 =======
@@ -199,6 +220,8 @@ MonoBehaviour:
 =======
   controlID: 113
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,12 +243,16 @@ MonoBehaviour:
     height: 947
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 98
+<<<<<<< HEAD
 =======
   m_MinSize: {x: 679, y: 321}
   m_MaxSize: {x: 12004, y: 8021}
@@ -244,6 +271,8 @@ MonoBehaviour:
   vertical: 1
   controlID: 111
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,12 +295,16 @@ MonoBehaviour:
     height: 947
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 99
+<<<<<<< HEAD
 =======
   m_MinSize: {x: 679, y: 321}
   m_MaxSize: {x: 12004, y: 8021}
@@ -290,6 +323,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 112
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,6 +339,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1372
     y: 0
 <<<<<<< HEAD
@@ -315,6 +351,11 @@ MonoBehaviour:
 =======
     width: 548
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    x: 1568
+    y: 0
+    width: 352
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -346,6 +387,7 @@ MonoBehaviour:
     height: 997
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 542}
 =======
   m_MinSize: {x: 950, y: 371}
@@ -353,6 +395,9 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 950, y: 300}
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+  m_MinSize: {x: 950, y: 542}
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &10
 MonoBehaviour:
@@ -409,6 +454,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 398
     y: 0
 <<<<<<< HEAD
@@ -423,6 +469,12 @@ MonoBehaviour:
     width: 974
     height: 586
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    x: 250
+    y: 0
+    width: 1318
+    height: 586
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
@@ -452,6 +504,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 400
     y: 92
 <<<<<<< HEAD
@@ -466,6 +519,12 @@ MonoBehaviour:
     width: 970
     height: 565
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    x: 252
+    y: 92
+    width: 1314
+    height: 565
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -479,10 +538,14 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_HBaseRangeMin: -657
     m_HBaseRangeMax: 657
     m_VBaseRangeMin: -274
     m_VBaseRangeMax: 274
+<<<<<<< HEAD
 =======
     m_HBaseRangeMin: -476
     m_HBaseRangeMax: 476
@@ -495,6 +558,8 @@ MonoBehaviour:
     m_VBaseRangeMin: -274
     m_VBaseRangeMax: 274
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -514,10 +579,14 @@ MonoBehaviour:
       y: 17
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
       width: 1314
       height: 548
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 657, y: 274}
+<<<<<<< HEAD
 =======
       width: 952
       height: 638
@@ -530,6 +599,8 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 485, y: 274}
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -538,10 +609,14 @@ MonoBehaviour:
       serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
       x: -657
       y: -274
       width: 1314
       height: 548
+<<<<<<< HEAD
 =======
       x: -476
       y: -319
@@ -554,10 +629,13 @@ MonoBehaviour:
       width: 970
       height: 548
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1314, y: 565}
@@ -567,6 +645,9 @@ MonoBehaviour:
 =======
   m_LastWindowPixelSize: {x: 970, y: 565}
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+  m_LastWindowPixelSize: {x: 1314, y: 565}
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000100
@@ -653,6 +734,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 678
     width: 1566
     height: 340
@@ -666,6 +748,11 @@ MonoBehaviour:
     width: 1370
     height: 340
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    y: 678
+    width: 1566
+    height: 340
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -681,6 +768,9 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 57
@@ -688,6 +778,7 @@ MonoBehaviour:
   - Assets/Prefabs
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\nkind\Documents\GitHub\Team-Jammin-306-Project\Jammin's
+<<<<<<< HEAD
 =======
     - Assets/Scripts/Abilities/Finn
 =======
@@ -700,16 +791,22 @@ MonoBehaviour:
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\Mark\Documents\GitHub\Team-Jammin-306-Project\Team-Jammin-306-Project\Jammin's
 >>>>>>> Player-Prefab-Management-Test
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     Amazing Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7a2b0000
     m_LastClickedID: 11130
     m_ExpandedIDs: 00000000302a0000b02a00007a2b0000b62b00006a2e0000
+<<<<<<< HEAD
 =======
     scrollPos: {x: 0, y: 139}
     m_SelectedIDs: 6a300000
@@ -722,6 +819,8 @@ MonoBehaviour:
     m_LastClickedID: 12356
     m_ExpandedIDs: 00000000043000002a31000064310000203200005c33000000ca9a3b
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -753,6 +852,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000302a0000b02a00007a2b0000b62b00006a2e0000
 =======
     m_ExpandedIDs: 00000000bc2b0000082d0000462d00001c2e000008300000
@@ -766,6 +866,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 0000000004300000703000002a31000064310000203200005c330000
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    m_ExpandedIDs: 00000000302a0000b02a00007a2b0000b62b00006a2e0000
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -840,6 +943,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1374
     y: 92
 <<<<<<< HEAD
@@ -851,6 +955,11 @@ MonoBehaviour:
 =======
     width: 546
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    x: 1570
+    y: 92
+    width: 350
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -886,6 +995,7 @@ MonoBehaviour:
     y: 92
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 248
     height: 565
 =======
@@ -896,6 +1006,10 @@ MonoBehaviour:
     width: 396
     height: 565
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    width: 248
+    height: 565
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
@@ -903,6 +1017,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_SelectedIDs: 0a2d0000
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_ExpandedIDs: 46bdfeff1afbffff00000000
 =======
@@ -915,6 +1030,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: a834f8ff1635f8ff7237f8fffe8ef9ff6c8ff9ffc891f9ff8888faff3ea0faffeea3faff62a4faffc0a6faff6c9cfeff80b8feffe8f3ffff00000000
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    m_ExpandedIDs: e6fbffff00000000
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -958,6 +1076,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 400
     y: 92
 <<<<<<< HEAD
@@ -972,6 +1091,12 @@ MonoBehaviour:
     width: 970
     height: 565
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    x: 252
+    y: 92
+    width: 1314
+    height: 565
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 305.0259127140481
@@ -979,9 +1104,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -1.8103788, y: 16.898165, z: -1.765625}
     speed: 2
     m_Value: {x: -1.8103788, y: 16.898165, z: -1.765625}
+=======
+    m_Target: {x: 3.4910824, y: 13.248049, z: -1.53125}
+    speed: 2
+    m_Value: {x: 3.4910824, y: 13.248049, z: -1.53125}
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1013,9 +1144,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 98.54513
     speed: 2
     m_Value: 98.54513
+=======
+    m_Target: 74.64938
+    speed: 2
+    m_Value: 74.64938
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1052,6 +1189,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 678
     width: 1566
     height: 340
@@ -1075,4 +1213,9 @@ MonoBehaviour:
     width: 1566
     height: 340
 >>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
+=======
+    y: 678
+    width: 1566
+    height: 340
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
   m_PersistentViewDataDictionary: {fileID: 0}

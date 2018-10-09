@@ -1,5 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -110,5 +111,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+>>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
 Cmd: initializeCompiler
 Cmd: initializeCompiler

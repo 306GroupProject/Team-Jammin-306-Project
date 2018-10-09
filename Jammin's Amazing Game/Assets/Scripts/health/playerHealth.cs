@@ -30,7 +30,7 @@ public class playerHealth : NetworkBehaviour {
 
         anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
-        playerHP = playerHP - dmg; 
+		playerHP = playerHP - dmg; 
 		this.GetComponentsInChildren<Text> () [0].text = "Health: " + playerHP; 
 		
 		if (playerHP <= 0) {
