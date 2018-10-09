@@ -104,6 +104,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.4563383, y: 19.966587, z: 0}
 =======
   m_LocalPosition: {x: 0.88054085, y: 9.723488, z: 0}
@@ -114,6 +115,9 @@ Transform:
 =======
   m_LocalPosition: {x: -0.29363292, y: 49.255615, z: 0}
 >>>>>>> parent of da568e5... Small Network change on Attack prefab
+=======
+  m_LocalPosition: {x: -5.846855, y: 6.213482, z: 0}
+>>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4860301187242404}

@@ -17,8 +17,6 @@ public class CharacterMovement : NetworkBehaviour {
     public float attackRate = 0.5f; // cooldown for the basic attack
     private float canAttack = 0.0f;
 
-    public Abilities[] abilities;
-
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
@@ -66,35 +64,8 @@ public class CharacterMovement : NetworkBehaviour {
             CmdAttack();
             canAttack = Time.time + attackRate;
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            CmdCast1();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            CmdCast2();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            CmdCast3();
-        }
-
-
-    }
-
-
-    [Command]
-    void CmdCast1() {
-        abilities[0].Cast();
-    }
-
-    [Command]
-    void CmdCast2() {
-        abilities[1].Cast();
-    }
-
-    [Command]
-    void CmdCast3() {
-        abilities[2].Cast();
-    }
+        
+	}
 
     // player attack command
     [Command]
@@ -112,9 +83,17 @@ public class CharacterMovement : NetworkBehaviour {
 
         NetworkServer.Spawn(attack);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
 =======
+=======
+
+
+
+
+
+>>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
         Destroy(attack, 1.0f);
 >>>>>>> Player-Prefab-Management-Test
     }

@@ -81,7 +81,6 @@ GameObject:
   - component: {fileID: 114948022428795084}
   - component: {fileID: 114775900907896096}
   - component: {fileID: 95148798796412164}
-  - component: {fileID: 114975554255623464}
   m_Layer: 0
   m_Name: Player_Finn
   m_TagString: Player
@@ -253,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660879b2e85ccfd4e851225bf4339331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothFactor: 0.5
   playerPosition: {fileID: 4057837833218652}
 --- !u!114 &114126851738873490
 MonoBehaviour:
@@ -303,10 +303,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  abilities:
-  - {fileID: 11400000, guid: e4962636065a45d42a2c9c8be1fad0fe, type: 2}
-  - {fileID: 11400000, guid: 47dc692d9c111fe47ab54b3ea9da9fb3, type: 2}
-  - {fileID: 11400000, guid: f8b239dc4305a334995634fe1529d650, type: 2}
 --- !u!114 &114341682397554932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,25 +405,6 @@ MonoBehaviour:
     i15: 41
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &114975554255623464
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1967780496380348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Animator: {fileID: 95148798796412164}
-  m_ParameterSendBits: 15
-  param0: 
-  param1: 
-  param2: 
-  param3: 
-  param4: 
-  param5: 
 --- !u!212 &212059395680654096
 SpriteRenderer:
   m_ObjectHideFlags: 1
