@@ -82,29 +82,13 @@ public class CharacterMovement : NetworkBehaviour {
 		attack.gameObject.tag = "basicAttack"; 
 
         NetworkServer.Spawn(attack);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
-=======
-=======
 
-
-
-
-
->>>>>>> parent of c9dcfba... Added Ability Asset Menu for player abilities! Also made small changes to some commands
         Destroy(attack, 1.0f);
->>>>>>> Player-Prefab-Management-Test
-=======
+
 
         Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
->>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
-=======
 
         Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
->>>>>>> parent of e84cb7e... Merge branch 'Player-Prefab-Management-Test'
     }
 }
