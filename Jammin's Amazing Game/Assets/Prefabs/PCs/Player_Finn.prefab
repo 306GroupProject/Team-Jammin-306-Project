@@ -303,6 +303,10 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
+  abilities:
+  - {fileID: 11400000, guid: 47dc692d9c111fe47ab54b3ea9da9fb3, type: 2}
+  - {fileID: 11400000, guid: f8b239dc4305a334995634fe1529d650, type: 2}
+  - {fileID: 11400000, guid: e4962636065a45d42a2c9c8be1fad0fe, type: 2}
 --- !u!114 &114341682397554932
 MonoBehaviour:
   m_ObjectHideFlags: 1

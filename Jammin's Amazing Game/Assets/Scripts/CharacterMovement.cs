@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking; 
+using UnityEngine.Networking;
 
 
 
@@ -11,25 +11,27 @@ public class CharacterMovement : NetworkBehaviour {
     private Rigidbody2D rb; // Get the RigidBody Component of our player to access mass and force
     private Animator anim;
 
-	public int plyerDmg = 4; 
+    public int plyerDmg = 4;
 
-    public GameObject attackPrefab; // Select the attack prefab you want drag and drop it into this variable in unity.
-    public float attackRate = 0.5f; // cooldown for the basic attack
+    public GameObject attackPrefab;
+    public float attackRate = 0.5f;
     private float canAttack = 0.0f;
 
+    public Abilities[] abilities;
 
-	void Start () {
+
+    void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
-        anim.SetBool("IsMoving", false);   
-	}
-	
-	
-	void FixedUpdate () {
+        anim.SetBool("IsMoving", false);
+    }
 
-		if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
-			return; 
-		}
+
+    void FixedUpdate() {
+
+        if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
+            return;
+        }
 
         // The next two lines set the variable attached to the player animator to what the current horizontal and vertical axis values are.
         anim.SetFloat("Vertical Movement", Input.GetAxis("Vertical"));      // Set vertical animator float value to current vertical axis
@@ -50,45 +52,60 @@ public class CharacterMovement : NetworkBehaviour {
             if (Input.GetAxisRaw("Horizontal") < 0.0) {
                 transform.localScale = new Vector3(1, 1, 1);
             }
-        } 
-        else {
+        } else {
             anim.SetBool("IsMoving", false);
         }
 
 
         rb.AddForce(movement * speed);
 
-        // initiates attack on left-click and starts cooldown
-        if (Input.GetMouseButtonDown(0) && Time.time > canAttack)
-        {
+        if (Input.GetMouseButtonDown(0) && Time.time > canAttack) {
             CmdAttack();
             canAttack = Time.time + attackRate;
         }
-        
-	}
 
-    // player attack command
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            CmdCast1();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            CmdCast2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            CmdCast3();
+        }
+
+
+    }
+
+
     [Command]
-    void CmdAttack()
-    {
+    void CmdCast1() {
+        abilities[0].Cast();
+    }
+
+    [Command]
+    void CmdCast2() {
+        abilities[1].Cast();
+    }
+
+    [Command]
+    void CmdCast3() {
+        abilities[2].Cast();
+    }
+
+    [Command]
+    void CmdAttack() {
         Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        Vector2 myPos = new Vector2(transform.position.x, transform.position.y); // gets current cursor position
-        Vector2 direction = target - myPos; // direction for the attack
-        direction = direction.normalized; // normalize attack so it doesn't matter how close the cursor is to the player
+        Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 direction = target - myPos;
+        direction = direction.normalized;
 
         GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
-        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f; // universal attack speed
+        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
 
-		attack.gameObject.tag = "basicAttack"; 
+        attack.gameObject.tag = "basicAttack";
 
         NetworkServer.Spawn(attack);
-        Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
-
         Destroy(attack, 1.0f);
-
-
-        Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
-
-        Destroy(attack, 1.0f); // destroys the attack after set amount of time with no collision 
     }
 }
