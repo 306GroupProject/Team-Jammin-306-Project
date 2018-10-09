@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-
-    [Range(0.1f, 1.0f)] public float smoothFactor = 0.5f;
+    
     [SerializeField] private Transform playerPosition;
     private Vector3 cameraCoordinates;
 
