@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 9}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -38,8 +38,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 250
     height: 586
+=======
+    width: 404
+    height: 676
+>>>>>>> Player-Prefab-Management-Test
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -65,12 +70,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1568
     height: 586
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 101
+=======
+    width: 1360
+    height: 676
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
+  vertical: 0
+  controlID: 79
+>>>>>>> Player-Prefab-Management-Test
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,17 +100,26 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 586
     width: 1568
     height: 361
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 15}
+=======
+    y: 676
+    width: 1360
+    height: 271
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
+>>>>>>> Player-Prefab-Management-Test
   m_Panes:
   - {fileID: 15}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,12 +138,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1568
     height: 947
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 100
+=======
+    width: 1360
+    height: 947
+  m_MinSize: {x: 404, y: 321}
+  m_MaxSize: {x: 8004, y: 8021}
+  vertical: 1
+  controlID: 78
+>>>>>>> Player-Prefab-Management-Test
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,10 +172,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
   controlID: 98
+=======
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
+  vertical: 1
+  controlID: 76
+>>>>>>> Player-Prefab-Management-Test
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,10 +203,17 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 99
+=======
+  m_MinSize: {x: 679, y: 321}
+  m_MaxSize: {x: 12004, y: 8021}
+  vertical: 0
+  controlID: 77
+>>>>>>> Player-Prefab-Management-Test
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,9 +228,13 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1568
+    x: 1360
     y: 0
+<<<<<<< HEAD
     width: 352
+=======
+    width: 560
+>>>>>>> Player-Prefab-Management-Test
     height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -214,7 +264,11 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 542}
+=======
+  m_MinSize: {x: 950, y: 371}
+>>>>>>> Player-Prefab-Management-Test
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &10
 MonoBehaviour:
@@ -271,10 +325,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 250
+    x: 404
     y: 0
+<<<<<<< HEAD
     width: 1318
     height: 586
+=======
+    width: 956
+    height: 676
+>>>>>>> Player-Prefab-Management-Test
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
@@ -304,10 +363,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 252
+    x: 406
     y: 92
+<<<<<<< HEAD
     width: 1314
     height: 565
+=======
+    width: 952
+    height: 655
+>>>>>>> Player-Prefab-Management-Test
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -319,10 +383,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -657
     m_HBaseRangeMax: 657
     m_VBaseRangeMin: -274
     m_VBaseRangeMax: 274
+=======
+    m_HBaseRangeMin: -476
+    m_HBaseRangeMax: 476
+    m_VBaseRangeMin: -319
+    m_VBaseRangeMax: 319
+>>>>>>> Player-Prefab-Management-Test
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -340,25 +411,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 1314
       height: 548
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 657, y: 274}
+=======
+      width: 952
+      height: 638
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 476, y: 319}
+>>>>>>> Player-Prefab-Management-Test
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -657
       y: -274
       width: 1314
       height: 548
+=======
+      x: -476
+      y: -319
+      width: 952
+      height: 638
+>>>>>>> Player-Prefab-Management-Test
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1314, y: 565}
+=======
+  m_LastWindowPixelSize: {x: 952, y: 655}
+>>>>>>> Player-Prefab-Management-Test
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000100
@@ -383,10 +472,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 252
+    x: 406
     y: 92
-    width: 1314
-    height: 590
+    width: 952
+    height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -443,9 +532,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 678
     width: 1566
     height: 340
+=======
+    y: 768
+    width: 1358
+    height: 250
+>>>>>>> Player-Prefab-Management-Test
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -459,6 +554,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 57
@@ -466,28 +562,44 @@ MonoBehaviour:
   - Assets/Prefabs
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\Users\nkind\Documents\GitHub\Team-Jammin-306-Project\Jammin's
+=======
+    - Assets/Scripts/Abilities/Finn
+  m_ViewMode: 1
+  m_StartGridSize: 57
+  m_LastFolders:
+  - Assets/Scripts/Abilities/Finn
+  m_LastFoldersGridSize: 57
+  m_LastProjectPath: C:\Users\Mark\Documents\GitHub\Team-Jammin-306-Project\Team-Jammin-306-Project\Jammin's
+>>>>>>> Player-Prefab-Management-Test
     Amazing Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7a2b0000
     m_LastClickedID: 11130
     m_ExpandedIDs: 00000000302a0000b02a00007a2b0000b62b00006a2e0000
+=======
+    scrollPos: {x: 0, y: 139}
+    m_SelectedIDs: 6a300000
+    m_LastClickedID: 12394
+    m_ExpandedIDs: 00000000bc2b0000082d0000462d0000083000006430000000ca9a3b
+>>>>>>> Player-Prefab-Management-Test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Network Scripts
+      m_OriginalName: Network Scripts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11554
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -501,7 +613,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000302a0000b02a00007a2b0000b62b00006a2e0000
+=======
+    m_ExpandedIDs: 00000000bc2b0000082d0000462d00001c2e000008300000
+>>>>>>> Player-Prefab-Management-Test
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -526,8 +642,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 48ebfcff
+    m_LastClickedInstanceID: -201912
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000943a00007a5afbff222bffffae2b000060b3f7ffa827f6ff3872f3ff000000004e0b000090300000242b0000e62b0000700a000030310000403100003831000088270000
     m_RenameOverlay:
@@ -576,9 +692,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1570
+    x: 1362
     y: 92
+<<<<<<< HEAD
     width: 350
+=======
+    width: 558
+>>>>>>> Player-Prefab-Management-Test
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -612,14 +732,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
+<<<<<<< HEAD
     width: 248
     height: 565
+=======
+    width: 402
+    height: 655
+>>>>>>> Player-Prefab-Management-Test
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 0a2d0000
     m_LastClickedID: 0
-    m_ExpandedIDs: e6fbffff00000000
+    m_ExpandedIDs: 46bdfeff1afbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -663,20 +788,25 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 252
+    x: 406
     y: 92
+<<<<<<< HEAD
     width: 1314
     height: 565
+=======
+    width: 952
+    height: 655
+>>>>>>> Player-Prefab-Management-Test
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 305.0259127140481
+  lastFramingTime: 8143.0855237
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.4910824, y: 13.248049, z: -1.53125}
+    m_Target: {x: -2.8119543, y: 2.077774, z: 21.109375}
     speed: 2
-    m_Value: {x: 3.4910824, y: 13.248049, z: -1.53125}
+    m_Value: {x: -2.8119543, y: 2.077774, z: 21.109375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -708,9 +838,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 74.64938
+    m_Target: 44.462852
     speed: 2
-    m_Value: 74.64938
+    m_Value: 44.462852
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -743,7 +873,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 678
     width: 1566
     height: 340
+=======
+    y: 768
+    width: 1358
+    height: 250
+>>>>>>> Player-Prefab-Management-Test
   m_PersistentViewDataDictionary: {fileID: 0}
