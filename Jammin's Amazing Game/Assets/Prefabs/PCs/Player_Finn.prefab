@@ -72,15 +72,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4057837833218652}
   - component: {fileID: 212059395680654096}
-  - component: {fileID: 114150924099079550}
   - component: {fileID: 50875732405696490}
   - component: {fileID: 58816349619430672}
-  - component: {fileID: 114737538703113216}
   - component: {fileID: 61607245741938168}
   - component: {fileID: 114948022428795084}
   - component: {fileID: 114775900907896096}
   - component: {fileID: 95148798796412164}
   - component: {fileID: 114092689619248484}
+  - component: {fileID: 114150924099079550}
+  - component: {fileID: 114737538703113216}
+  - component: {fileID: 114386538200123028}
   m_Layer: 0
   m_Name: Player_Finn
   m_TagString: Player
@@ -334,6 +335,17 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114386538200123028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967780496380348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e42b717d55be6448301e6c53a8c0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114581940149210166
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -17,13 +17,16 @@ public class CharacterMovement : NetworkBehaviour {
     public GameObject attackPrefab;
     public float attackRate = 0.5f;
     private float canAttack = 0.0f;
-
+    private bool flipped = false;
+    private SyncFlip flipMe;
     public Abilities[] abilities;
 
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
+        flipMe = GetComponent<SyncFlip>();
+        
         anim.SetBool("IsMoving", false);
         playerCam = GetComponentInChildren<Camera>();
         playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
@@ -52,10 +55,14 @@ public class CharacterMovement : NetworkBehaviour {
 
             // Flip
             if (Input.GetAxisRaw("Horizontal") > 0.0) {
-                transform.localScale = new Vector3(-1, 1, 1);
+                flipped = true;
+                flipMe.CmdFlip(flipped);
+                //transform.localScale = new Vector3(-1, 1, 1);
             }
             if (Input.GetAxisRaw("Horizontal") < 0.0) {
-                transform.localScale = new Vector3(1, 1, 1);
+                flipped = false;
+                flipMe.CmdFlip(flipped);
+                //transform.localScale = new Vector3(1, 1, 1);
             }
         } else {
             anim.SetBool("IsMoving", false);
