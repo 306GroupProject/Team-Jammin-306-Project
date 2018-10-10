@@ -13,6 +13,7 @@ public class CharacterMovement : NetworkBehaviour {
 
     public int plyerDmg = 4;
 
+    private Camera playerCam;
     public GameObject attackPrefab;
     public float attackRate = 0.5f;
     private float canAttack = 0.0f;
@@ -24,12 +25,16 @@ public class CharacterMovement : NetworkBehaviour {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
         anim.SetBool("IsMoving", false);
+        playerCam = GetComponentInChildren<Camera>();
+        playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
+        playerCam.fieldOfView = 177;
     }
 
 
     void FixedUpdate() {
 
         if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
+            playerCam.enabled = false;
             return;
         }
 
