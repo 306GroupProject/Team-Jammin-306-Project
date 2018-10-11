@@ -1056,9 +1056,7 @@ MonoBehaviour:
   matchMaker: {fileID: 0}
   prefabs:
   - {fileID: 1967780496380348, guid: acacf84958777ce4db1b89fbda560529, type: 2}
-  - {fileID: 1967780496380348, guid: acacf84958777ce4db1b89fbda560529, type: 2}
-  - {fileID: 1967780496380348, guid: acacf84958777ce4db1b89fbda560529, type: 2}
-  - {fileID: 1967780496380348, guid: acacf84958777ce4db1b89fbda560529, type: 2}
+  - {fileID: 1870788858281144, guid: bad2b03818b331c4381ea6f16538355b, type: 2}
 --- !u!4 &1726435845
 Transform:
   m_ObjectHideFlags: 0
