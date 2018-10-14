@@ -21,6 +21,11 @@ public class CharacterMovement : NetworkBehaviour {
     private SyncFlip flipMe;
     public Abilities[] abilities;
 
+    public float teleportDistance = 5f; // currently unused. at the moment, the player can teleport any distance (relative to the main camera) need to use raycasting or something to set up a distance
+    public float teleportCooldown = 3f;
+    private float timeSinceTeleport = 0f;
+    private Vector2 point; // the point where the mouse is clicked for a teleport
+    private Transform playerTransform; // the player's position
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
@@ -31,8 +36,25 @@ public class CharacterMovement : NetworkBehaviour {
         playerCam = GetComponentInChildren<Camera>();
         playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
         playerCam.fieldOfView = 177;
+
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
+    private void Update()
+    {
+        // if the player Right Clicks, teleport them to where they clicked.
+        if(Input.GetMouseButtonDown(1))
+        { 
+            if(timeSinceTeleport <= Time.time)
+            {
+                point = Camera.main.ScreenToWorldPoint(Input.mousePosition); // should use playerCam, but only works with Camera.main...
+                // Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                playerTransform.transform.position = point;
+                timeSinceTeleport = Time.time + teleportCooldown; // start the cooldwon period
+            } 
+        }
+    }
 
     void FixedUpdate() {
 
