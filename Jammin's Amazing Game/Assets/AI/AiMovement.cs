@@ -40,7 +40,7 @@ public class AiMovement : NetworkBehaviour {
 	void Start () {
 
         rb = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
