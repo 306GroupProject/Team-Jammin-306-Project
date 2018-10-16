@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 114150924099079550}
   - component: {fileID: 114737538703113216}
   - component: {fileID: 114386538200123028}
+  - component: {fileID: 114556939281587490}
   m_Layer: 0
   m_Name: Player_Finn
   m_TagString: Player
@@ -314,6 +315,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47dc692d9c111fe47ab54b3ea9da9fb3, type: 2}
   - {fileID: 11400000, guid: f8b239dc4305a334995634fe1529d650, type: 2}
   - {fileID: 11400000, guid: e4962636065a45d42a2c9c8be1fad0fe, type: 2}
+  teleportDistance: 5
+  teleportCooldown: 3
 --- !u!114 &114341682397554932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,6 +350,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
+--- !u!114 &114556939281587490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967780496380348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c601d064feff7c248901d49a176407dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: 
 --- !u!114 &114581940149210166
 MonoBehaviour:
   m_ObjectHideFlags: 1

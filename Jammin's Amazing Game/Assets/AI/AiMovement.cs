@@ -53,7 +53,7 @@ public class AiMovement : NetworkBehaviour {
             // we will have to find a better way to fix this. For now the AI can find the position of the player. 
             // The problem is that no player exists at Start, so we cant initialize the player position until the game 
             // is running. 
-            playerPosition = GameObject.FindWithTag("Player");
+            playerPosition = GameObject.FindWithTag("Player1");
 
         }
 
