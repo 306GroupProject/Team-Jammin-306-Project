@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 103
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 31
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,21 +323,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/PCs
+    - Assets/AI
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/PCs
+  - Assets/AI
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Mark\Documents\GitHub\Team-Jammin-306-Project\Team-Jammin-306-Project\Team-Jammin-306-Project\Jammin's
-    Amazing Game
+  m_LastProjectPath: C:\Users\Trooper\Documents\GitHub\Team-Jammin-306-Project\Jammin's
+    Amazing Game\Jammin's Amazing Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 4}
-    m_SelectedIDs: e82c0000
-    m_LastClickedID: 11496
-    m_ExpandedIDs: 00000000a42c00001a2d0000dc2d00001a2e0000882e00005830000000ca9a3b
+    scrollPos: {x: 0, y: 84}
+    m_SelectedIDs: 1a0c0000
+    m_LastClickedID: 3098
+    m_ExpandedIDs: 00000000ac0900002c0a0000fa0a0000380b0000b80b0000162e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a42c00001a2d0000dc2d00001a2e0000882e000058300000
+    m_ExpandedIDs: 00000000ac0900002c0a0000fa0a0000380b0000b80b0000162e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000942f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -481,28 +481,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 3e090000
     m_LastClickedID: 0
-    m_ExpandedIDs: b86cfeff2a6dfeff746efeffa896feff0297feff4c98feff220dffff861dffffe21dffff2c1fffffa042fffffc42ffff4644ffff8855ffff305affffb65afffffc5bffff78a9ffff0eccffff7eccffffdacdffff2af7ffff00000000
+    m_ExpandedIDs: 5e9dfbffd49efbff504dfcffd012fdff3a13fdff8c14fdff8826fdffec26fdff3e28fdff8032fdffe832fdff3a34fdff12a9fdffc8a9fdff0aabfdffb8b5fdff20b6fdff84b7fdffe6fbffff00000000a2340000d0340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player_Finn
-      m_OriginalName: Player_Finn
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -67458
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - SampleScene
+  - aiTesting
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -533,14 +533,14 @@ MonoBehaviour:
     height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2641.9878141
+  lastFramingTime: 2656.0296741672646
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.1647496, y: 2.0707836, z: -0.7265625}
+    m_Target: {x: 1.2372655, y: -3.7034063, z: 2.5430481}
     speed: 2
-    m_Value: {x: -4.1647496, y: 2.0707836, z: -0.7265625}
+    m_Value: {x: 1.2372655, y: -3.7034063, z: 2.5430481}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -572,9 +572,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 53.214138
+    m_Target: 15.591188
     speed: 2
-    m_Value: 53.214138
+    m_Value: 15.591188
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -633,7 +633,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
