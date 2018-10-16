@@ -28,7 +28,7 @@ public class AiMovement : NetworkBehaviour {
 
 		 if (coll.gameObject.tag == "basicAttack") {
 			// we can change were damage goes later. I just put it in there for now.
-			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<CharacterMovement>().plyerDmg);
+			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<CharacterController>().plyerDmg);
             anim.SetTrigger("Hurt"); // play the hurt animation
 			
 		}
@@ -53,8 +53,9 @@ public class AiMovement : NetworkBehaviour {
             // we will have to find a better way to fix this. For now the AI can find the position of the player. 
             // The problem is that no player exists at Start, so we cant initialize the player position until the game 
             // is running. 
-            playerPosition = GameObject.FindWithTag("Player1");
-
+            //playerPosition = GameObject.FindWithTag("Player1");
+            return; // Just a place holder
+          
         }
 
         // if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
