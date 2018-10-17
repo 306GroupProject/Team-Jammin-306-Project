@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 114733904964487132}
   - component: {fileID: 212466806849333570}
   - component: {fileID: 50706529737922540}
-  - component: {fileID: 61935962708083400}
   - component: {fileID: 114994763983773200}
-  - component: {fileID: 114255757137674304}
+  - component: {fileID: 58711943691099312}
+  - component: {fileID: 114198676947513652}
   m_Layer: 0
   m_Name: meleeAI
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Rigidbody2D:
   m_Constraints: 4
 --- !u!58 &58711943691099312
 CircleCollider2D:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}
@@ -101,7 +101,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114198676947513652
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}

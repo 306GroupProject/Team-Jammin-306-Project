@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 114150924099079550}
   - component: {fileID: 114737538703113216}
   - component: {fileID: 114386538200123028}
-  - component: {fileID: 114556939281587490}
+  - component: {fileID: 114863615265062876}
   m_Layer: 0
   m_Name: Player_Finn
   m_TagString: Player
@@ -449,6 +449,19 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114863615265062876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967780496380348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c601d064feff7c248901d49a176407dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: 
+  playerName: 
 --- !u!114 &114948022428795084
 MonoBehaviour:
   m_ObjectHideFlags: 1
