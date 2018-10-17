@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114994763983773200}
   - component: {fileID: 58711943691099312}
   - component: {fileID: 114198676947513652}
+  - component: {fileID: 95568687501479128}
   m_Layer: 0
   m_Name: meleeAI
   m_TagString: Untagged
@@ -40,8 +41,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7577796, y: -0.13922024, z: -0.6432247}
-  m_LocalScale: {x: 12.93, y: 12.6, z: 1}
+  m_LocalPosition: {x: 10.387, y: -19.301, z: -0.6432247}
+  m_LocalScale: {x: 0.80832154, y: 0.7233408, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -68,7 +69,7 @@ Rigidbody2D:
   m_Constraints: 4
 --- !u!58 &58711943691099312
 CircleCollider2D:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}
@@ -99,9 +100,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95568687501479128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289061748266242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb6fabae55402354588474e19ff761fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114198676947513652
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289061748266242}
