@@ -42,7 +42,7 @@ public class aiHealth : NetworkBehaviour {
 		if (isDead == true) {
 			
 
-			this.GetComponent<AiMovement>().speed = 0; 
+			this.GetComponent<ai>().aiMovementSpeed = 0; 
 
 			// We need to put a death animation in here. For future programming.
 			
