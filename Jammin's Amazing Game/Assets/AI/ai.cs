@@ -45,13 +45,13 @@ public class ai : NetworkBehaviour {
 		playerPosition = GameObject.FindWithTag("Player1");
 		// is enemySpotted this is our first decision!
 		if (Vector2.Distance (this.transform.position, playerPosition.transform.position) < 10f) {
-
+            anim.SetBool("IsMoving", true);
 			return true; 
 
 		
 		} else {
-
-			return false; 
+            anim.SetBool("IsMoving", false);
+            return false; 
 
 		}
 
@@ -67,16 +67,16 @@ public class ai : NetworkBehaviour {
 
 		// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
 
-			this.transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.transform.position, aiMovementSpeed * Time.deltaTime); 
+		this.transform.position = Vector2.MoveTowards(this.transform.position, playerPosition.transform.position, aiMovementSpeed * Time.deltaTime); 
 			
-		if (Mathf.Abs(rb.velocity.x) > 0.1 || Mathf.Abs(rb.velocity.y) > 0.1) // if the enemy is moving, animate it walking
-		{
-			anim.SetBool("IsMoving", true);
-		}
-		else
-		{
-			anim.SetBool("IsMoving", false);
-		}
+		//if (Mathf.Abs(rb.velocity.x) > 0.1 || Mathf.Abs(rb.velocity.y) > 0.1) // if the enemy is moving, animate it walking
+		//{
+		//	anim.SetBool("IsMoving", true);
+		//}
+		//else
+		//{
+		//	anim.SetBool("IsMoving", false);
+		//}
 
 			
 	}
