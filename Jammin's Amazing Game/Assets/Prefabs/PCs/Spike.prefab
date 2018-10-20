@@ -29,23 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1294704469821656
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4265669724339528}
-  - component: {fileID: 20364286931545566}
-  - component: {fileID: 81861644447355142}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1444966039895746
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +49,7 @@ GameObject:
   - component: {fileID: 114356520464550344}
   - component: {fileID: 114854936851304124}
   - component: {fileID: 114072013315003760}
+  - component: {fileID: 114318244421875192}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -90,19 +74,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4265669724339528
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1294704469821656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4420370974450690}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4420370974450690
 Transform:
   m_ObjectHideFlags: 1
@@ -113,51 +84,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4265669724339528}
   - {fileID: 224534096385657080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20364286931545566
-Camera:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1294704469821656}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.92156863, g: 0.42352942, b: 0.33333334, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!50 &50739433949231866
 Rigidbody2D:
   serializedVersion: 4
@@ -218,13 +148,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.600008, y: 4.309068}
   m_EdgeRadius: 0
---- !u!81 &81861644447355142
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1294704469821656}
-  m_Enabled: 1
 --- !u!95 &95147081895407498
 Animator:
   serializedVersion: 3
@@ -308,6 +231,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Health:'
+--- !u!114 &114318244421875192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444966039895746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9a4e3f59eafb6478cbcd3bfa4f82ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Rock Throw
+  description: Hurl a Boulder that causes direct and splash damage
+  manaCost: 0
+  cooldown: 0
+  projectile: {fileID: 0}
 --- !u!114 &114356520464550344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,7 +323,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  abilities: []
   teleportDistance: 5
   teleportCooldown: 3
 --- !u!114 &114773434047679066
@@ -544,7 +482,7 @@ RectTransform:
   m_Children:
   - {fileID: 224000870988779666}
   m_Father: {fileID: 4420370974450690}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

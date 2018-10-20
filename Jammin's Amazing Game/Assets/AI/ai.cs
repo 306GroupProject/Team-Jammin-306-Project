@@ -6,7 +6,7 @@ using UnityEngine;
 public class ai : NetworkBehaviour {
 
 	private GameObject playerPosition; 
-	private Rigidbody2D rb; // used to find the velocity of the enemy so that it can be animated
+	//private Rigidbody2D rb; // used to find the velocity of the enemy so that it can be animated
 	private Animator anim;
 
 	public int aiMovementSpeed = 0;  // aiMovement will need to be set in unity. 
@@ -32,7 +32,7 @@ public class ai : NetworkBehaviour {
 		
 		if (coll.gameObject.tag == "basicAttack") {
 			// we can change were damage goes later. I just put it in there for now.
-			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<CharacterController>().plyerDmg); 
+			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<PlayerManager>().plyerDmg); 
 			anim.SetTrigger("Hurt"); // play the hurt animation
 
 		}
@@ -62,7 +62,7 @@ public class ai : NetworkBehaviour {
 
 //-----------[[Actions: Void ]]-----------//
 	public void Movement(){
-		print ("Player is spotted!"); 
+		//print ("Player is spotted!"); 
 		this.aiMovementSpeed = 4; 
 
 		// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
@@ -83,7 +83,7 @@ public class ai : NetworkBehaviour {
 
 	public void idle(){
 		this.aiMovementSpeed = 0; 
-		print ("I am idle now!");
+		//print ("I am idle now!");
 
 	}
 
@@ -115,7 +115,7 @@ public class ai : NetworkBehaviour {
 	void Start () {
 
 		buildDecisionTree ();
-		rb = GetComponent<Rigidbody2D>();
+		//rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 
 	}

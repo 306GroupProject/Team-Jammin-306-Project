@@ -28,7 +28,7 @@ public class AiMovement : NetworkBehaviour {
 
 		 if (coll.gameObject.tag == "basicAttack") {
 			// we can change were damage goes later. I just put it in there for now.
-			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<CharacterController>().plyerDmg);
+			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<PlayerManager>().plyerDmg);
             anim.SetTrigger("Hurt"); // play the hurt animation
 			
 		}
