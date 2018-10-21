@@ -1075,7 +1075,7 @@ MonoBehaviour:
   isNetworkActive: 0
   matchMaker: {fileID: 0}
   prefabs:
-  - {fileID: 1967780496380348, guid: acacf84958777ce4db1b89fbda560529, type: 2}
+  - {fileID: 1155733998902128, guid: acacf84958777ce4db1b89fbda560529, type: 2}
   - {fileID: 1444966039895746, guid: 5cde4ac0af2926842b471a4422c589ab, type: 2}
   - {fileID: 1298046741503160, guid: e646f81d855cf9e4a984eda412865877, type: 2}
   - {fileID: 1506721537851016, guid: 0750e5fc75ef06f4fb86cec484a020dd, type: 2}
