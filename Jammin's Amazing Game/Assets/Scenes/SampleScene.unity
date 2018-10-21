@@ -533,6 +533,8 @@ GameObject:
   m_Component:
   - component: {fileID: 855291206}
   - component: {fileID: 855291205}
+  - component: {fileID: 855291208}
+  - component: {fileID: 855291207}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -568,6 +570,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855291207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855291204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &855291208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855291204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 138
+    i1: 86
+    i2: 193
+    i3: 119
+    i4: 79
+    i5: 120
+    i6: 156
+    i7: 212
+    i8: 154
+    i9: 37
+    i10: 199
+    i11: 99
+    i12: 104
+    i13: 156
+    i14: 205
+    i15: 106
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &909683537
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1046,7 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 1289061748266242, guid: d08ac1c1922622c4486aca9570845ee8, type: 2}
   - {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
+  - {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}
   m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:

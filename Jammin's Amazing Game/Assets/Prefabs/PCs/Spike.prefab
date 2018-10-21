@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 114854936851304124}
   - component: {fileID: 114072013315003760}
   - component: {fileID: 114318244421875192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,9 +244,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Rock Throw
   description: Hurl a Boulder that causes direct and splash damage
+  velocity: 500
   manaCost: 0
-  cooldown: 0
-  projectile: {fileID: 0}
+  cooldown: 3
+  projectile: {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}
 --- !u!114 &114356520464550344
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -34,7 +34,7 @@ public class PlayerManager : NetworkBehaviour {
         //playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
         //playerCam.fieldOfView = 177;
 
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player2").transform;
 
     }
 
@@ -96,28 +96,21 @@ public class PlayerManager : NetworkBehaviour {
         }
 
     }
-
-
-    [ClientRpc]
-    void RpcAttack() {
-        if (isLocalPlayer) {
-            Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-            Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
-            Vector2 direction = target - myPos;
-            direction = direction.normalized;
-
-            GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
-            attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
-
-            attack.gameObject.tag = "basicAttack";
-
-            NetworkServer.Spawn(attack);
-            Destroy(attack, 1.0f);
-        }
-    }
+   
     [Command]
     void CmdAttack() {
+        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 myPos = this.transform.position;
+        Vector2 direction = target - myPos;
+        direction = direction.normalized;
 
-        RpcAttack();
+        GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
+        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
+
+        attack.gameObject.tag = "basicAttack";
+
+        NetworkServer.Spawn(attack);
+        Destroy(attack, 1.0f);
+
     }
 }

@@ -33,7 +33,7 @@ public class ai : NetworkBehaviour {
 		if (coll.gameObject.tag == "basicAttack") {
 			// we can change were damage goes later. I just put it in there for now.
 			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<PlayerManager>().plyerDmg); 
-			anim.SetTrigger("Hurt"); // play the hurt animation
+			//anim.SetTrigger("Hurt"); // play the hurt animation
 
 		}
 		
@@ -42,7 +42,7 @@ public class ai : NetworkBehaviour {
 
 //------------[[Decisions: Boolean]]------------------//
 	public bool enemySpotted(){
-		playerPosition = GameObject.FindWithTag("Player1");
+		playerPosition = GameObject.FindWithTag("Player2");
 		// is enemySpotted this is our first decision!
 		if (Vector2.Distance (this.transform.position, playerPosition.transform.position) < 10f) {
             anim.SetBool("IsMoving", true);

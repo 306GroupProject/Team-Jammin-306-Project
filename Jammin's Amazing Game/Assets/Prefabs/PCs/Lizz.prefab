@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 114805542047692866}
   - component: {fileID: 114608797974835538}
   - component: {fileID: 114431320160762012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  abilities: []
   teleportDistance: 5
   teleportCooldown: 3
 --- !u!114 &114735366219495490

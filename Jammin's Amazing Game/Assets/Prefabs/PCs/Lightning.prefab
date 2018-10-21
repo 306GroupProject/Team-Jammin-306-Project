@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 114767401212044134}
   - component: {fileID: 114025515673433892}
   - component: {fileID: 114951340759725974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  abilities: []
   teleportDistance: 5
   teleportCooldown: 3
 --- !u!114 &114951340759725974

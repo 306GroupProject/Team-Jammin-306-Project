@@ -23,8 +23,8 @@ public class aiHealth : NetworkBehaviour {
 			
 		}
 
-	
 
+        this.GetComponent<Animator>().SetTrigger("Hurt");
 		
 		aiHP = aiHP - dmg; 
 		
