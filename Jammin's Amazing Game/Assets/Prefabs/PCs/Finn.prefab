@@ -35,11 +35,11 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4617196938340654}
-  - component: {fileID: 20537274785674234}
-  - component: {fileID: 81965454161133308}
-  m_Layer: 0
-  m_Name: Camera
+  - component: {fileID: 224994332040731412}
+  - component: {fileID: 222841592230095230}
+  - component: {fileID: 114427835662414074}
+  m_Layer: 5
+  m_Name: Text (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,8 +83,8 @@ GameObject:
   - component: {fileID: 114737538703113216}
   - component: {fileID: 114386538200123028}
   - component: {fileID: 114863615265062876}
-  m_Layer: 0
-  m_Name: Player_Finn
+  m_Layer: 8
+  m_Name: Finn
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,64 +100,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4617196938340654}
   - {fileID: 224212207714359850}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4617196938340654
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1199721823032658}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4057837833218652}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20537274785674234
-Camera:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1199721823032658}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.92156863, g: 0.42352942, b: 0.33333334, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 177
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!50 &50875732405696490
 Rigidbody2D:
   serializedVersion: 4
@@ -218,13 +164,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.600008, y: 4.3090677}
   m_EdgeRadius: 0
---- !u!81 &81965454161133308
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1199721823032658}
-  m_Enabled: 1
 --- !u!95 &95148798796412164
 Animator:
   serializedVersion: 3
@@ -311,10 +250,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  abilities:
-  - {fileID: 11400000, guid: 47dc692d9c111fe47ab54b3ea9da9fb3, type: 2}
-  - {fileID: 11400000, guid: f8b239dc4305a334995634fe1529d650, type: 2}
-  - {fileID: 11400000, guid: e4962636065a45d42a2c9c8be1fad0fe, type: 2}
   teleportDistance: 5
   teleportCooldown: 3
 --- !u!114 &114341682397554932
@@ -530,7 +465,7 @@ RectTransform:
   m_Children:
   - {fileID: 224501831212159398}
   m_Father: {fileID: 4057837833218652}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

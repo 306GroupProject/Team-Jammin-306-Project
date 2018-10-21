@@ -54,7 +54,7 @@ public class playerHealth : NetworkBehaviour {
 		
 		if (isDead == true) {
 			
-			this.GetComponent<CharacterController>().speed = 0; 
+			this.GetComponent<PlayerManager>().speed = 0; 
 			print ("you are dead, hit 'R' to respawn..."); 
 
 			// We need to put a death animation in here. For future programming.
@@ -84,7 +84,7 @@ public class playerHealth : NetworkBehaviour {
 
         anim = GetComponent<Animator>();
 
-		speedStorage = this.GetComponent<CharacterController> ().speed; 
+		speedStorage = this.GetComponent<PlayerManager> ().speed; 
 		this.GetComponentsInChildren<Text>()[0].text += " " + playerHP; 
 		
 	}

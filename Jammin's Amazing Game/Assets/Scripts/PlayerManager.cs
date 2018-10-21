@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Networking;
 
 
 
-public class CharacterController : NetworkBehaviour {
+public class PlayerManager : NetworkBehaviour {
 
     [SerializeField] public float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
     private Rigidbody2D rb; // Get the RigidBody Component of our player to access mass and force
@@ -13,13 +11,12 @@ public class CharacterController : NetworkBehaviour {
 
     public int plyerDmg = 4;
 
-    private Camera playerCam;
+    //private Camera playerCam;
     public GameObject attackPrefab;
     public float attackRate = 0.5f;
     private float canAttack = 0.0f;
     private bool flipped = false;
     private SyncFlip flipMe;
-    public Abilities[] abilities;
 
     public float teleportDistance = 5f; // currently unused. at the moment, the player can teleport any distance (relative to the main camera) need to use raycasting or something to set up a distance
     public float teleportCooldown = 3f;
@@ -33,11 +30,11 @@ public class CharacterController : NetworkBehaviour {
         flipMe = GetComponent<SyncFlip>();
         
         anim.SetBool("IsMoving", false);
-        playerCam = GetComponentInChildren<Camera>();
-        playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
-        playerCam.fieldOfView = 177;
+        //playerCam = GetComponentInChildren<Camera>();
+        //playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
+        //playerCam.fieldOfView = 177;
 
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player2").transform;
 
     }
 
@@ -59,7 +56,7 @@ public class CharacterController : NetworkBehaviour {
     void FixedUpdate() {
 
         if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
-            playerCam.enabled = false;
+            //playerCam.enabled = false;
             return;
         }
 
@@ -98,39 +95,12 @@ public class CharacterController : NetworkBehaviour {
             canAttack = Time.time + attackRate;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            CmdCast1();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            CmdCast2();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            CmdCast3();
-        }
-
-
     }
-
-
-    [Command]
-    void CmdCast1() {
-        abilities[0].Cast();
-    }
-
-    [Command]
-    void CmdCast2() {
-        abilities[1].Cast();
-    }
-
-    [Command]
-    void CmdCast3() {
-        abilities[2].Cast();
-    }
-
+   
     [Command]
     void CmdAttack() {
-        Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-        Vector2 myPos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 myPos = this.transform.position;
         Vector2 direction = target - myPos;
         direction = direction.normalized;
 
@@ -141,5 +111,6 @@ public class CharacterController : NetworkBehaviour {
 
         NetworkServer.Spawn(attack);
         Destroy(attack, 1.0f);
+
     }
 }

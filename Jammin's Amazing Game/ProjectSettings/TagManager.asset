@@ -10,6 +10,8 @@ TagManager:
   - Player3
   - Player4
   - networkManager
+  - Enemy
+  
   layers:
   - Default
   - TransparentFX
@@ -19,14 +21,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - WaterMage
+  - EarthMage
+  - FireMage
+  - LightningMage
+  - Puddle
+  - Boulder
+  - Pebbles
+  - Enemy
   - 
   - 
   - 
