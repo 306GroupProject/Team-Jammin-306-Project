@@ -15,6 +15,7 @@ public class CustomNetwork : NetworkManager {
     private GameObject[] prefabs; // A list containing all playable character prefabs
     private static int chosenPlayer = 0; // Players 1 - 4. Pick a character! There are buttons in UI for these
 
+	public GameObject[] players; 	// list of all the players currently In Game.
     /**
      * Once the client start, this method registers all the player
      * prefabs we are going to use for the players.
@@ -47,7 +48,9 @@ public class CustomNetwork : NetworkManager {
      * a character, instead of using the single built-in playerPrefab tab in the default net manager.
      */ 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extra) {
-        // Obtain the message stored in the server containing the selected player character
+		players = new GameObject[4]; 
+
+		// Obtain the message stored in the server containing the selected player character
         ChosenCharacter message = extra.ReadMessage<ChosenCharacter>(); 
         
         // Instantiate the selected player model based on the character player selected
@@ -56,6 +59,7 @@ public class CustomNetwork : NetworkManager {
         // Get the ChangePlayerIdentity componenent so that we can set the player's tag into a unique one
         ChangePlayerIdentity playerTag = playerFab.GetComponent<ChangePlayerIdentity>();
         playerTag.playerTag = "Player" + (message.classIndex + 1);
+		
 
         if (playerTag.playerTag == "Player1") {
             playerTag.playerName = "Finn";
@@ -73,7 +77,15 @@ public class CustomNetwork : NetworkManager {
         // Add the player, and spawn it!
         NetworkServer.AddPlayerForConnection(conn, playerFab, playerControllerId);
         NetworkServer.Spawn(playerFab);
+		players [message.classIndex] = playerFab;  
     }
+
+	public GameObject[] returnPlayers(){
+
+
+		return players; 
+
+	}
 
     /**
      * Test Gui buttons for character select. Subject to change 

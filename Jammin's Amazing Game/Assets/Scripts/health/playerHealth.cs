@@ -12,12 +12,12 @@ public class playerHealth : NetworkBehaviour {
 
 	[SyncVar]	// keep this variable up to date with the server. 
 	public int playerHP = maxHealth; //the players current health. 
+	public GameObject textHealth; 	// the text field for the players Health. 
 
-	private GameObject playerSpawnPoint;
 	private bool isDead = false;
 	private float speedStorage;
-
     private Animator anim;
+
 	
 	
 	
@@ -28,6 +28,8 @@ public class playerHealth : NetworkBehaviour {
 			
 		}
 
+
+		
         anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
 		playerHP = playerHP - dmg; 
@@ -68,17 +70,9 @@ public class playerHealth : NetworkBehaviour {
 		if (isDead == true) {
 
 			if(Input.GetKeyDown(KeyCode.R)){
-				playerSpawnPoint = GameObject.FindWithTag("Respawn");
-				
-				playerHP = maxHealth; 	// set the players Health back to Max.
-                this.GetComponentsInChildren<Text>()[0].text = "Health: " + playerHP; // set the text to display the player's new health total (should be at max)
-
-                this.GetComponent<CharacterController>().speed = speedStorage;  // restore speed of player.
-				
-				this.transform.position = playerSpawnPoint.transform.position;  // place player at spawn point. 
-				
-				isDead = false; 
-				
+				playerHP = 1; // give them a little bit of health and restore speed
+				this.GetComponent<CharacterController>().speed = speedStorage;  // restore speed of player.
+				// change animation from dead back to alive!
 			}
 
 		
@@ -92,7 +86,7 @@ public class playerHealth : NetworkBehaviour {
 
 		speedStorage = this.GetComponent<CharacterController> ().speed; 
 		this.GetComponentsInChildren<Text>()[0].text += " " + playerHP; 
-
+		
 	}
 	
 	// Update is called once per frame

@@ -129,8 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2fb49dec706534f895ba0e69940760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPosition: []
   aiMovementSpeed: 0
-  aiDmg: 0
+  aiDmg: 4
 --- !u!114 &114560031854364934
 MonoBehaviour:
   m_ObjectHideFlags: 1
