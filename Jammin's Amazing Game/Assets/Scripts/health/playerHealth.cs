@@ -71,7 +71,7 @@ public class playerHealth : NetworkBehaviour {
 
 			if(Input.GetKeyDown(KeyCode.R)){
 				playerHP = 1; // give them a little bit of health and restore speed
-				this.GetComponent<CharacterController>().speed = speedStorage;  // restore speed of player.
+				this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
 				// change animation from dead back to alive!
 			}
 
