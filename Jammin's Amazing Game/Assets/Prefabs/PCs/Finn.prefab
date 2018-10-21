@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 114358783460118470}
   - component: {fileID: 114619479684573588}
   - component: {fileID: 114552632658756570}
+  - component: {fileID: 114251918408987614}
   m_Layer: 8
   m_Name: Finn
   m_TagString: Player
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155733998902128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.9902494, y: 2.8401058, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224278782156917536}
@@ -197,7 +198,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health:'
+  m_Text: 
+--- !u!114 &114251918408987614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155733998902128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb938cde0e046a49a9f41a778b2204d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114267316264047188
 MonoBehaviour:
   m_ObjectHideFlags: 1

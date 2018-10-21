@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 114805542047692866}
   - component: {fileID: 114608797974835538}
   - component: {fileID: 114431320160762012}
+  - component: {fileID: 114004758318311376}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.38, y: 0.006540574, z: -12.3671875}
+  m_LocalPosition: {x: -7.2100163, y: -2.4893885, z: -12.3671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224569073953643352}
@@ -165,6 +166,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114004758318311376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb938cde0e046a49a9f41a778b2204d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114033431716920160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,7 +273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health:'
+  m_Text: 
 --- !u!114 &114799641183127640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 16
+  textHealth: {fileID: 0}
 --- !u!114 &114836966516690292
 MonoBehaviour:
   m_ObjectHideFlags: 1
