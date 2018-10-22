@@ -339,6 +339,8 @@ MonoBehaviour:
   attackRate: 0.5
   teleportDistance: 5
   teleportCooldown: 3
+  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
+    type: 2}
 --- !u!114 &114773434047679066
 MonoBehaviour:
   m_ObjectHideFlags: 1
