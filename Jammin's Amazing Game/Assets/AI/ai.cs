@@ -6,17 +6,15 @@ using UnityEngine;
 public class ai : NetworkBehaviour {
 	[SerializeField]
 	private GameObject [] playerPosition; 
+	private bool builtPlayerPos = false; 
 	private int playerSpotted = -1; 
-	private float aiSavedSpeed; 
+
+//	private Rigidbody2D rb; // used to find the velocity of the enemy so that it can be animated
 	private Animator anim;
 	private GameObject networkManager; 
-	private int plyerDmg; 
-//----------------------[[private and public]]-----------------------------------------------------//
-
-	public float aiMovementSpeed = 0;  // aiMovement will need to be set in unity. 
+	public int aiMovementSpeed = 0;  // aiMovement will need to be set in unity. 
 	public int aiDmg = 0; 		// aiDmg, will need to be set in unity
 	public decisionTree rootOfTree;  // reference to Decision Tree, which points at root.
-	public float timer = 0; 
 
 
 
@@ -29,8 +27,9 @@ public class ai : NetworkBehaviour {
 	 * return: Nothing
 	 */
 	public void OnCollisionEnter2D(Collision2D collision){
+		print ("dmg: "+aiDmg);
 		
-		if (collision.gameObject.tag == "Player1") { // check to see which player collided with the melee AI.
+		if (collision.gameObject.tag == "Player1") {
 
 			playerPosition [0].GetComponent<playerHealth> ().Damage (aiDmg);
 			
@@ -55,6 +54,10 @@ public class ai : NetworkBehaviour {
 		
 	}
 
+	public void initPlayerPos(){
+		this.playerPosition = networkManager.GetComponent<CustomNetwork> ().returnPlayers ();  
+	}
+
 	/**
 	 *  void OnTriggerEnter2D():
 	 * When the player shoots a attack at the AI, then it will trigger damage.
@@ -66,37 +69,14 @@ public class ai : NetworkBehaviour {
 	 */
 
 	public void OnTriggerEnter2D(Collider2D coll){
-
+		
 		if (coll.gameObject.tag == "basicAttack") {
-
 			// we can change were damage goes later. I just put it in there for now.
-			this.GetComponent<aiHealth>().Damage(plyerDmg); 
+			this.GetComponent<aiHealth>().Damage(playerPosition[0].GetComponent<PlayerManager>().plyerDmg); 
 			anim.SetTrigger("Hurt"); // play the hurt animation
 
 		}
 		
-	}
-
-
-	/**
-	 * initPlayerPos(): 
-	 * Initializes all the current players in the game. This allows the AI to be able to make decisions based
-	 * on how many players are on the current Scene. This would need to be called regually maybe every other second
-	 * just so we can keep up-to-date on all the players. Some might join, some might leave etc.
-	 * 
-	 * returns: Nothing
-	 * 
-	 */ 
-	public void initPlayerPos(){
-		if (this.networkManager.GetComponent<CustomNetwork> ().players.Length == 0) {
-
-			return;
-
-		} else {
-
-			this.playerPosition = networkManager.GetComponent<CustomNetwork> ().returnPlayers (); 
-			timer = 2f;
-		}
 	}
 
 
@@ -108,7 +88,7 @@ public class ai : NetworkBehaviour {
 
 	/**
 	 * bool enemySpotted():
-	 * when the enemy is within distance of the AI this function will return either True or False.
+	 * when the enemy is within distance of the AI it this function will return either True or False.
 	 * 
 	 * return: True if enemy is spotted or false if enemy is not spotted. 
 	 */ 
@@ -116,17 +96,17 @@ public class ai : NetworkBehaviour {
 
 		// is enemySpotted this is our first decision!
 
-		if (playerPosition [0] != null) { 		// check to see if this player is active.
-			 									// if so then lets get their distance.
+		if (playerPosition [0] != null) {
+
 			if (Vector2.Distance (this.transform.position, playerPosition [0].transform.position) < 10f) {
 
-				anim.SetBool ("IsMoving", true); // return true if player is spotted, store in a variable which player is spotted.
+				anim.SetBool ("IsMoving", true);
 				playerSpotted = 0; 
 
 				return true;
 
 			} else {
-												 // else this player was not spotted, return false. All players below are setup same way as this one.
+
 				anim.SetBool ("IsMoving", false);
 				return false;
 
@@ -196,8 +176,9 @@ public class ai : NetworkBehaviour {
 	 * returns: Nothing
 	 */ 
 	public void Movement(){
-		aiMovementSpeed = aiSavedSpeed; 
+
 		// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
+		this.aiMovementSpeed = 4; 
 		this.transform.position = Vector2.MoveTowards(this.transform.position, playerPosition[playerSpotted].transform.position, aiMovementSpeed * Time.deltaTime); 
 			
 		//if (Mathf.Abs(rb.velocity.x) > 0.1 || Mathf.Abs(rb.velocity.y) > 0.1) // if the enemy is moving, animate it walking
@@ -220,8 +201,7 @@ public class ai : NetworkBehaviour {
 	 * returns: Nothing
 	 */
 	public void idle(){
-		
-		this.aiMovementSpeed = 0f; 
+		this.aiMovementSpeed = 0; 
 	}
 
 
@@ -263,36 +243,23 @@ public class ai : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		plyerDmg = 4; 
+		this.aiMovementSpeed = 4; 
 		buildDecisionTree ();
 	//	rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		networkManager = GameObject.FindGameObjectWithTag("networkManager"); 
-		aiSavedSpeed = aiMovementSpeed; 
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (timer != 0) {
+		if (networkManager.GetComponent<CustomNetwork>().players.Length != 0 && builtPlayerPos == false) {
 
-			timer -= Time.deltaTime;
-
-			if (timer <= 0) {
-
-				timer = 0; 
-			}
-		}
-
-
-			if (timer == 0) {
-
-				this.initPlayerPos (); 
+			this.initPlayerPos(); 
 			
-			}
-		
-
+			
+		}
 
 		rootOfTree.search ();  // search for our choice to do. ie update
 
