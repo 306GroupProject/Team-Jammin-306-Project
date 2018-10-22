@@ -6,16 +6,17 @@ using UnityEngine;
 public class ai : NetworkBehaviour {
 	[SerializeField]
 	private GameObject [] playerPosition; 
-	private bool builtPlayerPos = false; 
 	private int playerSpotted = -1; 
 	private float aiSavedSpeed; 
-
-//	private Rigidbody2D rb; // used to find the velocity of the enemy so that it can be animated
 	private Animator anim;
 	private GameObject networkManager; 
+	private int plyerDmg; 
+//----------------------[[private and public]]-----------------------------------------------------//
+
 	public float aiMovementSpeed = 0;  // aiMovement will need to be set in unity. 
 	public int aiDmg = 0; 		// aiDmg, will need to be set in unity
 	public decisionTree rootOfTree;  // reference to Decision Tree, which points at root.
+	public float timer = 0; 
 
 
 
@@ -55,19 +56,6 @@ public class ai : NetworkBehaviour {
 	}
 
 	/**
-	 * initPlayerPos(): 
-	 * Initializes all the current players in the game. This allows the AI to be able to make decisions based
-	 * on how many players are on the current Scene. This would need to be called regually maybe every other second
-	 * just so we can keep up-to-date on all the players. Some might join, some might leave etc.
-	 * 
-	 * returns: Nothing
-	 * 
-	 */ 
-	public void initPlayerPos(){
-		this.playerPosition = networkManager.GetComponent<CustomNetwork> ().returnPlayers ();  
-	}
-
-	/**
 	 *  void OnTriggerEnter2D():
 	 * When the player shoots a attack at the AI, then it will trigger damage.
 	 * on the AI unit. 
@@ -78,14 +66,37 @@ public class ai : NetworkBehaviour {
 	 */
 
 	public void OnTriggerEnter2D(Collider2D coll){
-		
+
 		if (coll.gameObject.tag == "basicAttack") {
+
 			// we can change were damage goes later. I just put it in there for now.
-			this.GetComponent<aiHealth>().Damage(playerPosition[0].GetComponent<PlayerManager>().plyerDmg); 
+			this.GetComponent<aiHealth>().Damage(plyerDmg); 
 			anim.SetTrigger("Hurt"); // play the hurt animation
 
 		}
 		
+	}
+
+
+	/**
+	 * initPlayerPos(): 
+	 * Initializes all the current players in the game. This allows the AI to be able to make decisions based
+	 * on how many players are on the current Scene. This would need to be called regually maybe every other second
+	 * just so we can keep up-to-date on all the players. Some might join, some might leave etc.
+	 * 
+	 * returns: Nothing
+	 * 
+	 */ 
+	public void initPlayerPos(){
+		if (this.networkManager.GetComponent<CustomNetwork> ().players.Length == 0) {
+
+			return;
+
+		} else {
+
+			this.playerPosition = networkManager.GetComponent<CustomNetwork> ().returnPlayers (); 
+			timer = 2f;
+		}
 	}
 
 
@@ -252,7 +263,7 @@ public class ai : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.aiMovementSpeed = 4; 
+		plyerDmg = 4; 
 		buildDecisionTree ();
 	//	rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
@@ -264,12 +275,24 @@ public class ai : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (networkManager.GetComponent<CustomNetwork>().players.Length != 0 && builtPlayerPos == false) {
+		if (timer != 0) {
 
-			this.initPlayerPos(); 
-			
-			
+			timer -= Time.deltaTime;
+
+			if (timer <= 0) {
+
+				timer = 0; 
+			}
 		}
+
+
+			if (timer == 0) {
+
+				this.initPlayerPos (); 
+			
+			}
+		
+
 
 		rootOfTree.search ();  // search for our choice to do. ie update
 

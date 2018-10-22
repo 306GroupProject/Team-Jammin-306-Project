@@ -10,9 +10,7 @@ public class playerHealth : NetworkBehaviour {
 	public const int maxHealth = 16; 
 
 
-	[SyncVar]	// keep this variable up to date with the server. 
-	public int playerHP = maxHealth; //the players current health. 
-	public GameObject textHealth; 	// the text field for the players Health. 
+	[SyncVar] public int playerHP = maxHealth; //the players current health.
 
 	private bool isDead = false;
 	private float speedStorage;
@@ -28,6 +26,8 @@ public class playerHealth : NetworkBehaviour {
 	 * 
 	 * returns: Nothing
 	 */ 
+
+
 	public void Damage(int dmg){
 		
 		if(!isServer){ // this is to ensure that damage is to only be applied on the server.
@@ -39,9 +39,14 @@ public class playerHealth : NetworkBehaviour {
 		
         anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
-		playerHP = playerHP - dmg; 
-		this.GetComponentsInChildren<Text> () [0].text = this.gameObject.name +" HP: " + playerHP; // update the health bar/Text when damage is done.
-		
+		playerHP = playerHP - dmg; // do the damage against this player.
+
+		//if (isLocalPlayer) {
+			// update the text on the health.
+			this.GetComponentsInChildren<Text> () [0].text = this.gameObject.name + " HP: " + playerHP; // update the health bar/Text when damage is done.
+		//}
+
+
 		if (playerHP <= 0) {
 
 			isDead = true;  

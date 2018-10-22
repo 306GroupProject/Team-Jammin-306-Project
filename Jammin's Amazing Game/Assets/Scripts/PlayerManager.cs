@@ -24,6 +24,12 @@ public class PlayerManager : NetworkBehaviour {
     private Vector2 point; // the point where the mouse is clicked for a teleport
     private Transform playerTransform; // the player's position
 
+
+
+
+
+
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
@@ -110,6 +116,7 @@ public class PlayerManager : NetworkBehaviour {
         attack.gameObject.tag = "basicAttack";
 
         NetworkServer.Spawn(attack);
+
         Destroy(attack, 1.0f);
 
     }
