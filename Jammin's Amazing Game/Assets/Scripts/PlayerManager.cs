@@ -18,11 +18,17 @@ public class PlayerManager : NetworkBehaviour {
     private bool flipped = false;
     private SyncFlip flipMe;
 
-    public float teleportDistance = 5f; // currently unused. at the moment, the player can teleport any distance (relative to the main camera) need to use raycasting or something to set up a distance
     public float teleportCooldown = 3f;
     private float timeSinceTeleport = 0f;
     private Vector2 point; // the point where the mouse is clicked for a teleport
     private Transform playerTransform; // the player's position
+    public GameObject teleportParticles;
+
+
+
+
+
+
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
@@ -45,10 +51,11 @@ public class PlayerManager : NetworkBehaviour {
         { 
             if(timeSinceTeleport <= Time.time)
             {
-                point = Camera.main.ScreenToWorldPoint(Input.mousePosition); // should use playerCam, but only works with Camera.main...
+                Instantiate(teleportParticles, transform.position, Quaternion.identity);
+                point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 // Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 playerTransform.transform.position = point;
-                timeSinceTeleport = Time.time + teleportCooldown; // start the cooldwon period
+                timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
             } 
         }
     }
@@ -112,8 +119,14 @@ public class PlayerManager : NetworkBehaviour {
 
         attack.gameObject.tag = "basicAttack";
 
+<<<<<<< HEAD
         NetworkServer.Spawn(attack); // spawns attack for all clients 
         Destroy(attack, 1.0f); // destroy projectile after set time
+=======
+        NetworkServer.Spawn(attack);
+
+        Destroy(attack, 1.0f);
+>>>>>>> 828eed099749ef4bab9c658c055d03d4711e9210
 
     }
 }
