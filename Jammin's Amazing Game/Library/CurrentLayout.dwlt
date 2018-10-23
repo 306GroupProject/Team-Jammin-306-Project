@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 111
+  controlID: 58
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,11 +297,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Projectiles/Lizz
+    - Assets/Scripts/Abilities/Lizz
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Projectiles/Lizz
+  - Assets/Scripts/Abilities/Lizz
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Austo\Desktop\306 Group Project\trunk\Jammin's Amazing
     Game
@@ -309,9 +309,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 9a0a0000
-    m_LastClickedID: 2714
-    m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000380d00002630000000ca9a3b
+    m_SelectedIDs: 880a0000
+    m_LastClickedID: 2696
+    m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000160c0000380d00002630000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b00b0000
+    m_SelectedIDs: 58060000
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
