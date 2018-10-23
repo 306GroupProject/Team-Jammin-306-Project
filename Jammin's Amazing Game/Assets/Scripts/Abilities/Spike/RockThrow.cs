@@ -7,6 +7,7 @@ using UnityEngine;
  */ 
 public class RockThrow : Abilities {
 
+    private float canAttack;
 
     /**
      *  Rockthrow ability for Spike, activated using number 1
@@ -14,8 +15,9 @@ public class RockThrow : Abilities {
     public void Update() {
         // Only allow local player to cast, so that other players doesn't cast this ability as well
         if (isLocalPlayer) {
-            if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Time.time > canAttack) {
                 CmdCast(transform.position, (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                canAttack = Time.time + cooldown;
             }
         }
     }

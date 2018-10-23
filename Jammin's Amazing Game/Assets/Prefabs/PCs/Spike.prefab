@@ -272,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 16
-  textHealth: {fileID: 0}
 --- !u!114 &114462844232092624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,7 +336,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  teleportDistance: 5
   teleportCooldown: 3
   teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
     type: 2}

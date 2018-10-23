@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 114608797974835538}
   - component: {fileID: 114431320160762012}
   - component: {fileID: 114004758318311376}
+  - component: {fileID: 114477181727869066}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -211,6 +212,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: 
   playerName: 
+--- !u!114 &114477181727869066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff444226f0f18544b28f0f412ac2623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: FireBall
+  description: Shoots a fast ball of fire
+  velocity: 4000
+  manaCost: 0
+  cooldown: 2
+  projectile: {fileID: 1630083490540194, guid: 60150678e296a6340912f6a96dfd52db, type: 2}
 --- !u!114 &114608797974835538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,8 +257,8 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  teleportDistance: 5
   teleportCooldown: 3
+  teleportParticles: {fileID: 0}
 --- !u!114 &114735366219495490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 16
-  textHealth: {fileID: 0}
 --- !u!114 &114836966516690292
 MonoBehaviour:
   m_ObjectHideFlags: 1
