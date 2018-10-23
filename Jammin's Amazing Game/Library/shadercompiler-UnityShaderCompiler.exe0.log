@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -5,4 +6,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+Base path: D:/Unity/Editor/Data
+>>>>>>> parent of 6826a91... Updated abilities
 Cmd: initializeCompiler

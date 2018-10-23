@@ -27,11 +27,10 @@ public class AiMovement : NetworkBehaviour {
 	public void OnTriggerEnter2D(Collider2D coll){
 
 		 if (coll.gameObject.tag == "basicAttack") {
-            // we can change were damage goes later. I just put it in there for now.
+			// we can change were damage goes later. I just put it in there for now.
 			this.GetComponent<aiHealth>().Damage(playerPosition.GetComponent<PlayerManager>().plyerDmg);
             anim.SetTrigger("Hurt"); // play the hurt animation
 			
-
 		}
 
 	}

@@ -34,5 +34,6 @@ public class RockThrow : Abilities {
         Rigidbody2D rockRb = rock.GetComponent<Rigidbody2D>();
         rockRb.AddForce(direction * this.velocity);
         rockRb.AddTorque(100);
+       
     }
 }

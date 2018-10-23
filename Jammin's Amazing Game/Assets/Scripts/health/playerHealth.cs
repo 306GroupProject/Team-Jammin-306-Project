@@ -10,17 +10,24 @@ public class playerHealth : NetworkBehaviour {
 	public const int maxHealth = 16; 
 
 
-	[SyncVar]	// keep this variable up to date with the server. 
-	public int playerHP = maxHealth; //the players current health. 
+	[SyncVar] public int playerHP = maxHealth; //the players current health.
 
-	private GameObject playerSpawnPoint;
 	private bool isDead = false;
 	private float speedStorage;
-
     private Animator anim;
 	
 	
-	
+	/**
+	 * Damage(dmg): 
+	 * 
+	 * param: dmg: is a integer number to resemble how much health has been lost.
+	 * 
+	 * function calculates the damage that has been currently done to this player. If the player health drops to 0 it will die.
+	 * 
+	 * returns: Nothing
+	 */ 
+
+
 	public void Damage(int dmg){
 		
 		if(!isServer){ // this is to ensure that damage is to only be applied on the server.
@@ -28,15 +35,22 @@ public class playerHealth : NetworkBehaviour {
 			
 		}
 
+
+		
         anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
-		playerHP = playerHP - dmg; 
-		this.GetComponentsInChildren<Text> () [0].text = "Health: " + playerHP; 
-		
+		playerHP = playerHP - dmg; // do the damage against this player.
+
+		//if (isLocalPlayer) {
+			// update the text on the health.
+			this.GetComponentsInChildren<Text> () [0].text = this.gameObject.name + " HP: " + playerHP; // update the health bar/Text when damage is done.
+		//}
+
+
 		if (playerHP <= 0) {
 
-			isDead = true; 
-			death(); 
+			isDead = true;  
+			death();  // if dead then death function is called.
 		}
 		
 	}
@@ -63,22 +77,25 @@ public class playerHealth : NetworkBehaviour {
 	}
 
 
+	/**
+	 * respawn():
+	 * 
+	 * the way we want to do death is as follows: if a player dies, then they can wait until room is cleared at, 
+	 * which point the players can respawn and have 1 hp and movement speed back.
+	 * 
+	 * returns: Nothing
+	 * 
+	 * 
+	 */ 
 	public void respawn(){
 
 		if (isDead == true) {
 
 			if(Input.GetKeyDown(KeyCode.R)){
-				playerSpawnPoint = GameObject.FindWithTag("Respawn");
-				
-				playerHP = maxHealth; 	// set the players Health back to Max.
-                this.GetComponentsInChildren<Text>()[0].text = "Health: " + playerHP; // set the text to display the player's new health total (should be at max)
-
-                this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
-				
-				this.transform.position = playerSpawnPoint.transform.position;  // place player at spawn point. 
-				
-				isDead = false; 
-				
+				playerHP = 1; // give them a little bit of health and restore speed
+				this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
+				this.GetComponentsInChildren<Text>()[0].text = this.gameObject.name + " Hp: "  + playerHP; 
+				// change animation from dead back to alive!
 			}
 
 		
@@ -91,13 +108,14 @@ public class playerHealth : NetworkBehaviour {
         anim = GetComponent<Animator>();
 
 		speedStorage = this.GetComponent<PlayerManager> ().speed; 
-		this.GetComponentsInChildren<Text>()[0].text += " " + playerHP; 
-
+		this.GetComponentsInChildren<Text>()[0].text +=  this.gameObject.name + " Hp: " + playerHP; 
+		
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
-
+		
 		respawn (); 
 
 	}
