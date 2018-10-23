@@ -48,8 +48,7 @@ GameObject:
   - component: {fileID: 114805542047692866}
   - component: {fileID: 114608797974835538}
   - component: {fileID: 114431320160762012}
-  - component: {fileID: 114004758318311376}
-  - component: {fileID: 114477181727869066}
+  - component: {fileID: 114948512900422802}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -82,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2100163, y: -2.4893885, z: -12.3671875}
+  m_LocalPosition: {x: -4.38, y: 0.006540574, z: -12.3671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224569073953643352}
@@ -167,17 +166,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114004758318311376
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298046741503160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb938cde0e046a49a9f41a778b2204d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114033431716920160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,23 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: 
   playerName: 
---- !u!114 &114477181727869066
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1298046741503160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff444226f0f18544b28f0f412ac2623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: FireBall
-  description: Shoots a fast ball of fire
-  velocity: 4000
-  manaCost: 0
-  cooldown: 2
-  projectile: {fileID: 1630083490540194, guid: 60150678e296a6340912f6a96dfd52db, type: 2}
 --- !u!114 &114608797974835538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,8 +228,8 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
+  teleportDistance: 5
   teleportCooldown: 3
-  teleportParticles: {fileID: 0}
 --- !u!114 &114735366219495490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,7 +262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Health:'
 --- !u!114 &114799641183127640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +347,23 @@ MonoBehaviour:
   param3: 
   param4: 
   param5: 
+--- !u!114 &114948512900422802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff531b85a6c55e9469aa72a5a0f3ffaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Fireball
+  description: Launches a fast ball of fire
+  velocity: 5000
+  manaCost: 0
+  cooldown: 2
+  projectile: {fileID: 1630083490540194, guid: 60150678e296a6340912f6a96dfd52db, type: 2}
 --- !u!114 &114990887091991630
 MonoBehaviour:
   m_ObjectHideFlags: 1

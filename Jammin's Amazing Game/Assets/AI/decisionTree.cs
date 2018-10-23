@@ -6,8 +6,8 @@ public class decisionTree  {
 
 	// delegates:
 
-	public delegate bool Decision(); // every function that is a decision must be a boolean.
-	public delegate void Action(); // every function that is a Action MUST be a void.
+	public delegate bool Decision();
+	public delegate void Action(); 
 
 
 
@@ -26,12 +26,8 @@ public class decisionTree  {
 	}
 
 	/**
-	 * void buildDecision: 
-	 * param: aiChoice: this is the decision that the AI will make at this node.
 	 * 
-	 * assigns the decision delegate to the function placed in aichoice variable.
 	 * 
-	 * return Nothing
 	 * 
 	 */ 
 
@@ -42,33 +38,11 @@ public class decisionTree  {
 	
 	}
 
-	/**
-	 * void buildAction: 
-	 * param: aiAction: this is the action that the AI will make at this node.
-	 * 
-	 * assigns the action delegate to the function placed in aiAction variable.
-	 * 
-	 * return Nothing
-	 * 
-	 */ 
-
-
 	public  void buildAction(Action aiAction){
 
 		this.action = aiAction; 
 
 	}
-
-	/**
-	 * void left: 
-	 * param: LeftNode: The left node of the parent called
-	 * 
-	 * sets the left Node of the this parent.
-	 * 
-	 * return Nothing
-	 * 
-	 */ 
-
 
 	public void Left(decisionTree leftNode){
 
@@ -78,15 +52,6 @@ public class decisionTree  {
 	}
 
 
-	/**
-	 * void Right: 
-	 * param: RightNode: The right node of the parent called
-	 * 
-	 * sets the right Node of the this parent.
-	 * 
-	 * return Nothing
-	 * 
-	 */ 
 	public void Right(decisionTree rightNode){
 
 		this.rightNode = rightNode; 
