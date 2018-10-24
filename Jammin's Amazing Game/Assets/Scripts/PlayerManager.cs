@@ -12,8 +12,8 @@ public class PlayerManager : NetworkBehaviour {
     public int plyerDmg = 4;
 
     //private Camera playerCam;
-    public GameObject attackPrefab; // basic attack projectile
-    public float attackRate = 0.5f; // Basic attack cooldown
+    public GameObject attackPrefab;
+    public float attackRate = 0.5f;
     private float canAttack = 0.0f;
     private bool flipped = false;
     private SyncFlip flipMe;
@@ -90,7 +90,6 @@ public class PlayerManager : NetworkBehaviour {
 
         rb.AddForce(movement * speed);
 
-        // fire basic attack on mouse press, start and check cooldown
         if (Input.GetMouseButtonDown(0) && Time.time > canAttack) {
             CmdAttack();
             canAttack = Time.time + attackRate;
@@ -98,22 +97,20 @@ public class PlayerManager : NetworkBehaviour {
 
     }
    
-    // Create player attack, network Command
     [Command]
     void CmdAttack() {
-        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition); // make target mouse position
-        Vector2 myPos = this.transform.position; // reference players current position
-        Vector2 direction = target - myPos; // direction of the attack
-        direction = direction.normalized; // normalize velcoity
+        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 myPos = this.transform.position;
+        Vector2 direction = target - myPos;
+        direction = direction.normalized;
 
         GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
         attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
-        // Instantiate attack prefab at players location with proper direction toward target
 
         attack.gameObject.tag = "basicAttack";
 
-        NetworkServer.Spawn(attack); // spawns attack for all clients 
-        Destroy(attack, 1.0f); // destroy projectile after set time
+        NetworkServer.Spawn(attack);
+        Destroy(attack, 1.0f);
 
     }
 }
