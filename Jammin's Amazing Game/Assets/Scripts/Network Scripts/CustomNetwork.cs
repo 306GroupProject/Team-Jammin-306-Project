@@ -32,6 +32,8 @@ public class CustomNetwork : NetworkManager {
 
 	[SerializeField] private playerStorage yeet; 
 
+	[SerializeField] private playerStorage yeet; 
+
     /**
      * Once the client start, this method registers all the player
      * prefabs we are going to use for the players.
@@ -103,7 +105,11 @@ public class CustomNetwork : NetworkManager {
         NetworkServer.AddPlayerForConnection(conn, playerFab, playerControllerId);
         NetworkServer.Spawn(playerFab);
 <<<<<<< HEAD
+<<<<<<< HEAD
         yeet.storePlayers (playerFab, message.classIndex); 
+=======
+		yeet.storePlayers (playerFab, message.classIndex); 
+>>>>>>> parent of 6826a91... Updated abilities
 =======
 		yeet.storePlayers (playerFab, message.classIndex); 
 >>>>>>> parent of 6826a91... Updated abilities

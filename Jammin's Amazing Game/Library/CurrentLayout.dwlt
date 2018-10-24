@@ -46,7 +46,11 @@ MonoBehaviour:
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 9
+=======
+  controlID: 58
+>>>>>>> parent of 6826a91... Updated abilities
 =======
   controlID: 58
 >>>>>>> parent of 6826a91... Updated abilities
@@ -92,8 +96,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 435
     height: 634
+=======
+    width: 398
+    height: 573
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     width: 398
     height: 573
@@ -121,6 +130,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 634
     width: 1480
     height: 313
@@ -140,6 +150,15 @@ MonoBehaviour:
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 12}
   m_Panes:
+=======
+    y: 573
+    width: 1531
+    height: 374
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+>>>>>>> parent of 6826a91... Updated abilities
   - {fileID: 12}
   - {fileID: 17}
   m_Selected: 0
@@ -233,7 +252,11 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 62
+=======
+  controlID: 112
+>>>>>>> parent of 6826a91... Updated abilities
 =======
   controlID: 112
 >>>>>>> parent of 6826a91... Updated abilities
@@ -256,6 +279,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1480
     height: 634
   m_MinSize: {x: 406, y: 221}
@@ -263,12 +287,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 63
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
     width: 1531
     height: 573
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
   controlID: 113
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
 --- !u!114 &11
 MonoBehaviour:
@@ -287,8 +316,13 @@ MonoBehaviour:
     x: 398
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1045
     height: 634
+=======
+    width: 1133
+    height: 573
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     width: 1133
     height: 573
@@ -323,9 +357,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 726
     width: 1478
     height: 292
+=======
+    y: 665
+    width: 1529
+    height: 353
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     y: 665
     width: 1529
@@ -356,15 +396,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: fc320000
     m_LastClickedID: 13052
     m_ExpandedIDs: 00000000fc3200000a330000303400006a340000d83400002e350000b83500008636000000ca9a3b
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
     scrollPos: {x: 0, y: 71}
     m_SelectedIDs: 880a0000
     m_LastClickedID: 2696
     m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000160c0000380d00002630000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -394,7 +440,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fc3200000a330000303400006a340000d83400002e350000b835000086360000
+=======
+    m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000380d000026300000
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000380d000026300000
 >>>>>>> parent of 6826a91... Updated abilities
@@ -423,15 +473,21 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 4c360000
     m_LastClickedInstanceID: 13900
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000942f0000062d000096330000420c000020300000880b0000
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 12390000
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -516,6 +572,7 @@ MonoBehaviour:
     x: 0
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 433
     height: 613
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -530,6 +587,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+=======
+    width: 396
+    height: 552
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+>>>>>>> parent of 6826a91... Updated abilities
     m_SelectedIDs: 58060000
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
@@ -580,8 +644,13 @@ MonoBehaviour:
     x: 406
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1041
     height: 613
+=======
+    width: 1148
+    height: 576
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     width: 1148
     height: 576
@@ -664,8 +733,13 @@ MonoBehaviour:
     x: 400
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1041
     height: 613
+=======
+    width: 1129
+    height: 552
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     width: 1129
     height: 552
@@ -682,15 +756,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -520.5
     m_HBaseRangeMax: 520.5
     m_VBaseRangeMin: -298
     m_VBaseRangeMax: 298
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
     m_HBaseRangeMin: -564.5
     m_HBaseRangeMax: 564.5
     m_VBaseRangeMin: -267.5
     m_VBaseRangeMax: 267.5
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -710,15 +790,21 @@ MonoBehaviour:
       x: 0
       y: 17
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 1041
       height: 596
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 520.5, y: 298}
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
       width: 1129
       height: 535
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 564.5, y: 267.5}
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -727,22 +813,32 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -520.5
       y: -298
       width: 1041
       height: 596
 =======
+=======
+>>>>>>> parent of 6826a91... Updated abilities
       x: -564.5
       y: -267.5
       width: 1129
       height: 535
+<<<<<<< HEAD
+>>>>>>> parent of 6826a91... Updated abilities
+=======
 >>>>>>> parent of 6826a91... Updated abilities
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1041, y: 613}
+=======
+  m_LastWindowPixelSize: {x: 1129, y: 552}
+>>>>>>> parent of 6826a91... Updated abilities
 =======
   m_LastWindowPixelSize: {x: 1129, y: 552}
 >>>>>>> parent of 6826a91... Updated abilities
@@ -772,9 +868,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 726
     width: 1478
     height: 292
+=======
+    y: 689
+    width: 1529
+    height: 369
+>>>>>>> parent of 6826a91... Updated abilities
 =======
     y: 689
     width: 1529
