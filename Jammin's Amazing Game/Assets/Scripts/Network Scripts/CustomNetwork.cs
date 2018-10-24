@@ -14,21 +14,6 @@ public class CustomNetwork : NetworkManager {
     [SerializeField]
     private GameObject[] prefabs; // A list containing all playable character prefabs
     private static int chosenPlayer = 0; // Players 1 - 4. Pick a character! There are buttons in UI for these
-    [SerializeField] private playerStorage yeet; 
-
-
-    public override void OnStartServer(){
-		
-		yeet = new playerStorage (4); 
-	
-	}
-
-    public playerStorage returnPlayers(){
-
-
-		return yeet; 
-
-	}
 
 	[SerializeField] private playerStorage yeet; 
 
@@ -106,6 +91,7 @@ public class CustomNetwork : NetworkManager {
         NetworkServer.Spawn(playerFab);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         yeet.storePlayers (playerFab, message.classIndex); 
 =======
 		yeet.storePlayers (playerFab, message.classIndex); 
@@ -113,6 +99,8 @@ public class CustomNetwork : NetworkManager {
 =======
 		yeet.storePlayers (playerFab, message.classIndex); 
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     }
 
 	public playerStorage returnPlayers(){

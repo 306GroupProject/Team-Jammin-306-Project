@@ -40,7 +40,7 @@ public class PlayerManager : NetworkBehaviour {
         //playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
         //playerCam.fieldOfView = 177;
 
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player2").transform;
 
     }
 

@@ -42,9 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 342}
-  m_MaxSize: {x: 12008, y: 8042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 9
@@ -54,6 +55,9 @@ MonoBehaviour:
 =======
   controlID: 58
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+  controlID: 11
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,6 +102,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 435
+<<<<<<< HEAD
     height: 634
 =======
     width: 398
@@ -107,6 +112,9 @@ MonoBehaviour:
     width: 398
     height: 573
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    height: 633
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -131,15 +139,20 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 634
+=======
+    y: 633
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     width: 1480
-    height: 313
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+    height: 314
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
+<<<<<<< HEAD
   m_Selected: 1
   m_LastSelected: 0
 =======
@@ -164,6 +177,10 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+  m_Selected: 0
+  m_LastSelected: 1
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,9 +265,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 8006, y: 8042}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 62
@@ -260,6 +278,9 @@ MonoBehaviour:
 =======
   controlID: 112
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+  controlID: 12
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,10 +302,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1480
-    height: 634
+    height: 633
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 63
 =======
 =======
@@ -299,6 +321,9 @@ MonoBehaviour:
 >>>>>>> parent of 6826a91... Updated abilities
 =======
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+  controlID: 13
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,6 +343,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1045
+<<<<<<< HEAD
     height: 634
 =======
     width: 1133
@@ -327,6 +353,9 @@ MonoBehaviour:
     width: 1133
     height: 573
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    height: 633
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
@@ -358,6 +387,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 726
     width: 1478
     height: 292
@@ -371,6 +401,11 @@ MonoBehaviour:
     width: 1529
     height: 353
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    y: 725
+    width: 1478
+    height: 293
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -384,20 +419,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Abilities/Lizz
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Abilities/Lizz
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Mark\Documents\GitHub\Team-Jammin-306-Project\Team-Jammin-306-Project\Team-Jammin-306-Project\Jammin's
-    Amazing Game
+  m_LastProjectPath: C:\Users\Austo\Desktop\306 Group Project\trunk\Jammin's Amazing
+    Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: fc320000
     m_LastClickedID: 13052
     m_ExpandedIDs: 00000000fc3200000a330000303400006a340000d83400002e350000b83500008636000000ca9a3b
@@ -412,20 +448,25 @@ MonoBehaviour:
 >>>>>>> parent of 6826a91... Updated abilities
 =======
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    m_SelectedIDs: 280c0000
+    m_LastClickedID: 3112
+    m_ExpandedIDs: 00000000b4090000ce090000340b0000720b0000fc0b0000620c0000200d00001830000000ca9a3b
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: AI
+      m_OriginalName: AI
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 2688
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -441,6 +482,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fc3200000a330000303400006a340000d83400002e350000b835000086360000
 =======
     m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000380d000026300000
@@ -448,6 +490,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000ba090000d4090000620a00003e0b00007c0b0000380d000026300000
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    m_ExpandedIDs: 00000000b4090000ce0900005c0a0000fc0b000018300000
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -474,8 +519,13 @@ MonoBehaviour:
   m_ListAreaState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 4c360000
     m_LastClickedInstanceID: 13900
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000942f0000062d000096330000420c000020300000880b0000
 =======
@@ -574,10 +624,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 433
-    height: 613
+    height: 612
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 4c360000
     m_LastClickedID: 13900
     m_ExpandedIDs: aef0ffff00000000
@@ -598,6 +649,11 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: e6fbffff00000000
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    m_SelectedIDs: 120d0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,6 +702,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1041
+<<<<<<< HEAD
     height: 613
 =======
     width: 1148
@@ -655,6 +712,9 @@ MonoBehaviour:
     width: 1148
     height: 576
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    height: 612
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 3798.135634304156
@@ -735,6 +795,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1041
+<<<<<<< HEAD
     height: 613
 =======
     width: 1129
@@ -744,6 +805,9 @@ MonoBehaviour:
     width: 1129
     height: 552
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    height: 612
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -759,6 +823,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     m_HBaseRangeMin: -520.5
     m_HBaseRangeMax: 520.5
+<<<<<<< HEAD
     m_VBaseRangeMin: -298
     m_VBaseRangeMax: 298
 =======
@@ -772,6 +837,10 @@ MonoBehaviour:
 >>>>>>> parent of 6826a91... Updated abilities
 =======
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    m_VBaseRangeMin: -297.5
+    m_VBaseRangeMax: 297.5
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -780,7 +849,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -792,8 +861,9 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
       width: 1041
-      height: 596
+      height: 595
     m_Scale: {x: 1, y: 1}
+<<<<<<< HEAD
     m_Translation: {x: 520.5, y: 298}
 =======
 =======
@@ -806,6 +876,9 @@ MonoBehaviour:
 >>>>>>> parent of 6826a91... Updated abilities
 =======
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    m_Translation: {x: 520.5, y: 297.5}
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -815,8 +888,9 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
       x: -520.5
-      y: -298
+      y: -297.5
       width: 1041
+<<<<<<< HEAD
       height: 596
 =======
 =======
@@ -829,10 +903,14 @@ MonoBehaviour:
 >>>>>>> parent of 6826a91... Updated abilities
 =======
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+      height: 595
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1041, y: 613}
@@ -842,6 +920,9 @@ MonoBehaviour:
 =======
   m_LastWindowPixelSize: {x: 1129, y: 552}
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+  m_LastWindowPixelSize: {x: 1041, y: 612}
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000100
@@ -869,6 +950,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 726
     width: 1478
     height: 292
@@ -882,4 +964,9 @@ MonoBehaviour:
     width: 1529
     height: 369
 >>>>>>> parent of 6826a91... Updated abilities
+=======
+    y: 725
+    width: 1480
+    height: 293
+>>>>>>> parent of 1f12fb3... Minor Change to Custom Network
   m_PersistentViewDataDictionary: {fileID: 0}
