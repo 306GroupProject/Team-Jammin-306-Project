@@ -6,6 +6,8 @@ using UnityEngine;
 public class ai : NetworkBehaviour {
 	[SerializeField]
 	private GameObject [] playerPosition; 
+	//[SerializeField]
+//	private SyncListStruct [] playerPosition ;
 	private int playerSpotted = -1; 
 	private float aiSavedSpeed; 
 	private Animator anim;
@@ -32,7 +34,9 @@ public class ai : NetworkBehaviour {
 	 * return: Nothing
 	 */
 	public void OnCollisionEnter2D(Collision2D collision){
-		
+
+
+
 		if (collision.gameObject.tag == "Player1") { // check to see which player collided with the melee AI.
 			
 			playerPosition [0].GetComponent<playerHealth> ().Damage (aiDmg);
@@ -116,7 +120,12 @@ public class ai : NetworkBehaviour {
 	 * return: True if enemy is spotted or false if enemy is not spotted. 
 	 */ 
 	public bool enemySpotted(){
-		
+		if (!isServer) {
+			return false; 
+
+		}
+
+
 		// is enemySpotted this is our first decision!
 		
 		if (playerPosition [0] != null) { 		// check to see if this player is active.
@@ -199,10 +208,14 @@ public class ai : NetworkBehaviour {
 	 * returns: Nothing
 	 */ 
 	public void Movement(){
-		aiMovementSpeed = aiSavedSpeed; 
-		// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
-		this.transform.position = Vector2.MoveTowards(this.transform.position, playerPosition[playerSpotted].transform.position, aiMovementSpeed * Time.deltaTime); 
+
+		if (isServer) {
 		
+			aiMovementSpeed = aiSavedSpeed; 
+			// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
+			this.transform.position = Vector2.MoveTowards (this.transform.position, playerPosition [playerSpotted].transform.position, aiMovementSpeed * Time.deltaTime); 
+		
+		}
 		//if (Mathf.Abs(rb.velocity.x) > 0.1 || Mathf.Abs(rb.velocity.y) > 0.1) // if the enemy is moving, animate it walking
 		//{
 		//	anim.SetBool("IsMoving", true);
@@ -223,8 +236,10 @@ public class ai : NetworkBehaviour {
 	 * returns: Nothing
 	 */
 	public void idle(){
-		
-		this.aiMovementSpeed = 0f; 
+		if (isServer) {
+			this.aiMovementSpeed = 0f;
+
+		}
 	}
 	
 	

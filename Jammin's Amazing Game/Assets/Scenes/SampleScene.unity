@@ -1404,7 +1404,6 @@ MonoBehaviour:
   - {fileID: 1444966039895746, guid: 5cde4ac0af2926842b471a4422c589ab, type: 2}
   - {fileID: 1298046741503160, guid: e646f81d855cf9e4a984eda412865877, type: 2}
   - {fileID: 1506721537851016, guid: 0750e5fc75ef06f4fb86cec484a020dd, type: 2}
-  players: []
 --- !u!4 &1726435845
 Transform:
   m_ObjectHideFlags: 0

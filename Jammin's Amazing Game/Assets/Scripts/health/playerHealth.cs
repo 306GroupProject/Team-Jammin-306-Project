@@ -10,12 +10,30 @@ public class playerHealth : NetworkBehaviour {
 	public const int maxHealth = 16; 
 
 
-	[SyncVar] public int playerHP = maxHealth; //the players current health.
+	[SyncVar(hook = "changeHealth")] public int playerHP = maxHealth; //the players current health.
 
-	private bool isDead = false;
+	[SyncVar(hook = "changeIsDead")]private bool isDead = false;
 	private float speedStorage;
+	[SyncVar]private float Timer; 
     private Animator anim;
-	
+
+
+//-------------------[[Hooks]]---------------------------------//
+
+	// hooks allow us to attach a function to a vriable it ensures that the values inside the varibles get updated 
+	// when something happens over the Network.
+	public void changeHealth(int health){
+		this.GetComponentsInChildren<Text> () [0].text = this.gameObject.name + " HP: " + health;
+		
+	}
+
+
+	public void changeIsDead(bool isDead){
+
+		this.isDead = isDead; 
+	}
+
+
 	
 	/**
 	 * Damage(dmg): 
@@ -43,36 +61,16 @@ public class playerHealth : NetworkBehaviour {
 
 		//if (isLocalPlayer) {
 			// update the text on the health.
-			this.GetComponentsInChildren<Text> () [0].text = this.gameObject.name + " HP: " + playerHP; // update the health bar/Text when damage is done.
 		//}
 
 
 		if (playerHP <= 0) {
 
 			isDead = true;  
-			death();  // if dead then death function is called.
-		}
-		
-	}
-	
-	/**
-	 * death(): basic death script will set the players movement speed to 0. We will need a death animation later as well.
-	 * For now player can respawn by hitting "R", Once we get spells, we can change it to use healing spells.
-	 * 
-	 * param: None
-	 * return: None
-	 */
-	public void death(){
-		
-		if (isDead == true) {
-			
+			Timer = 2f; 
 			this.GetComponent<PlayerManager>().speed = 0; 
 			print ("you are dead, hit 'R' to respawn..."); 
-
-			// We need to put a death animation in here. For future programming.
-				
 		}
-
 		
 	}
 
@@ -87,19 +85,39 @@ public class playerHealth : NetworkBehaviour {
 	 * 
 	 * 
 	 */ 
+
+	//[ClientRpc]
 	public void respawn(){
-
-		if (isDead == true) {
-
-			if(Input.GetKeyDown(KeyCode.R)){
-				playerHP = 1; // give them a little bit of health and restore speed
-				this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
-				this.GetComponentsInChildren<Text>()[0].text = this.gameObject.name + " Hp: "  + playerHP; 
-				// change animation from dead back to alive!
+		if (!isServer) {
+		
+			return; 
+		}
+		if (Timer != 0) {
+			
+			Timer -= Time.deltaTime;
+			
+			if (Timer <= 0) {
+				
+				Timer = 0;
 			}
 
-		
+		} else { 
+			if (isDead == true) {
+				
+				this.GetComponent<PlayerManager> ().speed = speedStorage;  // restore speed of player.
+
+				playerHP = 1; 
+					
+			
+				isDead = false; 
+
+				// change animation from dead back to alive!
+				
+			}
 		}
+
+
+
 	
 	}
 	// Use this for initialization
@@ -115,8 +133,10 @@ public class playerHealth : NetworkBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-		respawn (); 
+
+		respawn();
+	
+
 
 	}
 }

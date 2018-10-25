@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class PlayerManager : NetworkBehaviour {
 
-    [SerializeField] public float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
+    [SyncVar (hook = "changeSpeed")] public float speed = 20.0f; // use to calculate how much force to be added. If player slips a lot, modify linear drag in RB toolbar
     private Rigidbody2D rb; // Get the RigidBody Component of our player to access mass and force
     private Animator anim;
 
@@ -28,7 +28,11 @@ public class PlayerManager : NetworkBehaviour {
 
 
 
+	public void changeSpeed(float speed){
 
+		this.speed = speed; 
+
+	}
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
@@ -101,6 +105,7 @@ public class PlayerManager : NetworkBehaviour {
             CmdAttack();
             canAttack = Time.time + attackRate;
         }
+		
 
     }
    
