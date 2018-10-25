@@ -322,6 +322,9 @@ MonoBehaviour:
   teleportCooldown: 3
   teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
     type: 2}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 65536
 --- !u!114 &114833269435320528
 MonoBehaviour:
   m_ObjectHideFlags: 1

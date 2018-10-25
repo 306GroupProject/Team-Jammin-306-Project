@@ -23,12 +23,9 @@ public class PlayerManager : NetworkBehaviour {
     private Vector2 point; // the point where the mouse is clicked for a teleport
     private Transform playerTransform; // the player's position
     public GameObject teleportParticles;
+    public LayerMask wallMask; // a masking layer for walls that the player CANNOT teleport through
 
-
-
-
-
-	public void changeSpeed(float speed){
+    public void changeSpeed(float speed){
 
 		this.speed = speed; 
 
@@ -52,15 +49,25 @@ public class PlayerManager : NetworkBehaviour {
     {
         // if the player Right Clicks, teleport them to where they clicked.
         if(Input.GetMouseButtonDown(1))
-        { 
-            if(timeSinceTeleport <= Time.time)
+        {
+            Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, wallMask);
+            if(!hit) // if there isn't a wall (gameObject with the tag "Wall") in the way, teleport if the cooldown is over
             {
-                Instantiate(teleportParticles, transform.position, Quaternion.identity);
-                point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                // Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                playerTransform.transform.position = point;
-                timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
-            } 
+                if (timeSinceTeleport <= Time.time)
+                {
+                    //cooldownScript.TeleportBlocked(false);
+                    Instantiate(teleportParticles, transform.position, Quaternion.identity);
+                    point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    playerTransform.transform.position = point;
+                    timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
+                }
+            }
+            else
+            {
+               //cooldownScript.TeleportBlocked(true);
+            }
+            
         }
     }
 
