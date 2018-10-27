@@ -15,7 +15,7 @@ public class CustomNetwork : NetworkManager {
     private GameObject[] prefabs; // A list containing all playable character prefabs
     private static int chosenPlayer = 0; // Players 1 - 4. Pick a character! There are buttons in UI for these
 
-	[SerializeField] private playerStorage yeet; 
+	GameObject currentPrefabSpawning; // this is the current Prefab which is being spawned into the Server!
 
     /**
      * Once the client start, this method registers all the player
@@ -29,12 +29,6 @@ public class CustomNetwork : NetworkManager {
     }
 
 
-
-	public override void OnStartServer(){
-		
-		yeet = new playerStorage (4); 
-	
-	}
 
 
     /**
@@ -87,16 +81,17 @@ public class CustomNetwork : NetworkManager {
         // Add the player, and spawn it!
         NetworkServer.AddPlayerForConnection(conn, playerFab, playerControllerId);
         NetworkServer.Spawn(playerFab);
-        yeet.storePlayers (playerFab, message.classIndex); 
+		currentPrefabSpawning = playerFab;
+		 
 
     }
 
-	public playerStorage returnPlayers(){
+	public GameObject returnCurrentPrefab(){
 
-
-		return yeet; 
+		return currentPrefabSpawning;
 
 	}
+
 
     /**
      * Test Gui buttons for character select. Subject to change 

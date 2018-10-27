@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/aiTesting.unity
     guid: 42332906342715640a70c2155b805551
-  - enabled: 1
-    path: Assets/Scenes/Levels.unity
+  - enabled: 0
+    path: Assets/Scenes/Level1.unity
     guid: 790baf10b583e84499d512cb0d0873e2
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 67184a6c531a41a479416427e6c0c06a
   m_configObjects: {}

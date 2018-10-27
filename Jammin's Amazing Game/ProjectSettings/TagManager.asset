@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - Boulder
   - Fireball
+  - assitantNet
   layers:
   - Default
   - TransparentFX

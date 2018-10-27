@@ -4,24 +4,16 @@ using UnityEngine.Networking;
 using UnityEngine;
 
 public class ai : NetworkBehaviour {
-	[SerializeField]
-	private GameObject [] playerPosition; 
-	//[SerializeField]
-//	private SyncListStruct [] playerPosition ;
-	private int playerSpotted = -1; 
-	private float aiSavedSpeed; 
-	private Animator anim;
-
-	[SerializeField]
-	private playerStorage playerstore; 
-
-	private int plyerDmg; 
+	private int playerSpotted = -1;  // this is the current target that our AI as spotted!
+	private float aiSavedSpeed; 	// the speed in which was given to the AI prefab!
+	private Animator anim;			// the animation to be played by the AI.
+	private int plyerDmg; 			// the damage that players deal to the AI.
 	//----------------------[[private and public]]-----------------------------------------------------//
 	
 	public float aiMovementSpeed = 0;  // aiMovement will need to be set in unity. 
 	public int aiDmg = 0; 		// aiDmg, will need to be set in unity
 	public decisionTree rootOfTree;  // reference to Decision Tree, which points at root.
-	public float timer = 0; 
+	public GameObject plyController; //THIS runs the entire script below. it accesses a SyncList. Check out the NetworkAssitant function, it explains it better.
 	
 	
 	
@@ -39,24 +31,28 @@ public class ai : NetworkBehaviour {
 
 		if (collision.gameObject.tag == "Player1") { // check to see which player collided with the melee AI.
 			
-			playerPosition [0].GetComponent<playerHealth> ().Damage (aiDmg);
-			
+			plyController.GetComponent<netWorkAssitant>().playerManager[0].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+
 		} 
 		
 		if (collision.gameObject.tag == "Player2") {
-			
-			playerPosition [1].GetComponent<playerHealth> ().Damage (aiDmg);
+		
+			plyController.GetComponent<netWorkAssitant>().playerManager[1].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+
 			
 		} 
 		
 		if (collision.gameObject.tag == "Player3") {
-			
-			playerPosition [2].GetComponent<playerHealth> ().Damage (aiDmg);
+		
+			plyController.GetComponent<netWorkAssitant>().playerManager[2].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+
 		}
 		
 		if (collision.gameObject.tag == "Player4") {
-			
-			playerPosition [3].GetComponent<playerHealth> ().Damage (aiDmg);
+
+
+			plyController.GetComponent<netWorkAssitant>().playerManager[3].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+
 			
 		}
 		
@@ -83,29 +79,7 @@ public class ai : NetworkBehaviour {
 		}
 		
 	}
-	
-	
-	/**
-	 * initPlayerPos(): 
-	 * Initializes all the current players in the game. This allows the AI to be able to make decisions based
-	 * on how many players are on the current Scene. This would need to be called regually maybe every other second
-	 * just so we can keep up-to-date on all the players. Some might join, some might leave etc.
-	 * 
-	 * returns: Nothing
-	 * 
-	 */ 
-	public void initPlayerPos(){
-		if (this.playerstore.players.Length == 0) {
-			
-			return;
-			
-		} else {
-			
-			this.playerPosition = this.playerstore.returnPlayers(); 
-			timer = 2f;
-		}
-	}
-	
+
 	
 	//------------[[Decisions: Boolean]]------------------//
 	
@@ -119,84 +93,118 @@ public class ai : NetworkBehaviour {
 	 * 
 	 * return: True if enemy is spotted or false if enemy is not spotted. 
 	 */ 
-	public bool enemySpotted(){
+	public bool ply2Spotted(){
 		if (!isServer) {
 			return false; 
 
 		}
 
+		if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 1) {
+			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject;
 
-		// is enemySpotted this is our first decision!
-		
-		if (playerPosition [0] != null) { 		// check to see if this player is active.
-			// if so then lets get their distance.
-			if (Vector2.Distance (this.transform.position, playerPosition [0].transform.position) < 10f) {
+			if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f) {
 				
-				anim.SetBool ("IsMoving", true); // return true if player is spotted, store in a variable which player is spotted.
-				playerSpotted = 0; 
-				
+				this.playerSpotted = 0; 
 				return true;
 				
 			} else {
-				// else this player was not spotted, return false. All players below are setup same way as this one.
-				anim.SetBool ("IsMoving", false);
+				
 				return false;
-				
 			}
+
+		} else if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 2) {
+
+			GameObject ply1 = plyController.GetComponent<netWorkAssitant> ().playerManager [1].ply.gameObject;
+			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject;
+
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f) {
+
+				this.playerSpotted = 1; 
+				return true;
+
+		
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f) {
+
+				this.playerSpotted = 0; 
+				return true;
+
+			} else {
+
+				return false;
+			}
+
+		} else if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 3) {
+			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject;
+			GameObject ply1 = plyController.GetComponent<netWorkAssitant> ().playerManager [1].ply.gameObject;
+			GameObject ply2 = plyController.GetComponent<netWorkAssitant> ().playerManager [2].ply.gameObject;
+
 			
-		} else if (playerPosition [1] != null) {
-			
-			if (Vector2.Distance (this.transform.position, playerPosition [1].transform.position) < 10f) {
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f) {
 				
-				anim.SetBool ("IsMoving", true);
+				this.playerSpotted = 1; 
+				return true;
 				
-				playerSpotted = 1; 
 				
-				return true; 
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f) {
 				
+				this.playerSpotted = 0; 
+				return true;
+				
+			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f) {
+				
+				this.playerSpotted = 2; 
+				return true;
+
 			} else {
 				
-				anim.SetBool ("IsMoving", false);
 				return false;
 			}
-			
-		} else if (playerPosition [2] != null) {
-			
-			if (Vector2.Distance (this.transform.position, playerPosition [2].transform.position) < 10f) {
+
+
+
+
+		} else if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 4) {
+			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject;
+			GameObject ply1 = plyController.GetComponent<netWorkAssitant> ().playerManager [1].ply.gameObject;
+			GameObject ply2 = plyController.GetComponent<netWorkAssitant> ().playerManager [2].ply.gameObject;
+			GameObject ply3 = plyController.GetComponent<netWorkAssitant> ().playerManager [3].ply.gameObject;
+
+
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
 				
-				anim.SetBool ("IsMoving", true);
-				playerSpotted = 2; 
+				this.playerSpotted = 1; 
+				return true;
+				
+				
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
+				
+				this.playerSpotted = 0; 
+				return true;
+				
+			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
+				
+				this.playerSpotted = 2; 
+				return true;
+				
+			} else if (Vector2.Distance (this.transform.position, ply3.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f ){ 
+			
+				this.playerSpotted = 3;
 				return true; 
-				
+
 			} else {
-				
-				anim.SetBool ("IsMoving", false);
+			
 				return false;
 			}
-			
-		} else if (playerPosition [3] != null) {
-			
-			if (Vector2.Distance (this.transform.position, playerPosition [3].transform.position) < 10f) {
-				
-				anim.SetBool ("IsMoving", true);
-				playerSpotted = 3; 
-				return true; 
-				
-			} else {
-				
-				anim.SetBool ("IsMoving", false);
-				return false;
-			}
-			
-		} else {
-			
-			
-			return false; 
+
+
+
+		
 		}
+
+
+		return false; 
 		
-		
-		
-		
+
 	}
 	
 	//-----------[[Actions: Void ]]-----------//
@@ -209,23 +217,13 @@ public class ai : NetworkBehaviour {
 	 */ 
 	public void Movement(){
 
-		if (isServer) {
-		
+		if (this.playerSpotted != -1) {
+
 			aiMovementSpeed = aiSavedSpeed; 
 			// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
-			this.transform.position = Vector2.MoveTowards (this.transform.position, playerPosition [playerSpotted].transform.position, aiMovementSpeed * Time.deltaTime); 
-		
+			this.transform.position = Vector2.MoveTowards (this.transform.position, plyController.GetComponent<netWorkAssitant> ().playerManager [this.playerSpotted].ply.gameObject.transform.position, aiMovementSpeed * Time.deltaTime); 
 		}
-		//if (Mathf.Abs(rb.velocity.x) > 0.1 || Mathf.Abs(rb.velocity.y) > 0.1) // if the enemy is moving, animate it walking
-		//{
-		//	anim.SetBool("IsMoving", true);
-		//}
-		//else
-		//{
-		//	anim.SetBool("IsMoving", false);
-		//}
-		
-		
+
 	}
 	
 	
@@ -259,7 +257,7 @@ public class ai : NetworkBehaviour {
 	public void buildDecisionTree(){
 		
 		decisionTree inRangeNode = new decisionTree ();  // create the root of our tree.
-		inRangeNode.buildDecision(enemySpotted);  		// the root of this tree is a Decision it is if the enemy is spotted or not.
+		inRangeNode.buildDecision(ply2Spotted);  		// the root of this tree is a Decision it is if the enemy is spotted or not.
 		
 		decisionTree MoveTowardsEnemy = new decisionTree (); //the second node is a action.
 		MoveTowardsEnemy.buildAction(Movement);				// assign the node to a action within the Tree.
@@ -281,37 +279,17 @@ public class ai : NetworkBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
 		plyerDmg = 4; 
 		buildDecisionTree ();
-		//	rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		GameObject networkManager  =  GameObject.FindGameObjectWithTag("networkManager");
-		playerstore = networkManager.GetComponent<CustomNetwork> ().returnPlayers (); 
-		
+		plyController = GameObject.FindGameObjectWithTag("assitantNet");
 		aiSavedSpeed = aiMovementSpeed; 
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		if (timer != 0) {
-			
-			timer -= Time.deltaTime;
-			
-			if (timer <= 0) {
-				
-				timer = 0; 
-			}
-		}
-		
-		
-		if (timer == 0) {
-			
-			this.initPlayerPos (); 
-			
-		}
-		
 		
 		
 		rootOfTree.search ();  // search for our choice to do. ie update
