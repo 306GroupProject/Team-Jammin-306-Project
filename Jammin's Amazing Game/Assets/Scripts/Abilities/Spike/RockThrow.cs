@@ -31,6 +31,7 @@ public class RockThrow : Abilities {
         // Spawns in a boulder, syncronized accross network!
         GameObject rock = Instantiate(this.projectile, playerTransform, Quaternion.identity);
         Vector2 direction = (mouseTransform - playerTransform).normalized;
+        rock.GetComponent<Splatter>().trans = direction;
         Rigidbody2D rockRb = rock.GetComponent<Rigidbody2D>();
         rockRb.AddForce(direction * this.velocity);
         rockRb.AddTorque(100);

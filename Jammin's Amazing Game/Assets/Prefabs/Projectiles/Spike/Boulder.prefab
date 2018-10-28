@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114130929077229290}
   - component: {fileID: 50557685773282980}
   - component: {fileID: 114970991226426650}
-  m_Layer: 13
+  m_Layer: 17
   m_Name: Boulder
   m_TagString: Boulder
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253025402657162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.91, y: 0, z: 0}
+  m_LocalPosition: {x: -3.91, y: 0, z: -0.5}
   m_LocalScale: {x: 0.38930285, y: 0.38930285, z: 0.38930285}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,6 +95,8 @@ MonoBehaviour:
   airtime: 3
   splashRate: 5
   pebble: {fileID: 1452411878856366, guid: bcbbc57cc7d315b43af8667340541d98, type: 2}
+  trans: {x: 0, y: 0}
+  meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
 --- !u!114 &114827578643750496
 MonoBehaviour:
   m_ObjectHideFlags: 1

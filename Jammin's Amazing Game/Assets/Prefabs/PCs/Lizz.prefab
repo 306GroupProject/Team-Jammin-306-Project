@@ -292,10 +292,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Fireball
   description: Shoots a fast ball of fire
-  velocity: 4000
+  velocity: 500
   manaCost: 0
   cooldown: 2
   projectile: {fileID: 1630083490540194, guid: 60150678e296a6340912f6a96dfd52db, type: 2}
+  airTime: 10
 --- !u!114 &114799641183127640
 MonoBehaviour:
   m_ObjectHideFlags: 1

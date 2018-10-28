@@ -12,9 +12,9 @@ public abstract class Abilities : NetworkBehaviour {
 
     public string skillName;    
     public string description; // Skill Description
-    public float velocity;     // How fast to throw some projectile at enemy
-    public float manaCost;      
-    public float cooldown;
+    [SyncVar] public float velocity;     // How fast to throw some projectile at enemy
+    [SyncVar] public float manaCost;      
+    [SyncVar] public float cooldown;
     public GameObject projectile;
 
     /**

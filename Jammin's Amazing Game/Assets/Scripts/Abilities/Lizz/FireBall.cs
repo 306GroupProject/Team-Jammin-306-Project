@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 /**
@@ -8,7 +6,7 @@ using UnityEngine;
  */
 public class FireBall : Abilities
 {
-
+    public float airTime = 1.0f;
     private float canAttack;
     GameObject fireball;
 
@@ -41,23 +39,12 @@ public class FireBall : Abilities
 
         fireball = Instantiate(this.projectile, playerTransform, Quaternion.Euler(new Vector3(0f, 0f, angle)));
         Vector2 direction = (mouseTransform - playerTransform).normalized;
-        Rigidbody2D fireballRb = fireball.GetComponent<Rigidbody2D>();
-        fireballRb.AddForce(direction * this.velocity);
-        fireball.gameObject.tag = "basicAttack";
+   
+        fireball.GetComponent<Rigidbody2D>().AddForce(direction * this.velocity);
 
-        Destroy(fireball, 0.5f);
-
-
+        Destroy(fireball, airTime);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Destroy(fireball);
-        }
-
-    }
 
     private float AngleMath(Vector2 player, Vector2 mouse)
     {
