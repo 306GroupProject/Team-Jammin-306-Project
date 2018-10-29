@@ -146,7 +146,7 @@ MonoBehaviour:
   damage: 4
   meteorFragments: {fileID: 1775679875289528, guid: af9b6761e0a4d7b45aa86979bc687a2f,
     type: 2}
-  spreadRate: 4
+  spreadRate: 2
   fragForce: 300
 --- !u!114 &114297456088268274
 MonoBehaviour:

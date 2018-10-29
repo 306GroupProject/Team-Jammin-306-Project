@@ -26,9 +26,9 @@ GameObject:
   - component: {fileID: 50555084413364234}
   - component: {fileID: 58672980548396940}
   - component: {fileID: 114765716470614174}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Fragments
-  m_TagString: Untagged
+  m_TagString: FireFrags
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fcecb526298b8a4eb32c1e4b92ada64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airTime: 3
+  airTime: 100
   damage: 2
 --- !u!114 &114890014314017600
 MonoBehaviour:

@@ -8,12 +8,22 @@ public class Pebble : NetworkBehaviour {
 
     public float airTime = 3.0f;
     public int damage = 1;
+    public GameObject fireFragments;
+    Vector2[] crossPositions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
+    public float fireFragVelocity = 2000.0f;
 
     public void Update() {
         Destroy(this.gameObject, airTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "FireFrags") {
+            foreach (Vector2 pos in crossPositions) {
+                GameObject frag = Instantiate(fireFragments, transform.position, Quaternion.identity);
+                frag.GetComponent<Rigidbody2D>().AddForce(pos * fireFragVelocity);
+            }
+        }
+
         collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
         Destroy(this.gameObject);
     }
