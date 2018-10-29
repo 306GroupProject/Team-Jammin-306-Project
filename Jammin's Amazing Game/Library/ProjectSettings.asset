@@ -615,12 +615,12 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 8f864dda-b5f7-4c6a-bdab-4f66d57ce3e7
-  projectName: Jammin's Amazing Game (1)
+  cloudProjectId: 3706c0f9-8ac1-40b7-a657-1172f3430db7
+  projectName: Jammin's Amazing Game
   organizationId: markcantuba
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

@@ -6,22 +6,31 @@ using UnityEngine.Networking;
  * after being casted 
  */
 public class Splatter : NetworkBehaviour {
-    public int damage = 4;
+
+    [SyncVar] public int damage = 4;
     public float airtime;
     public int splashRate;
     public GameObject pebble;
     [HideInInspector] public Vector2 trans;
     [SerializeField] GameObject meteor;
-    Vector2[] randomDirection = {Vector2.up, Vector2.left, Vector2.right, Vector2.down};
-    
     float startTime;
+    Vector2[] positions = { Vector2.left, Vector2.right, Vector2.up, Vector2.down};
+    float[] rotations = { 90.0f, -90.0f, 0.0f, 180.0f };
+    [SyncVar] int random;
 
+    /*
+     * Awake starts our timer for destroying projectile mid-air
+     */
     private void Awake() {
         startTime = Time.time;
     }
 
+    /*
+     * Update keeps track of our boulder's airtime. If it is destroyed mid air, spawn
+     * mini-projectiles that deals small damage to enemies.
+     */ 
     public void Update() {
-
+        random = Random.Range(0, 2);
         // Destroy the casted rock throw after X amount of seconds.
         if (Time.time - startTime > airtime) {
             // Loops that spawns out the projectiles after being destroyed mid-air.
@@ -33,15 +42,24 @@ public class Splatter : NetworkBehaviour {
         }
     }
 
+    /*
+     * Collision detector
+     */ 
     public void OnCollisionEnter2D(Collision2D collision) {
         // Don't spawn in pebbles if collides with a fireball. Will summon meteors!
         if (collision.gameObject.tag == "Fireball") {
-            GameObject fire = Instantiate(meteor, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-             
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = mousePos - collision.transform.position;
-            fire.GetComponent<Rigidbody2D>().AddForce(direction.normalized * fire.GetComponent<Meteor>().velocity);
-     
+
+            Vector2 spawnMeteorPoint = collision.gameObject.transform.position;  
+
+            // Spawns 4 meteors in cross-shaped pattern with             
+            for (int i = 0; i < 4; i++) {
+                Vector2 direction = positions[i];
+                Quaternion rotation = Quaternion.Euler(new Vector3(0,0,rotations[i]));
+                GameObject fire = Instantiate(meteor, spawnMeteorPoint, rotation);
+                fire.GetComponent<Rigidbody2D>().AddForce(direction.normalized * fire.GetComponent<Meteor>().velocity);
+                meteor.GetComponent<Meteor>().damage = this.damage;
+            }
+
         } else {
             // Sends damage message to the object rock collided with
             collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
@@ -54,7 +72,7 @@ public class Splatter : NetworkBehaviour {
         NetworkServer.Destroy(this.gameObject);
     }
 
-
+    
 
 
 }

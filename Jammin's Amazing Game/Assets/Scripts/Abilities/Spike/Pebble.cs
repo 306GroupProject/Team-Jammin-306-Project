@@ -8,16 +8,9 @@ public class Pebble : NetworkBehaviour {
 
     public float airTime = 3.0f;
     public int damage = 1;
-    float startTime;
-
-    public void Awake() {
-        startTime = Time.time;
-    }
 
     public void Update() {
-        if (Time.time - startTime > airTime) {
-            Destroy(this.gameObject);
-        }
+        Destroy(this.gameObject, airTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
