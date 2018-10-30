@@ -16,6 +16,7 @@ public class RockThrow : Abilities {
         // Only allow local player to cast, so that other players doesn't cast this ability as well
         if (isLocalPlayer) {
             if (Input.GetKeyDown(KeyCode.Alpha1) && Time.time > canAttack) {
+                
                 CmdCast(transform.position, (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 canAttack = Time.time + cooldown;
             }
@@ -28,8 +29,12 @@ public class RockThrow : Abilities {
     }
 
     public override void RpcCast(Vector2 playerTransform, Vector2 mouseTransform) {
+        if (!isClient) {
+            return;
+        }
         // Spawns in a boulder, syncronized accross network!
         GameObject rock = Instantiate(this.projectile, playerTransform, Quaternion.identity);
+
         Vector2 direction = (mouseTransform - playerTransform).normalized;
         rock.GetComponent<Splatter>().trans = direction;
         Rigidbody2D rockRb = rock.GetComponent<Rigidbody2D>();

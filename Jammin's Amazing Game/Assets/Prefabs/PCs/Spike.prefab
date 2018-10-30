@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Rock Throw
   description: Hurl a Boulder that causes direct and splash damage
-  velocity: 500
+  velocity: 1500
   manaCost: 0
   cooldown: 3
   projectile: {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}

@@ -8,15 +8,25 @@ using UnityEngine.Networking;
 public class Splatter : NetworkBehaviour {
 
     [SyncVar] public int damage = 4;
+
     public float airtime;
     public int splashRate;
     public GameObject pebble;
+
     [HideInInspector] public Vector2 trans;
     [SerializeField] GameObject meteor;
+
     float startTime;
     Vector2[] positions = { Vector2.left, Vector2.right, Vector2.up, Vector2.down};
     float[] rotations = { 90.0f, -90.0f, 0.0f, 180.0f };
-    [SyncVar] int random;
+
+    // Trajectory directions
+    static Vector2 diagLeft = new Vector2(-Mathf.Sqrt(2) / 2, Mathf.Sqrt(2) / 2);
+    static Vector2 diagRight = new Vector2(Mathf.Sqrt(2) / 2, -Mathf.Sqrt(2) / 2);
+    static Vector2 diagDLeft = new Vector2(-Mathf.Sqrt(2) / 2, -Mathf.Sqrt(2) / 2);
+    static Vector2 diagDRight = new Vector2(Mathf.Sqrt(2) / 2, Mathf.Sqrt(2) / 2);
+
+    Vector2[] crossPositions = { Vector2.up, diagLeft, Vector2.left, diagDLeft, Vector2.down, diagRight, Vector2.right, diagDRight };
 
     /*
      * Awake starts our timer for destroying projectile mid-air
@@ -30,14 +40,13 @@ public class Splatter : NetworkBehaviour {
      * mini-projectiles that deals small damage to enemies.
      */ 
     public void Update() {
-        random = Random.Range(0, 2);
         // Destroy the casted rock throw after X amount of seconds.
         if (Time.time - startTime > airtime) {
             // Loops that spawns out the projectiles after being destroyed mid-air.
-            for (int i = 0; i < splashRate; i++) {
-            GameObject pebbles = Instantiate(pebble, transform.position, Quaternion.identity);
-            pebbles.GetComponent<Pebble>().CmdCast(transform.position);
-        }
+            for (int i = 0; i < crossPositions.Length; i++) {
+                GameObject pebbles = Instantiate(pebble, transform.position, Quaternion.identity);
+                pebbles.GetComponent<Pebble>().CmdCast(transform.position, crossPositions[i], 500.0f);
+            }
             Destroy(this.gameObject);
         }
     }
@@ -60,13 +69,17 @@ public class Splatter : NetworkBehaviour {
                 meteor.GetComponent<Meteor>().damage = this.damage;
             }
 
+        } else if (collision.gameObject.tag == "Enemy") {
+            collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+
         } else {
             // Sends damage message to the object rock collided with
-            collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+            
             // Splash pebbles.
-            for (int i = 0; i < splashRate; i++) {
+            for (int i = 0; i < crossPositions.Length; i++) {
+
                 GameObject pebbles = Instantiate(pebble, transform.position, Quaternion.identity);
-                pebbles.GetComponent<Pebble>().CmdCast(transform.position);
+                pebbles.GetComponent<Pebble>().CmdCast(transform.position, crossPositions[i], 500.0f);
             }
         }
         NetworkServer.Destroy(this.gameObject);

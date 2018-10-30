@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1688056578352840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 11.66, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.67586, y: 0.67586, z: 0.67586}
   m_Children:
   - {fileID: 4774699483250376}
   m_Father: {fileID: 0}
@@ -142,12 +142,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 1500
-  airTime: 5
+  airTime: 1
   damage: 4
   meteorFragments: {fileID: 1775679875289528, guid: af9b6761e0a4d7b45aa86979bc687a2f,
     type: 2}
   spreadRate: 2
-  fragForce: 300
+  fragForce: 500
 --- !u!114 &114297456088268274
 MonoBehaviour:
   m_ObjectHideFlags: 1
