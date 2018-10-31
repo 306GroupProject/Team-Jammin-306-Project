@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 114431320160762012}
   - component: {fileID: 114004758318311376}
   - component: {fileID: 114783453200620264}
+  - component: {fileID: 114695395844197348}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2100163, y: -2.4893885, z: -12.3671875}
+  m_LocalPosition: {x: -23.142036, y: -16.862347, z: -12.3671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224569073953643352}
@@ -246,6 +247,18 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 65536
+  networkAssit: {fileID: 0}
+--- !u!114 &114695395844197348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114735366219495490
 MonoBehaviour:
   m_ObjectHideFlags: 1

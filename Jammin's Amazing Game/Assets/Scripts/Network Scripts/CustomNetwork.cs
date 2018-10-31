@@ -82,6 +82,7 @@ public class CustomNetwork : NetworkManager {
         NetworkServer.AddPlayerForConnection(conn, playerFab, playerControllerId);
         NetworkServer.Spawn(playerFab);
 		currentPrefabSpawning = playerFab;
+
 		 
 
     }

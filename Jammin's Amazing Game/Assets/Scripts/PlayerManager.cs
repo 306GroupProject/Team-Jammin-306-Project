@@ -25,6 +25,8 @@ public class PlayerManager : NetworkBehaviour {
     public GameObject teleportParticles;
     public LayerMask wallMask; // a masking layer for walls that the player CANNOT teleport through
 
+
+
     public void changeSpeed(float speed){
 
 		this.speed = speed; 
@@ -72,6 +74,7 @@ public class PlayerManager : NetworkBehaviour {
     }
 
     void FixedUpdate() {
+
 
         if (!this.GetComponent<NetworkIdentity>().isLocalPlayer) { // well allow me to control my player but not every other character in the scene.
             //playerCam.enabled = false;

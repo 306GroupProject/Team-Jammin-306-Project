@@ -14,7 +14,7 @@ public class playerHealth : NetworkBehaviour {
 	
 	[SyncVar(hook = "changeIsDead")]private bool isDead = false;
 	private float speedStorage;
-	[SyncVar]private float Timer; 
+	private float Timer; 
 	private Animator anim;
 	
 	

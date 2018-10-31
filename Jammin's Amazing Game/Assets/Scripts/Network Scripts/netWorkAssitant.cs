@@ -26,9 +26,10 @@ public class netWorkAssitant : NetworkBehaviour {
 	[SerializeField] private GameObject oldObject = null;
 	//private bool isPlayerManagerEmpty;  							// possibly for later!
 	private GameObject networkMan; 									// used to grab the current perfab from CustomNetwork.
+	private GameObject leftServer; 
 
 
-																	// I created a command to add players, ANY OTHER WAY will not work like how you expect. You need to do this or your SyncList will littearlly delete objects in the network manager.
+	// I created a command to add players, ANY OTHER WAY will not work like how you expect. You need to do this or your SyncList will littearlly delete objects in the network manager.
 	[Command]
 	public void CmdAddNewPlayer(GameObject ply, GameObject netWorkAssitant){
 
@@ -58,29 +59,44 @@ public class netWorkAssitant : NetworkBehaviour {
 	}
 
 		public override void OnStartClient() {
-
+		
 		networkMan = GameObject.FindGameObjectWithTag("networkManager"); // need to get the current PlayerPrefab!
 		//isPlayerManagerEmpty = true;
 
 		}
 
-	/* // This command will be added in later, once a player leaves, we will need to delete that player from the list to ensure no bugs come up!
+
+
 	[Command] 
-	public void CmdRemovePlayer(GameObject ply){
+	public void CmdRemovePlayer(string tag){
 
+		int counter = 0;
 
+		while(counter < playerManager.Count){
 
-	for(int counter = this.playerManager.Count - 1; counter >= 0; counter --){
+			if(playerManager[counter].ply.gameObject.tag == tag){
 
-		if(this.playerManager[counter].ply == null){
+				print ("Found player, removing the following index:" + counter); 
+				playerManager.RemoveAt(counter);
 
-				this.playerManager.rEM
+			}else{
+
+				print ("searching for player!");
 			}
+
+			counter ++; 
 		}
+
+	}
+
+
+	public void deleteOldPlayers(string tag){
+
+		CmdRemovePlayer (tag);
 
 
 	}
-*/ 
+ 
 	// build our current list
 	public void buildList(GameObject newPlayer){
 
@@ -98,18 +114,16 @@ public class netWorkAssitant : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
 		this.currentObject = networkMan.GetComponent<CustomNetwork> ().returnCurrentPrefab ();  // check the currentObject that is in the customScript network!
 
 		if (oldObject == null && currentObject != null) { // if this is the first prefab, then lets add it into the first cell.
-			print ("Frist place to vist!");
 			oldObject = currentObject; 
 			buildList(oldObject);
 
 		} else if (!oldObject.Equals (currentObject)) { // once we have the first prefab lets test against it until a new prefab is spawned in.
 
 			oldObject = currentObject; // ideally this will be the second player :)
-			print ("New player Joining!");
+
 			buildList(oldObject);  
 		}
 		

@@ -31,28 +31,71 @@ public class ai : NetworkBehaviour {
 
 		if (collision.gameObject.tag == "Player1") { // check to see which player collided with the melee AI.
 			
-			plyController.GetComponent<netWorkAssitant>().playerManager[0].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+			int counter = 0; 
+			
+			while(counter < plyController.GetComponent<netWorkAssitant>().playerManager.Count){
+				
+				if(plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.tag == "Player1"){
+					
+					plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+				}
+				
+				counter ++; 
+				
+			}
 
 		} 
 		
 		if (collision.gameObject.tag == "Player2") {
 		
-			plyController.GetComponent<netWorkAssitant>().playerManager[1].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+			int counter = 0; 
+			
+			while(counter < plyController.GetComponent<netWorkAssitant>().playerManager.Count){
+				
+				if(plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.tag == "Player2"){
+					
+					plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+				}
+				
+				counter ++; 
+				
+			}
 
 			
 		} 
 		
 		if (collision.gameObject.tag == "Player3") {
 		
-			plyController.GetComponent<netWorkAssitant>().playerManager[2].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+			int counter = 0; 
+
+			while(counter < plyController.GetComponent<netWorkAssitant>().playerManager.Count){
+
+				if(plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.tag == "Player3"){
+
+					plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+				}
+
+				counter ++; 
+
+			}
 
 		}
 		
 		if (collision.gameObject.tag == "Player4") {
 
 
-			plyController.GetComponent<netWorkAssitant>().playerManager[3].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
-
+			int counter = 0; 
+			
+			while(counter < plyController.GetComponent<netWorkAssitant>().playerManager.Count){
+				
+				if(plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.tag == "Player4"){
+					
+					plyController.GetComponent<netWorkAssitant>().playerManager[counter].ply.gameObject.GetComponent<playerHealth> ().Damage (aiDmg);
+				}
+				
+				counter ++; 
+				
+			}
 			
 		}
 		

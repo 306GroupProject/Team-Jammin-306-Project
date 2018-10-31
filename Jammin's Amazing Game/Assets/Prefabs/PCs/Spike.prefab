@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 114072013315003760}
   - component: {fileID: 114318244421875192}
   - component: {fileID: 114278106869560274}
+  - component: {fileID: 114130038237702000}
   m_Layer: 9
   m_Name: Spike
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444966039895746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.4821105, y: -16.596672, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224534096385657080}
@@ -180,6 +181,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: 
   playerName: 
+--- !u!114 &114130038237702000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444966039895746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114214754776171366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +354,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 65536
+  networkAssit: {fileID: 0}
 --- !u!114 &114773434047679066
 MonoBehaviour:
   m_ObjectHideFlags: 1
