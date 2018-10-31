@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 114619479684573588}
   - component: {fileID: 114552632658756570}
   - component: {fileID: 114251918408987614}
-  - component: {fileID: 114059804819346814}
+  - component: {fileID: 114958378556308328}
   m_Layer: 8
   m_Name: Finn
   m_TagString: Player
@@ -391,6 +391,24 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114958378556308328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155733998902128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70f3ace23c7dd4a90995f5aa6187ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportCooldown: 3
+  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
+    type: 2}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  teleportDistance: 10
 --- !u!212 &212357219113313598
 SpriteRenderer:
   m_ObjectHideFlags: 1
