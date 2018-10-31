@@ -26,10 +26,20 @@ public class netWorkAssitant : NetworkBehaviour {
 	[SerializeField] private GameObject oldObject = null;
 	//private bool isPlayerManagerEmpty;  							// possibly for later!
 	private GameObject networkMan; 									// used to grab the current perfab from CustomNetwork.
-	private GameObject leftServer; 
 
 
-	// I created a command to add players, ANY OTHER WAY will not work like how you expect. You need to do this or your SyncList will littearlly delete objects in the network manager.
+
+	/**
+	 * CmdAddNewPlayer(ply, networkAssitant):
+	 * Param: 	ply: GameObject, this is the player GameObject that is stored within the SyncList.
+	 * 			netWorkAssitant: this is the class itself, used to access the Structure in the Class.
+	 * 
+	 * A command that adds the playerGameObject to the SyncList, syncList will keep up-to-date all data stored in it and return info back to all users.
+	 * Use it with the build list function, its main purpose is to build within the netWorkAssitant class.
+	 * 
+	 * return: Nothing
+	 * 
+	 */ 
 	[Command]
 	public void CmdAddNewPlayer(GameObject ply, GameObject netWorkAssitant){
 
@@ -58,6 +68,7 @@ public class netWorkAssitant : NetworkBehaviour {
 		
 	}
 
+
 		public override void OnStartClient() {
 		
 		networkMan = GameObject.FindGameObjectWithTag("networkManager"); // need to get the current PlayerPrefab!
@@ -67,6 +78,15 @@ public class netWorkAssitant : NetworkBehaviour {
 
 
 
+	/**
+	 * CmdRemovePlayer(tag):
+	 * param:	tag: the tag of the player that is currently leaving the server.
+	 * 
+	 * 
+	 *  Removes the current player that left the server. Will check which player left and remove it so no errors pop up.
+	 * 
+	 * returns Nothing
+	 */ 
 	[Command] 
 	public void CmdRemovePlayer(string tag){
 
@@ -89,6 +109,16 @@ public class netWorkAssitant : NetworkBehaviour {
 
 	}
 
+	/**
+	 * deleteOldPlayers(tag)
+	 * 
+	 * param:	Tag: String, feed this string into cmdRemovePlayer
+	 * 
+	 * function which accesses CmdRemovePlayer.
+	 * 
+	 * returns: Nothing
+	 * 
+	 */ 
 
 	public void deleteOldPlayers(string tag){
 
@@ -97,7 +127,18 @@ public class netWorkAssitant : NetworkBehaviour {
 
 	}
  
-	// build our current list
+
+	/**
+	 * deleteOldPlayers(newPlayer)
+	 * 
+	 * param:	newPlayer: The gameObject that is wanted to be stored.
+	 * 
+	 * Function which accesses, CmdAddNewPlayer.
+	 * 
+	 * returns: Nothing
+	 * 
+	 */ 
+
 	public void buildList(GameObject newPlayer){
 
 

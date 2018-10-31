@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 114552632658756570}
   - component: {fileID: 114251918408987614}
   - component: {fileID: 114958378556308328}
+  - component: {fileID: 114059804819346814}
   m_Layer: 8
   m_Name: Finn
   m_TagString: Player
@@ -169,7 +170,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114059804819346814
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155733998902128}
@@ -331,13 +332,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  teleportCooldown: 3
-  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
-    type: 2}
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 65536
-  networkAssit: {fileID: 0}
 --- !u!114 &114833269435320528
 MonoBehaviour:
   m_ObjectHideFlags: 1
