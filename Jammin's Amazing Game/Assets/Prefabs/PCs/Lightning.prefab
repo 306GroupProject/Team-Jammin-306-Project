@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 114025515673433892}
   - component: {fileID: 114951340759725974}
   - component: {fileID: 114149764300597272}
+  - component: {fileID: 114777245878719234}
   m_Layer: 11
   m_Name: Lightning
   m_TagString: Untagged
@@ -81,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506721537851016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.459164, y: -1.5496602, z: -12.3671875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224220322579692804}
@@ -157,7 +158,7 @@ Animator:
   m_GameObject: {fileID: 1506721537851016}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 320a91c3014e3164d8ee95008b31dfbd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3fc0a67ccfe961840b5ceaafa8cca992, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -327,6 +328,24 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114777245878719234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506721537851016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70f3ace23c7dd4a90995f5aa6187ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportCooldown: 3
+  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
+    type: 2}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  teleportDistance: 10
 --- !u!114 &114818949765425636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,12 +378,6 @@ MonoBehaviour:
   attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
     type: 2}
   attackRate: 0.5
-  teleportCooldown: 3
-  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
-    type: 2}
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 65536
 --- !u!114 &114951340759725974
 MonoBehaviour:
   m_ObjectHideFlags: 1
