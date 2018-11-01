@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class Key : NetworkBehaviour {
 
     [SerializeField]
-    private int keyID; // 0 = key, 1 = key1, 2 = key2
+    private int keyID; // 0 = key, 1 = key1, 2 = key2, 3 = key3, 4 = key4
 
     // option for each gate that can be opened by corresponding keyID
     public GameObject Gate1;
@@ -14,6 +14,9 @@ public class Key : NetworkBehaviour {
     public GameObject Gate3;
     public GameObject Gate4;
     public GameObject Gate5;
+    public GameObject Gate6;
+    public GameObject Gate7;
+
 
 
     // when key is collided with corresponding gate is destroyed then key is  
@@ -36,6 +39,15 @@ public class Key : NetworkBehaviour {
                 Destroy(Gate4);
                 Destroy(Gate5);
             }
+            else if (keyID == 3) // for room 2
+            {
+                Destroy(Gate7);
+            }
+            else if(keyID == 4)
+            {
+                Destroy(Gate6);
+            }
+
 
             Destroy(this.gameObject); // key is destroyed
         }

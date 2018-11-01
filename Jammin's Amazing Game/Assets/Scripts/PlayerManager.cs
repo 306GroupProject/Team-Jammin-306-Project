@@ -18,6 +18,7 @@ public class PlayerManager : NetworkBehaviour {
     private bool flipped = false;
     private SyncFlip flipMe;
 
+
     //public float teleportCooldown = 3f;
     //private float timeSinceTeleport = 0f;
     //private Vector2 point; // the point where the mouse is clicked for a teleport
@@ -44,6 +45,8 @@ public class PlayerManager : NetworkBehaviour {
         //playerCam.fieldOfView = 177;
 
         //playerTransform = GameObject.FindGameObjectWithTag("Player2").transform;
+
+
 
     }
 
@@ -115,6 +118,7 @@ public class PlayerManager : NetworkBehaviour {
             CmdAttack();
             canAttack = Time.time + attackRate;
         }
+
 		
 
     }
