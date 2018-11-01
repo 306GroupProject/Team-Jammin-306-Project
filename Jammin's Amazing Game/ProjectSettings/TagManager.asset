@@ -13,9 +13,9 @@ TagManager:
   - Enemy
   - Boulder
   - Fireball
-  - assitantNet
   - FireFrags
   - Pebbles
+  - assistantNet
   layers:
   - Default
   - TransparentFX

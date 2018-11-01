@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 388941993}
   m_Layer: 0
   m_Name: netWorkAssistant
-  m_TagString: assitantNet
+  m_TagString: assistantNet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1777,7 +1777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiPrefab: {fileID: 1289061748266242, guid: d08ac1c1922622c4486aca9570845ee8, type: 2}
   spawnPoint: {fileID: 2005528041}
-  numAI: 1
+  spawnPoints: []
+  numAI: 2
 --- !u!1 &855291204
 GameObject:
   m_ObjectHideFlags: 0

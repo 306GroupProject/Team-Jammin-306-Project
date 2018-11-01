@@ -21,7 +21,7 @@ public class whenPlayerLeaves : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		networkAssit = GameObject.FindGameObjectWithTag ("assitantNet");
+		networkAssit = GameObject.FindGameObjectWithTag ("assistantNet");
 
 	}
 	

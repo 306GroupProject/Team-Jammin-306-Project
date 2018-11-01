@@ -326,7 +326,7 @@ public class ai : NetworkBehaviour {
 		plyerDmg = 4; 
 		buildDecisionTree ();
 		anim = GetComponent<Animator>();
-		plyController = GameObject.FindGameObjectWithTag("assitantNet");
+		plyController = GameObject.FindGameObjectWithTag("assistantNet");
 		aiSavedSpeed = aiMovementSpeed; 
 		
 	}
