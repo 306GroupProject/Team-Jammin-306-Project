@@ -68,6 +68,15 @@ public class netWorkAssitant : NetworkBehaviour {
 		
 	}
 
+	public override void OnStartServer ()
+	{
+		// this is in the case where the host leaves the server, it will refersh the sync list.
+		if (playerManager.Count != 0) {
+			playerManager.Clear (); 
+		}
+		
+
+	}
 
 		public override void OnStartClient() {
 		
@@ -121,9 +130,11 @@ public class netWorkAssitant : NetworkBehaviour {
 	 */ 
 
 	public void deleteOldPlayers(string tag){
+		if (!isServer) {
 
+			return;
+		}
 		CmdRemovePlayer (tag);
-
 
 	}
  

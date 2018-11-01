@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 114552632658756570}
   - component: {fileID: 114251918408987614}
   - component: {fileID: 114958378556308328}
-  - component: {fileID: 114059804819346814}
+  - component: {fileID: 114305502709163724}
   m_Layer: 8
   m_Name: Finn
   m_TagString: Player
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155733998902128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.874943, y: -16.72951, z: 0}
+  m_LocalPosition: {x: -22.725529, y: -12.731113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224278782156917536}
@@ -168,17 +168,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114059804819346814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155733998902128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114077574248342896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,6 +228,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114305502709163724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155733998902128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114358783460118470
 MonoBehaviour:
   m_ObjectHideFlags: 1

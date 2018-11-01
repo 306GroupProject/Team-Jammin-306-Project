@@ -10,11 +10,13 @@ public class whenPlayerLeaves : NetworkBehaviour {
 
 
 	void OnDisable(){
+		
 
 		networkAssit.GetComponent<netWorkAssitant> ().deleteOldPlayers (this.gameObject.tag);
-		
+
 		
 	}
+
 
 	// Use this for initialization
 	void Start () {
