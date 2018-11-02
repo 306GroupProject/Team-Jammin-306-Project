@@ -126,6 +126,8 @@ MonoBehaviour:
   damage: 1
   fireFragments: {fileID: 1775679875289528, guid: af9b6761e0a4d7b45aa86979bc687a2f,
     type: 2}
+  smoke: {fileID: 1648525985903002, guid: de55f5c043f1c64428ccc03ef69b1ff5, type: 2}
+  startTime: 0
   fireFragVelocity: 2000
 --- !u!114 &114379477967741480
 MonoBehaviour:

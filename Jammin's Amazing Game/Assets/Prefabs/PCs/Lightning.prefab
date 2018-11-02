@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 114149764300597272}
   - component: {fileID: 114174495998087216}
   - component: {fileID: 114777245878719234}
+  - component: {fileID: 114265786047724406}
   m_Layer: 11
   m_Name: Lightning
   m_TagString: Untagged
@@ -83,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506721537851016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.521071, y: -16.596672, z: -12.3671875}
+  m_LocalPosition: {x: -20, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224220322579692804}
@@ -159,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 1506721537851016}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3fc0a67ccfe961840b5ceaafa8cca992, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -223,6 +224,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114265786047724406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506721537851016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb7ad3a3d6a2bd49b627f900f325b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Basic Attack
+  description: Just a plain ol' attack
+  velocity: 2000
+  manaCost: 0
+  cooldown: 0.5
+  projectile: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
 --- !u!114 &114333335150084574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,7 +360,7 @@ MonoBehaviour:
   m_Text: 
 --- !u!114 &114777245878719234
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1506721537851016}
@@ -387,9 +405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   plyerDmg: 4
-  attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
-    type: 2}
-  attackRate: 0.5
 --- !u!114 &114951340759725974
 MonoBehaviour:
   m_ObjectHideFlags: 1

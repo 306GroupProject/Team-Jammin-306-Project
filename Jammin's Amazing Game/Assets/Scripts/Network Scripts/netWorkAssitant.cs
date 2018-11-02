@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Networking;
 // "Hey lets make classes that can have structs in them as well :)"
 
-public struct plyStore{												// this is the plyStore structure. I made a data type structure that could hold a Gameobject since none of the default ones could be initlized as a GameObject.
+public struct plyStore{		// this is the plyStore structure. I made a data type structure that could hold a Gameobject since none of the default ones could be initlized as a GameObject.
 	
 	
 	public GameObject ply;
 	
-	public plyStore(GameObject ply){ 								// constructor for the Struct.
+	public plyStore(GameObject ply){ 	// constructor for the Struct.
 		
 		this.ply = ply; 
 		
@@ -19,7 +19,8 @@ public struct plyStore{												// this is the plyStore structure. I made a d
 
 public class synclistplystore : SyncListStruct<plyStore>{} 
 
-																	// this class manages the data for when players join the server, it stores each player that joins into a SyncList. It is like a syncVar accept for holding bigger amounts of data.
+
+// this class manages the data for when players join the server, it stores each player that joins into a SyncList. It is like a syncVar accept for holding bigger amounts of data.
 public class netWorkAssitant : NetworkBehaviour {
 	public synclistplystore playerManager = new synclistplystore(); // this list will keep all current players updated. Throughout the server.
 	[SerializeField] private GameObject currentObject = null; 		// This object scans CustomNetwork script mark made, it will grab the prefab from that and store it into this current object. Once a new one comes this is removed.
@@ -68,6 +69,15 @@ public class netWorkAssitant : NetworkBehaviour {
 		
 	}
 
+	public override void OnStartServer ()
+	{
+		// this is in the case where the host leaves the server, it will refersh the sync list.
+		if (playerManager.Count != 0) {
+			playerManager.Clear (); 
+		}
+		
+
+	}
 
 		public override void OnStartClient() {
 		
@@ -121,9 +131,11 @@ public class netWorkAssitant : NetworkBehaviour {
 	 */ 
 
 	public void deleteOldPlayers(string tag){
+		if (!isServer) {
 
+			return;
+		}
 		CmdRemovePlayer (tag);
-
 
 	}
  

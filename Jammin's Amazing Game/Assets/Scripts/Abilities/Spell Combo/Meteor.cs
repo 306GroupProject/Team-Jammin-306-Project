@@ -23,7 +23,10 @@ public class Meteor : NetworkBehaviour {
     static Vector2 diagDRight = new Vector2(Mathf.Sqrt(2) / 2, Mathf.Sqrt(2) / 2);
 
     Vector2[] crossPositions = { Vector2.up, diagLeft, Vector2.left, diagDLeft, Vector2.down, diagRight, Vector2.right, diagDRight };
-    
+
+    float startTime;
+    public GameObject explosion;
+
     // Rotation where the meteor fragment should be facing.
     float[] rotations = { 0, 45.0f, 90.0f, 135.0f, 180.0f, 225.0f, 270.0f, 315.0f };
 
@@ -31,12 +34,18 @@ public class Meteor : NetworkBehaviour {
      * Sets up player damage by getting the Synced damage value of meteor, by the fireball damage
      */
     public void Awake() {
+        startTime = Time.time;
         damage *= damageMultiplier;
     }
 
     // Keep track of meteor's airtime
     void Update () {
-        Destroy(this.gameObject, airTime);
+        if (Time.time - startTime > airTime) {
+            Vector2 save = transform.position;
+            Destroy(this.gameObject);
+            GameObject explode = Instantiate(explosion, save, Quaternion.identity);
+            Destroy(explode, 2.0f);
+        }
     }
 
     /*
@@ -53,7 +62,10 @@ public class Meteor : NetworkBehaviour {
 
             }
         }
+        Vector2 save = transform.position;
         Destroy(this.gameObject);
+        GameObject explode = Instantiate(explosion, save, Quaternion.identity);
+        Destroy(explode, 2.0f);
     }
 
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 
 /**
@@ -26,13 +27,13 @@ public class FireBall : Abilities
         }
     }
 
-
-    public override void CmdCast(Vector2 playerTransform, Vector2 mouseTransform)
+    [Command]
+    void CmdCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
         RpcCast(playerTransform, mouseTransform);
     }
-
-    public override void RpcCast(Vector2 playerTransform, Vector2 mouseTransform)
+    [ClientRpc]
+     void RpcCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
         // Spawns in a fireball, syncronized accross network!
         float angle = AngleMath(playerTransform, mouseTransform) + 90.0f;

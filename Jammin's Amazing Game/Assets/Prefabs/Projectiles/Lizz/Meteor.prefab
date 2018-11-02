@@ -148,6 +148,7 @@ MonoBehaviour:
     type: 2}
   spreadRate: 2
   fragForce: 500
+  explosion: {fileID: 1976845950909830, guid: 3fe3d0ca223481a48860f94f032fd45c, type: 2}
 --- !u!114 &114297456088268274
 MonoBehaviour:
   m_ObjectHideFlags: 1

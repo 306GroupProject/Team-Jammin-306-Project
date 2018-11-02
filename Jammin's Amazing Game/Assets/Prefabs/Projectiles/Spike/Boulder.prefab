@@ -126,6 +126,7 @@ MonoBehaviour:
   airtime: 1
   splashRate: 5
   pebble: {fileID: 1452411878856366, guid: bcbbc57cc7d315b43af8667340541d98, type: 2}
+  smoke: {fileID: 1648525985903002, guid: de55f5c043f1c64428ccc03ef69b1ff5, type: 2}
   trans: {x: 0, y: 0}
   meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
 --- !u!114 &114827578643750496

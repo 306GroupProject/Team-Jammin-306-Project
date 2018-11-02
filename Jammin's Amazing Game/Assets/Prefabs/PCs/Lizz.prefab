@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 114783453200620264}
   - component: {fileID: 114695395844197348}
   - component: {fileID: 114630221529327538}
+  - component: {fileID: 114644169856954328}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.142036, y: -16.862347, z: -12.3671875}
+  m_LocalPosition: {x: 12, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224569073953643352}
@@ -228,7 +229,7 @@ MonoBehaviour:
   flipped: 0
 --- !u!114 &114630221529327538
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
@@ -244,6 +245,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65536
   teleportDistance: 10
+--- !u!114 &114644169856954328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb7ad3a3d6a2bd49b627f900f325b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Basic Attack
+  description: Just a plain ol' attack
+  velocity: 2000
+  manaCost: 0
+  cooldown: 0.5
+  projectile: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
 --- !u!114 &114665682933482340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,9 +275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   plyerDmg: 4
-  attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
-    type: 2}
-  attackRate: 0.5
 --- !u!114 &114695395844197348
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 4
   meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
+  explosion: {fileID: 1976845950909830, guid: 3fe3d0ca223481a48860f94f032fd45c, type: 2}
 --- !u!114 &114773532194492732
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,21 +11,9 @@ public class PlayerManager : NetworkBehaviour {
 
     public int plyerDmg = 4;
 
-    //private Camera playerCam;
-    public GameObject attackPrefab;
-    public float attackRate = 0.5f;
-    private float canAttack = 0.0f;
+
     private bool flipped = false;
     private SyncFlip flipMe;
-
-    //public float teleportCooldown = 3f;
-    //private float timeSinceTeleport = 0f;
-    //private Vector2 point; // the point where the mouse is clicked for a teleport
-    //private Transform playerTransform; // the player's position
-    //public GameObject teleportParticles;
-    //public LayerMask wallMask; // a masking layer for walls that the player CANNOT teleport through
-
-
 
     public void changeSpeed(float speed){
 
@@ -39,39 +27,7 @@ public class PlayerManager : NetworkBehaviour {
         flipMe = GetComponent<SyncFlip>();
         
         anim.SetBool("IsMoving", false);
-        //playerCam = GetComponentInChildren<Camera>();
-        //playerCam.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -0.3f);
-        //playerCam.fieldOfView = 177;
-
-        //playerTransform = GameObject.FindGameObjectWithTag("Player2").transform;
-
     }
-
-    //private void Update()
-    //{
-    //    // if the player Right Clicks, teleport them to where they clicked.
-    //    if(Input.GetMouseButtonDown(1))
-    //    {
-    //        Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
-    //        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity, wallMask);
-    //        if(!hit) // if there isn't a wall (gameObject with the tag "Wall") in the way, teleport if the cooldown is over
-    //        {
-    //            if (timeSinceTeleport <= Time.time)
-    //            {
-    //                //cooldownScript.TeleportBlocked(false);
-    //                Instantiate(teleportParticles, transform.position, Quaternion.identity);
-    //                point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //                playerTransform.transform.position = point;
-    //                timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
-    //            }
-    //        }
-    //        else
-    //        {
-    //           //cooldownScript.TeleportBlocked(true);
-    //        }
-            
-    //    }
-    //}
 
     void FixedUpdate() {
 
@@ -111,29 +67,6 @@ public class PlayerManager : NetworkBehaviour {
 
         rb.AddForce(movement * speed);
 
-        if (Input.GetMouseButtonDown(0) && Time.time > canAttack) {
-            CmdAttack();
-            canAttack = Time.time + attackRate;
-        }
-		
-
     }
    
-    [Command]
-    void CmdAttack() {
-        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 myPos = this.transform.position;
-        Vector2 direction = target - myPos;
-        direction = direction.normalized;
-
-        GameObject attack = (GameObject)Instantiate(attackPrefab, myPos, transform.rotation);
-        attack.GetComponent<Rigidbody2D>().velocity = direction * 20.0f;
-
-        attack.gameObject.tag = "basicAttack";
-
-        NetworkServer.Spawn(attack);
-
-        Destroy(attack, 1.0f);
-
-    }
 }

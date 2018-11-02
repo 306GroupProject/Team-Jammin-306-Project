@@ -12,6 +12,7 @@ public class Splatter : NetworkBehaviour {
     public float airtime;
     public int splashRate;
     public GameObject pebble;
+    public GameObject smoke;
 
     [HideInInspector] public Vector2 trans;
     [SerializeField] GameObject meteor;
@@ -47,7 +48,14 @@ public class Splatter : NetworkBehaviour {
                 GameObject pebbles = Instantiate(pebble, transform.position, Quaternion.identity);
                 pebbles.GetComponent<Pebble>().CmdCast(transform.position, crossPositions[i], 500.0f);
             }
+            
+            Vector2 save = transform.position;
+            
             Destroy(this.gameObject);
+            
+            GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
+            Destroy(smoker.gameObject, 1.0f);
+
         }
     }
 
@@ -82,7 +90,12 @@ public class Splatter : NetworkBehaviour {
                 pebbles.GetComponent<Pebble>().CmdCast(transform.position, crossPositions[i], 500.0f);
             }
         }
-        NetworkServer.Destroy(this.gameObject);
+        Vector2 save = transform.position;
+
+        Destroy(this.gameObject);
+
+        GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
+        Destroy(smoker.gameObject, 1.0f);
     }
 
     

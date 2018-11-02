@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.Networking;
 using UnityEngine;
 
 /**
@@ -8,7 +7,7 @@ using UnityEngine;
 public class RockThrow : Abilities {
 
     private float canAttack;
-
+    public ParticleSystem smoke;
     /**
      *  Rockthrow ability for Spike, activated using number 1
      */
@@ -23,12 +22,13 @@ public class RockThrow : Abilities {
         }
     }
 
-
-    public override void CmdCast(Vector2 playerTransform, Vector2 mouseTransform) {
+    [Command]
+    void CmdCast(Vector2 playerTransform, Vector2 mouseTransform) {
         RpcCast(playerTransform, mouseTransform);
     }
 
-    public override void RpcCast(Vector2 playerTransform, Vector2 mouseTransform) {
+    [ClientRpc]
+    void RpcCast(Vector2 playerTransform, Vector2 mouseTransform) {
         if (!isClient) {
             return;
         }

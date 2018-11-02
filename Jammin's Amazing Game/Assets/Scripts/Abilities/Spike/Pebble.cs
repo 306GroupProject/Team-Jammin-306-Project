@@ -9,6 +9,12 @@ public class Pebble : NetworkBehaviour {
     public float airTime = 3.0f;
     public int damage = 1;
     public GameObject fireFragments;
+    public GameObject smoke;
+    public float startTime;
+
+    private void Awake() {
+        startTime = Time.time;
+    }
 
     // Cross Trajectory Positions
     Vector2[] crossPositions = { Vector2.up, Vector2.left, Vector2.down, Vector2.right};
@@ -19,7 +25,15 @@ public class Pebble : NetworkBehaviour {
     public float fireFragVelocity = 2000.0f;
 
     public void Update() {
-        Destroy(this.gameObject, airTime);
+        if (Time.time - startTime > airTime) {
+            Vector2 save = transform.position;
+            Destroy(this.gameObject, airTime);
+
+            // spawn out particle effect, just to make it look 
+            GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
+            smoker.transform.localScale /= 6;
+            Destroy(smoker.gameObject, 0.5f);
+        }
     }
 
     // If the pebble collides with a fragment, instantiate more fire fragments. Also send damage if hits a Damagable object,
@@ -32,7 +46,13 @@ public class Pebble : NetworkBehaviour {
         }
 
         collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+        Vector2 save = transform.position;
         Destroy(this.gameObject);
+
+        GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
+        smoker.transform.localScale /= 6;
+        Destroy(smoker.gameObject, 1.0f);
+
     }
 
     // Controls pebble velocity.

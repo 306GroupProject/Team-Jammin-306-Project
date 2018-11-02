@@ -11,6 +11,7 @@ public class FireBallCollision : NetworkBehaviour {
 
     public GameObject meteor;
 
+    public GameObject explosion;
     /*
      * Send Damage message if the enemy is struct by fireball. 
      */
@@ -18,6 +19,11 @@ public class FireBallCollision : NetworkBehaviour {
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.SendMessage("Damage", damage);
         }
+        Vector2 save = transform.position;
         Destroy(this.gameObject);
+
+        // Spawn explosion particle effect
+        GameObject explode = Instantiate(explosion, save, Quaternion.identity);
+        Destroy(explode, 2.0f);
     }
 }

@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 114278106869560274}
   - component: {fileID: 114130038237702000}
   - component: {fileID: 114379172762204352}
+  - component: {fileID: 114264730518823524}
   m_Layer: 9
   m_Name: Spike
   m_TagString: Untagged
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444966039895746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4821105, y: -16.596672, z: 0}
+  m_LocalPosition: {x: 20, y: -12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224534096385657080}
@@ -212,6 +213,24 @@ MonoBehaviour:
   param3: 
   param4: 
   param5: 
+--- !u!114 &114264730518823524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444966039895746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb7ad3a3d6a2bd49b627f900f325b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Basic Attack
+  description: Just a plain ol' attack
+  velocity: 2000
+  manaCost: 0
+  cooldown: 0.5
+  projectile: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
+  airTime: 1
 --- !u!114 &114278106869560274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,10 +288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Rock Throw
   description: Hurl a Boulder that causes direct and splash damage
-  velocity: 1500
+  velocity: 1000
   manaCost: 0
   cooldown: 3
   projectile: {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}
+  smoke: {fileID: 0}
 --- !u!114 &114356520464550344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -364,16 +384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   plyerDmg: 4
-  attackPrefab: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5,
-    type: 2}
-  attackRate: 0.5
-  teleportCooldown: 3
-  teleportParticles: {fileID: 1951969185029062, guid: 72cbd90a22f633642ad20ca462cd54fe,
-    type: 2}
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 65536
-  networkAssit: {fileID: 0}
 --- !u!114 &114773434047679066
 MonoBehaviour:
   m_ObjectHideFlags: 1
