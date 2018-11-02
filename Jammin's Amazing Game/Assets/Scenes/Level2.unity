@@ -2379,8 +2379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116575842c7135045aab27f47205f195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownImage: {fileID: 352638461}
-  cooldown: 3
+  teleportCooldownImage: {fileID: 0}
+  rockThrowCooldownImage: {fileID: 0}
 --- !u!1 &1127284790
 GameObject:
   m_ObjectHideFlags: 0

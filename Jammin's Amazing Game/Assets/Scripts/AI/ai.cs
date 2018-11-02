@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking; 
 using UnityEngine;
@@ -264,9 +264,8 @@ public class ai : NetworkBehaviour {
 
 			aiMovementSpeed = aiSavedSpeed; 
 			// if the Vector2 position is less then 7f distance, we will apply force to move towards Player. 
-			this.transform.position = Vector2.MoveTowards (this.transform.position, plyController.GetComponent<netWorkAssitant> ().playerManager [this.playerSpotted].ply.gameObject.transform.position, aiMovementSpeed * Time.deltaTime);
-            anim.SetBool("IsMoving", true);
-        }
+			this.transform.position = Vector2.MoveTowards (this.transform.position, plyController.GetComponent<netWorkAssitant> ().playerManager [this.playerSpotted].ply.gameObject.transform.position, aiMovementSpeed * Time.deltaTime); 
+		}
 
 	}
 	
@@ -280,8 +279,8 @@ public class ai : NetworkBehaviour {
 	public void idle(){
 		if (isServer) {
 			this.aiMovementSpeed = 0f;
-            anim.SetBool("IsMoving", false);
-        }
+
+		}
 	}
 	
 	

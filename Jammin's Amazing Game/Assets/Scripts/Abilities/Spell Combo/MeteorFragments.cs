@@ -20,7 +20,7 @@ public class MeteorFragments : MonoBehaviour {
             Vector2 save = transform.position;
             Destroy(this.gameObject);
             GameObject explode = Instantiate(explosion, save, Quaternion.identity);
-            explode.transform.position /= 6;
+            explode.transform.localScale /= 6;
             Destroy(explode, 2.0f);
         }
     }
@@ -40,7 +40,7 @@ public class MeteorFragments : MonoBehaviour {
         Vector2 save = transform.position;
         Destroy(this.gameObject);
         GameObject explode = Instantiate(explosion, save, Quaternion.identity);
-        explode.transform.position /= 6;
+        explode.transform.localScale /= 6;
         Destroy(explode, 2.0f);
     }
 }
