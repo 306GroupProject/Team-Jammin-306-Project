@@ -7,7 +7,6 @@ using UnityEngine;
 public class RockThrow : Abilities {
 
     private float canAttack;
-    public ParticleSystem smoke;
     /**
      *  Rockthrow ability for Spike, activated using number 1
      */
@@ -22,11 +21,14 @@ public class RockThrow : Abilities {
         }
     }
 
+    // Invokes command oclient side, so that method is executed locally!
     [Command]
     void CmdCast(Vector2 playerTransform, Vector2 mouseTransform) {
         RpcCast(playerTransform, mouseTransform);
     }
 
+
+    // Invokes command server side, so that casting a spell is synchronized across all connected clients!
     [ClientRpc]
     void RpcCast(Vector2 playerTransform, Vector2 mouseTransform) {
         if (!isClient) {

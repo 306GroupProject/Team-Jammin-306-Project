@@ -7,7 +7,7 @@ using UnityEngine.Networking;
  */
 public class FireBall : Abilities
 {
-    public float airTime = 1.0f;
+    
     private float canAttack;
     GameObject fireball;
 
@@ -19,7 +19,7 @@ public class FireBall : Abilities
         // Only allow local player to cast, so that other players doesn't cast this ability as well
         if (isLocalPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha2) && Time.time > canAttack)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Time.time > canAttack)
             {
                 CmdCast(transform.position, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 canAttack = Time.time + cooldown;
@@ -27,11 +27,14 @@ public class FireBall : Abilities
         }
     }
 
+    
     [Command]
     void CmdCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
         RpcCast(playerTransform, mouseTransform);
     }
+
+    // Cast the ability server side, so that spell is casted across all connected clients!
     [ClientRpc]
      void RpcCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
@@ -43,7 +46,7 @@ public class FireBall : Abilities
    
         fireball.GetComponent<Rigidbody2D>().AddForce(direction * this.velocity);
 
-        Destroy(fireball, airTime);
+        
     }
 
 
