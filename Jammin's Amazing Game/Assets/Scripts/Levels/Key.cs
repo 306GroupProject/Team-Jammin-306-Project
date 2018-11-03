@@ -14,6 +14,8 @@ public class Key : NetworkBehaviour {
     public GameObject Gate3;
     public GameObject Gate4;
     public GameObject Gate5;
+    public GameObject Gate6;
+    public GameObject Gate7;
 
 
     // when key is collided with corresponding gate is destroyed then key is  
@@ -35,6 +37,14 @@ public class Key : NetworkBehaviour {
                 Destroy(Gate1);
                 Destroy(Gate4);
                 Destroy(Gate5);
+            }
+            else if (keyID == 3)
+            {
+                Destroy(Gate6);
+            }
+            else if (keyID == 4)
+            {
+                Destroy(Gate7);
             }
 
             Destroy(this.gameObject); // key is destroyed
