@@ -156,6 +156,38 @@ Prefab:
       propertyPath: m_Name
       value: Gate2
       objectReference: {fileID: 0}
+    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -288,7 +320,7 @@ GameObject:
   - component: {fileID: 284791172}
   - component: {fileID: 284791171}
   - component: {fileID: 284791173}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1711,7 +1743,7 @@ GameObject:
   - component: {fileID: 625844030}
   - component: {fileID: 625844029}
   - component: {fileID: 625844031}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3097,6 +3129,38 @@ Prefab:
       propertyPath: m_Name
       value: Gate5
       objectReference: {fileID: 0}
+    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -3152,6 +3216,38 @@ Prefab:
     - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
       propertyPath: m_Name
       value: Gate3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
@@ -3878,6 +3974,38 @@ Prefab:
       propertyPath: m_Name
       value: Gate4
       objectReference: {fileID: 0}
+    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -3944,7 +4072,7 @@ GameObject:
   - component: {fileID: 1676419707}
   - component: {fileID: 1676419706}
   - component: {fileID: 1676419708}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4111,6 +4239,38 @@ Prefab:
     - target: {fileID: 4423980158782636, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
@@ -4461,7 +4621,7 @@ GameObject:
   - component: {fileID: 1779714571}
   - component: {fileID: 1779714570}
   - component: {fileID: 1779714572}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4904,7 +5064,7 @@ GameObject:
   - component: {fileID: 1833029024}
   - component: {fileID: 1833029023}
   - component: {fileID: 1833029025}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5061,7 +5221,7 @@ GameObject:
   - component: {fileID: 1866253735}
   - component: {fileID: 1866253734}
   - component: {fileID: 1866253736}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9
   m_TagString: Untagged
   m_Icon: {fileID: 0}

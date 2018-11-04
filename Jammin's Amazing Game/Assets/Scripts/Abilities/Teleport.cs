@@ -32,6 +32,7 @@ public class Teleport : NetworkBehaviour {
                     }
                 } else {
                     //cooldownScript.TeleportBlocked(true);
+                    Debug.Log("Wall");
                 }
 
             }
