@@ -9,6 +9,7 @@ public class PuddleCollision : NetworkBehaviour
 
     [SerializeField, SyncVar]
     private float damage = 0.0f;
+    public float slowRate = 50.0f;
     PlayerManager Script;
     bool notelectric = true;
 
@@ -17,12 +18,13 @@ public class PuddleCollision : NetworkBehaviour
     /*
     * Slows a player when they enter the puddle, and electrifies the puddle if hit by a bolt
     */
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        if((collision.gameObject.GetComponent("PlayerManager") as PlayerManager) != null)
+        
+        if(collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "Player3" || collision.gameObject.tag == "Player4")
         {
             Script = collision.gameObject.GetComponent<PlayerManager>();
-            Script.changeSpeed(50.0f);
+            Script.changeSpeed(slowRate);
         }
         if (collision.gameObject.tag == "Bolt" && notelectric)
         {
@@ -40,7 +42,9 @@ public class PuddleCollision : NetworkBehaviour
     */
     public void OnTriggerExit2D(Collider2D collision)
     {
-        Script = collision.gameObject.GetComponent<PlayerManager>();
-        Script.changeSpeed(100.0f);
+        if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "Player3" || collision.gameObject.tag == "Player4") {
+            Script = collision.gameObject.GetComponent<PlayerManager>();
+            Script.changeSpeed(100.0f);
+        }
     }
 }

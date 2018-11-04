@@ -9,13 +9,23 @@ using UnityEngine.Networking;
 public class EPuddleCollison : NetworkBehaviour
 {
     [SerializeField, SyncVar]
-    private float damage = 0.01f;
+    private int damage = 1;
 
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-        if ((collision.gameObject.GetComponent("ai") as ai) != null)
-        {
-            collision.gameObject.SendMessage("Damage", damage);
+    public int dotRate = 1;
+    float startTime;
+
+    public void Awake() {
+        startTime = Time.time;
+    }
+
+    public void OnTriggerStay2D(Collider2D collision) {
+        if ((collision.gameObject.GetComponent("ai") as ai) != null) {
+            if (Time.time > startTime) {
+                collision.gameObject.SendMessage("Damage", damage);
+                startTime = Time.time + dotRate;
+            }
         }
     }
+
+
 }

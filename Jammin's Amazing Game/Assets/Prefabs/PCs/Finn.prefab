@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 114958378556308328}
   - component: {fileID: 114305502709163724}
   - component: {fileID: 114647912292696284}
+  - component: {fileID: 114321775276469648}
   m_Layer: 8
   m_Name: Finn
   m_TagString: Player
@@ -205,7 +206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155733998902128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -92.14787, y: 0.4845841, z: 0}
+  m_LocalPosition: {x: -92.14787, y: 0.4845841, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224278782156917536}
@@ -428,6 +429,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1ec47fd1df099468a289d47651747a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114321775276469648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155733998902128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea4ad6ed30e2944bb6b9b04f65bd726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  velocity: 0
+  manaCost: 0
+  cooldown: 2
+  projectile: {fileID: 1274004759208662, guid: ce7175a9a8e2c29448bfe02c11108723, type: 2}
+  lifeTime: 10
 --- !u!114 &114358783460118470
 MonoBehaviour:
   m_ObjectHideFlags: 1
