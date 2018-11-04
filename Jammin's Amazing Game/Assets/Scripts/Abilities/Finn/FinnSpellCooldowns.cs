@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-public class FinnSpellCooldowns : NetworkBehaviour
+public class FinnSpellCooldowns : MonoBehaviour
 {
 
     //public GameObject playerController;

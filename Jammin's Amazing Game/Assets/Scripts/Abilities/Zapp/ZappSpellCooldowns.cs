@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-public class ZappSpellCooldowns : NetworkBehaviour
+public class ZappSpellCooldowns : MonoBehaviour
 {
 
     //public GameObject playerController;

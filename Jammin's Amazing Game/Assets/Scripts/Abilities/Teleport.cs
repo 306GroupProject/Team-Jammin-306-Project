@@ -25,7 +25,10 @@ public class Teleport : NetworkBehaviour {
                 {
                     if (timeSinceTeleport <= Time.time) {
                         //cooldownScript.TeleportBlocked(false);
-                        CmdTeleport();
+                        Instantiate(teleportParticles, transform.position, Quaternion.identity);
+                        point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        transform.position = point;
+                        timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
                     }
                 } else {
                     //cooldownScript.TeleportBlocked(true);
@@ -55,4 +58,5 @@ public class Teleport : NetworkBehaviour {
         playerTransform.transform.position = point;
         timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
     }
+
 }

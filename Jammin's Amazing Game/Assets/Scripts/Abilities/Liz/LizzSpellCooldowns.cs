@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 // The Cooldown UI for all of Liz's spells and abilities
 
-public class LizzSpellCooldowns : NetworkBehaviour
+public class LizzSpellCooldowns : MonoBehaviour
 {
 
     //public GameObject playerController;

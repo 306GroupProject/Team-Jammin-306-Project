@@ -33,8 +33,6 @@ public class CustomNetwork : NetworkManager {
     }
 
 
-
-
     /**
      * When a new client joins a host lobby, add this client to the player to the
      * player list of game objects in the server.
@@ -101,6 +99,7 @@ public class CustomNetwork : NetworkManager {
         start.enabled = true;
         base.OnStopClient();
     }
+
     /**
      * Test Gui buttons for character select. Subject to change 
      **/
