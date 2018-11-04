@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 658414829}
   - component: {fileID: 658414828}
   - component: {fileID: 658414827}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
