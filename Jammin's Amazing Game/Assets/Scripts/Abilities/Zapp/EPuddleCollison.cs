@@ -11,7 +11,7 @@ public class EPuddleCollison : NetworkBehaviour
     [SerializeField, SyncVar]
     private int damage = 1;
 
-    public int dotRate = 1;
+    public float dotRate = 0.5f;
     float startTime;
 
     public void Awake() {
@@ -20,6 +20,8 @@ public class EPuddleCollison : NetworkBehaviour
 
     public void OnTriggerStay2D(Collider2D collision) {
         if ((collision.gameObject.GetComponent("ai") as ai) != null) {
+            // For the time duration an enemy is inside electric puddle's trigger, send damage 
+            // messaage to enemy once every 1 dotRateSeconds.
             if (Time.time > startTime) {
                 collision.gameObject.SendMessage("Damage", damage);
                 startTime = Time.time + dotRate;

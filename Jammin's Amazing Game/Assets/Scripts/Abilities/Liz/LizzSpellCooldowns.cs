@@ -53,7 +53,6 @@ public class LizzSpellCooldowns : MonoBehaviour
         }
 
 
-        // 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             fireBallCooldownActive = true;

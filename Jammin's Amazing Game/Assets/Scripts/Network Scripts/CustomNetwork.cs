@@ -6,9 +6,9 @@ public class CustomNetwork : NetworkManager {
 
     public Camera main;
     public Camera start;
-    /**
+    /*
      * Message base that stores the player's selected character into the server.
-     **/
+     */
     public class ChosenCharacter : MessageBase {
         public int classIndex;
     }
@@ -19,24 +19,25 @@ public class CustomNetwork : NetworkManager {
 
 	GameObject currentPrefabSpawning; // this is the current Prefab which is being spawned into the Server!
 
-    /**
+    /*
      * Once the client start, this method registers all the player
      * prefabs we are going to use for the players.
-     **/
+     */
     public override void OnStartClient(NetworkClient client) {
-        main.transform.position = GameObject.Find("Room1 Center").transform.position;
+        
         foreach (GameObject charac in prefabs) {
             ClientScene.RegisterPrefab(charac);
         }
         base.OnStartClient(client);
     }
 
+   
 
-    /**
+    /*
      * When a new client joins a host lobby, add this client to the player to the
      * player list of game objects in the server.
      * 
-     **/
+     */
     public override void OnClientConnect(NetworkConnection conn) {
 
         ChosenCharacter character = new ChosenCharacter {
@@ -49,7 +50,7 @@ public class CustomNetwork : NetworkManager {
     }
 
 
-    /**
+    /*
      * Overrides the built in OnServerAddPlayer, to instead use a custom script that allows us to select
      * a character, instead of using the single built-in playerPrefab tab in the default net manager.
      */ 
@@ -93,9 +94,9 @@ public class CustomNetwork : NetworkManager {
 		return currentPrefabSpawning;
 	}
 
-    /**
+    /*
      * Test Gui buttons for character select. Subject to change 
-     **/
+     */
     public void OnGUI() {
         if (GUI.Button(new Rect(65, 340,100, 20), "Finn")) {
             chosenPlayer = 0;

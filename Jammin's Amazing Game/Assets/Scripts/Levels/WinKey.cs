@@ -4,16 +4,24 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class WinKey : NetworkBehaviour {
-	// Use this for initialization
+	
+    /*
+     * Center the camera into the first room once the game has started.  
+     */
 	void Start () {
         GameObject.Find("Main Camera").GetComponent<Camera>().enabled = true;
         GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Room1 Center").transform.position;
 	}
 
+    /*
+     * When a player touches appropriate key, teleport the player into the next room.
+     */
     private void OnCollisionEnter2D(Collision2D collision) {
+        // Center the camera into the second room when player touches key.
         GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Room2 Center").transform.position;
         SpawnPoints secondSpawn = GameObject.Find("Spawn2").GetComponent<SpawnPoints>();
 
+        // Teleport the player that touched special key into the next room.
         if (collision.gameObject.tag == "Player1") {
             collision.gameObject.transform.position = secondSpawn.spawnPoints[0].transform.position;
         }

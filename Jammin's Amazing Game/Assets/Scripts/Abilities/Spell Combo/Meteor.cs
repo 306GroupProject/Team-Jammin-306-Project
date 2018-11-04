@@ -48,14 +48,14 @@ public class Meteor : NetworkBehaviour {
         }
     }
 
-    /*
-     * If the meteor collides with 
-     */ 
+
     private void OnCollisionEnter2D(Collision2D collision) {
+        // If the meteor collides with the enemy, send a damage message to inflict damage to enemy.
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
             
         } else {
+            // Otherwise, if the meteor collides with anything else, spawn meteor frags in a circular projectile.
             for (int i = 0; i < crossPositions.Length; i++) {
                 GameObject fragements = Instantiate(meteorFragments, transform.position, Quaternion.Euler(new Vector3(0, 0, rotations[i])));
                 fragements.GetComponent<Rigidbody2D>().AddForce(crossPositions[i] * fragForce);
@@ -64,6 +64,7 @@ public class Meteor : NetworkBehaviour {
         }
         Vector2 save = transform.position;
         Destroy(this.gameObject);
+        // Player explosion particle effect.
         GameObject explode = Instantiate(explosion, save, Quaternion.identity);
         Destroy(explode, 2.0f);
     }
