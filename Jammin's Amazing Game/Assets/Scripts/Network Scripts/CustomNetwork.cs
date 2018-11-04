@@ -24,14 +24,15 @@ public class CustomNetwork : NetworkManager {
      * prefabs we are going to use for the players.
      **/
     public override void OnStartClient(NetworkClient client) {
-        main.enabled = true;
         main.transform.position = GameObject.Find("Room1 Center").transform.position;
+      
         foreach (GameObject charac in prefabs) {
             ClientScene.RegisterPrefab(charac);
         }
         base.OnStartClient(client);
     }
 
+  
 
     /**
      * When a new client joins a host lobby, add this client to the player to the
@@ -55,7 +56,6 @@ public class CustomNetwork : NetworkManager {
      * a character, instead of using the single built-in playerPrefab tab in the default net manager.
      */ 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extra) {
-        this.playerSpawnMethod = PlayerSpawnMethod.RoundRobin;
 		// Obtain the message stored in the server containing the selected player character
         ChosenCharacter message = extra.ReadMessage<ChosenCharacter>(); 
         
@@ -94,11 +94,6 @@ public class CustomNetwork : NetworkManager {
 		return currentPrefabSpawning;
 	}
 
-    public override void OnStopClient() {
-        main.enabled = false;
-        start.enabled = true;
-        base.OnStopClient();
-    }
 
     /**
      * Test Gui buttons for character select. Subject to change 

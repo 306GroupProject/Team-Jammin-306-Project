@@ -13,7 +13,6 @@ public class whenPlayerLeaves : NetworkBehaviour {
 		
 
 		networkAssit.GetComponent<netWorkAssitant> ().deleteOldPlayers (this.gameObject.tag);
-
 		
 	}
 
