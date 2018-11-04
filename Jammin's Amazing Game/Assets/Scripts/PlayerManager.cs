@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.Networking;
 
 
@@ -16,7 +17,6 @@ public class PlayerManager : NetworkBehaviour {
     private SyncFlip flipMe;
 
     public void changeSpeed(float speed){
-
 		this.speed = speed; 
 
 	}

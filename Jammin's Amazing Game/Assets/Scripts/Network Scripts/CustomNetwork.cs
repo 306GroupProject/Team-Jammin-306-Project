@@ -5,6 +5,7 @@ using UnityEngine.Networking.NetworkSystem;
 public class CustomNetwork : NetworkManager {
 
     public Camera main;
+    public Camera start;
     /**
      * Message base that stores the player's selected character into the server.
      **/
@@ -23,6 +24,7 @@ public class CustomNetwork : NetworkManager {
      * prefabs we are going to use for the players.
      **/
     public override void OnStartClient(NetworkClient client) {
+        main.enabled = true;
         main.transform.position = GameObject.Find("Room1 Center").transform.position;
         foreach (GameObject charac in prefabs) {
             ClientScene.RegisterPrefab(charac);
@@ -91,6 +93,12 @@ public class CustomNetwork : NetworkManager {
 	public GameObject returnCurrentPrefab(){
 		return currentPrefabSpawning;
 	}
+
+    public override void OnStopClient() {
+        main.enabled = false;
+        start.enabled = true;
+        base.OnStopClient();
+    }
 
     /**
      * Test Gui buttons for character select. Subject to change 
