@@ -109,7 +109,7 @@ public class netWorkAssitant : NetworkBehaviour {
 				print ("Found player, removing the following index:" + counter); 
 				playerManager.RemoveAt(counter);
 
-			}else{
+            } else{
 
 				print ("searching for player!");
 			}
@@ -117,7 +117,7 @@ public class netWorkAssitant : NetworkBehaviour {
 			counter ++; 
 		}
 
-	}
+    }
 
 	/**
 	 * deleteOldPlayers(tag)
@@ -136,6 +136,7 @@ public class netWorkAssitant : NetworkBehaviour {
 			return;
 		}
 		CmdRemovePlayer (tag);
+
 
 	}
  

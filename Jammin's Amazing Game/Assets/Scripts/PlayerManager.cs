@@ -25,8 +25,22 @@ public class PlayerManager : NetworkBehaviour {
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
         flipMe = GetComponent<SyncFlip>();
-        
+
+        SpawnPoints spawnPoint = GameObject.Find("Spawn1").GetComponent<SpawnPoints>();
+
         anim.SetBool("IsMoving", false);
+        if (this.tag == "Player1") {
+            this.transform.position = spawnPoint.spawnPoints[0].transform.position;
+        }
+        else if (this.tag == "Player2") {
+            this.transform.position = spawnPoint.spawnPoints[1].transform.position;
+        }
+        else if (this.tag == "Player3") {
+            this.transform.position = spawnPoint.spawnPoints[2].transform.position;
+        }
+        else if (this.tag == "Player4") {
+            this.transform.position = spawnPoint.spawnPoints[3].transform.position;
+        }
     }
 
     void FixedUpdate() {

@@ -80,11 +80,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyID: 0
-  Gate1: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-  Gate2: {fileID: 1941519366561498, guid: 2d5375809d4773a4e89180047e2a9675, type: 2}
-  Gate3: {fileID: 1910688458513826, guid: 4b53afe14664aa14493960546869d833, type: 2}
-  Gate4: {fileID: 1844218646087088, guid: 605968532393ba34fa7a64660cdacb06, type: 2}
-  Gate5: {fileID: 1903584814688952, guid: a774187adfca36d46b06fbdb9884a590, type: 2}
+  Gate1: {fileID: 0}
+  Gate2: {fileID: 0}
+  Gate3: {fileID: 0}
+  Gate4: {fileID: 0}
+  Gate5: {fileID: 0}
+  Gate6: {fileID: 0}
+  Gate7: {fileID: 0}
 --- !u!114 &114044915097216232
 MonoBehaviour:
   m_ObjectHideFlags: 1
