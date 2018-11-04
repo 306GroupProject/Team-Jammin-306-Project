@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 224448779432836624}
   - component: {fileID: 223659076640745870}
   - component: {fileID: 114914622680336136}
-  - component: {fileID: 114961515061341708}
+  - component: {fileID: 114447160452787568}
   m_Layer: 5
   m_Name: Spike Cooldown Canvas
   m_TagString: Untagged
@@ -205,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444966039895746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.54404, y: -0.54569435, z: 0}
+  m_LocalPosition: {x: 148.21571, y: 22.22614, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224534096385657080}
@@ -440,7 +440,6 @@ MonoBehaviour:
   manaCost: 0
   cooldown: 3
   projectile: {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}
-  smoke: {fileID: 0}
 --- !u!114 &114356520464550344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -471,6 +470,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65536
   teleportDistance: 10
+--- !u!114 &114447160452787568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1914593730376018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116575842c7135045aab27f47205f195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportCooldownImage: {fileID: 114004888895901164}
+  rockThrowCooldownImage: {fileID: 114708981331847288}
 --- !u!114 &114462844232092624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,19 +718,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114961515061341708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914593730376018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116575842c7135045aab27f47205f195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportCooldownImage: {fileID: 114004888895901164}
-  rockThrowCooldownImage: {fileID: 114708981331847288}
 --- !u!114 &114962120387042508
 MonoBehaviour:
   m_ObjectHideFlags: 1

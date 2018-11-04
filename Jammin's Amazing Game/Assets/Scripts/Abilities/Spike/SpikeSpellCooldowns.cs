@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-public class SpikeSpellCooldowns : NetworkBehaviour {
+public class SpikeSpellCooldowns : MonoBehaviour {
 
     //public GameObject playerController;
 

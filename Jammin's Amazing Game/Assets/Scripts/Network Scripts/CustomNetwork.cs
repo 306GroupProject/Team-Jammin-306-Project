@@ -74,7 +74,7 @@ public class CustomNetwork : NetworkManager {
             playerTag.playerName = "Spike";
         } 
         else if (playerTag.playerTag == "Player3") {
-            playerTag.playerName = "Sal";
+            playerTag.playerName = "Lizz";
         } 
         else if (playerTag.playerTag == "Player4") {
             playerTag.playerName = "Zap";
