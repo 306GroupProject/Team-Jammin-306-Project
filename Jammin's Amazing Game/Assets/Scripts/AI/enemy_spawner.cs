@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class enemy_spawner : NetworkBehaviour {
 	
-	public GameObject aiPrefab; // Select the AI prefab you want drag and drop it into this variable in unity.
-    public Transform spawnPoint; // this is just a gameobject without a sprite. Put it where you want the AI to spawn.
+	public GameObject aiPrefab; // Select the AI prefab you want drag and drop it into this variable in unity..
 	public GameObject[] spawnPoints; // spawn points
-	public int numAI; // how many AI do we want to spawn?
+	public int numAI; // how many AI do we want to spawn? make sure it is the same size as the spawnPoints[].
 	
 
 
@@ -22,9 +21,8 @@ public class enemy_spawner : NetworkBehaviour {
 		int counter = 0; 
 
 		while (counter < numAI) {
-			print (numAI);
 
-			GameObject enemy = Instantiate (aiPrefab, new Vector2(spawnPoint.position.x, spawnPoint.position.y), Quaternion.identity );
+			GameObject enemy = Instantiate (aiPrefab, new Vector2(spawnPoints[counter].transform.position.x, spawnPoints[counter].transform.position.y), Quaternion.identity );
 			
 			NetworkServer.Spawn (enemy); 
 			counter ++;
@@ -35,10 +33,7 @@ public class enemy_spawner : NetworkBehaviour {
 
 
 	void Start(){
-
-
-		spawnPoints = new GameObject [numAI]; 
-
+		
 	}
 	
 }
