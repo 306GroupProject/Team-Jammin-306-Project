@@ -26,7 +26,7 @@ public class PlayerManager : NetworkBehaviour {
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
         flipMe = GetComponent<SyncFlip>();
 
-        SpawnPoints spawnPoint = GameObject.Find("Spawn1").GetComponent<SpawnPoints>();
+        SpawnPoints spawnPoint = GameObject.FindGameObjectWithTag("Spawn1").GetComponent<SpawnPoints>();
 
         anim.SetBool("IsMoving", false);
         if (this.tag == "Player1") {

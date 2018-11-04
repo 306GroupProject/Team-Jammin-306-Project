@@ -16,6 +16,7 @@ TagManager:
   - FireFrags
   - Pebbles
   - assistantNet
+  - Spawn1
   layers:
   - Default
   - TransparentFX
