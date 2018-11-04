@@ -24,7 +24,7 @@ public class CustomNetwork : NetworkManager {
      * prefabs we are going to use for the players.
      */
     public override void OnStartClient(NetworkClient client) {
-        
+        GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Room1 Center").transform.position;
         foreach (GameObject charac in prefabs) {
             ClientScene.RegisterPrefab(charac);
         }
