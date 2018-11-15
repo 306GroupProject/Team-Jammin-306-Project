@@ -85,6 +85,9 @@ public class CustomNetwork : NetworkManager {
         NetworkServer.Spawn(playerFab);
 
 		currentPrefabSpawning = playerFab;
+
+		 
+
     }
 
 	public GameObject returnCurrentPrefab(){
@@ -94,42 +97,20 @@ public class CustomNetwork : NetworkManager {
     /*
      * Test Gui buttons for character select. Subject to change 
      */
-
-    bool showPlayerButtons = true;
-
     public void OnGUI() {
-        if (showPlayerButtons)
-        {
-            if (GUI.Button(new Rect(65, 340, 100, 20), "Finn"))
-            {
-                chosenPlayer = 0;
-                showPlayerButtons = false;
-            }
-
-            if (GUI.Button(new Rect(65, 390, 100, 20), "Spike"))
-            {
-                chosenPlayer = 1;
-                showPlayerButtons = false;
-            }
-            if (GUI.Button(new Rect(65, 430, 100, 20), "Liz"))
-            {
-                chosenPlayer = 2;
-                showPlayerButtons = false;
-            }
-            if (GUI.Button(new Rect(65, 470, 100, 20), "Zap"))
-            {
-                chosenPlayer = 3;
-                showPlayerButtons = false;
-            }
-        }       
-    }
-
-    // It would be good to set up a function that just sets showPlayerButtons to true after a client leaves
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            showPlayerButtons = true;
+        if (GUI.Button(new Rect(65, 340,100, 20), "Finn")) {
+            chosenPlayer = 0;
+        }
+        if (GUI.Button(new Rect(65, 390, 100, 20), "Spike")) {
+            chosenPlayer = 1;
+        }
+        if (GUI.Button(new Rect(65, 430, 100, 20), "Liz")) {
+            chosenPlayer = 2;
+        }
+        if (GUI.Button(new Rect(65, 470, 100, 20), "Zap")) {
+            chosenPlayer = 3;
         }
     }
+
+
 }

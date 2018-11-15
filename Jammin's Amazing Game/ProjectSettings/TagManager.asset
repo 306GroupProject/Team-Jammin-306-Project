@@ -16,7 +16,6 @@ TagManager:
   - FireFrags
   - Pebbles
   - assistantNet
-  - Bolt
   layers:
   - Default
   - TransparentFX
@@ -39,7 +38,7 @@ TagManager:
   - Fireball
   - Meteor
   - FireFrag
-  - TPKey
+  - 
   - 
   - 
   - 
