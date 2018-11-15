@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 95568687501479128}
   - component: {fileID: 114225577254999616}
   - component: {fileID: 114443989487249540}
+  - component: {fileID: 50373915086034490}
   m_Layer: 15
   m_Name: meleeAI
   m_TagString: Enemy
@@ -47,6 +48,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50373915086034490
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289061748266242}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 500
+  m_LinearDrag: 100
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58711943691099312
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -128,9 +149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5681e56762348b64e9354ebb08bcefa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiMovementSpeed: 2.5
+  aiMovementSpeed: 10
   aiDmg: 4
   plyController: {fileID: 0}
+  spottingDistance: 30
 --- !u!114 &114560031854364934
 MonoBehaviour:
   m_ObjectHideFlags: 1

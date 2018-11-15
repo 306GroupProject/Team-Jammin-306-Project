@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 114695395844197348}
   - component: {fileID: 114630221529327538}
   - component: {fileID: 114644169856954328}
+  - component: {fileID: 114062926392838570}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Untagged
@@ -205,15 +206,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1298046741503160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.9021, y: -31.999514, z: 0}
+  m_LocalRotation: {x: -0.12497497, y: 0.69597507, z: 0.69597507, w: 0.12497497}
+  m_LocalPosition: {x: 698.1373, y: 21.285576, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224569073953643352}
   - {fileID: 224035877600804310}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 98.79, z: 60.85}
 --- !u!50 &50432249850962382
 Rigidbody2D:
   serializedVersion: 4
@@ -324,6 +325,24 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114062926392838570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6816d6e1942f8e7498a5f95473e0e847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  velocity: 0
+  manaCost: 0
+  cooldown: 10
+  projectile: {fileID: 1027108284590840, guid: ff62bd42a7e1c7047a277d8924f092ed, type: 2}
+  fireDuration: 0
 --- !u!114 &114109463074688562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,7 +402,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7cd8e502ecfb75944b6415ad2895c6c0, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -460,7 +479,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d87fab50d7a4b744dbff063b6efdad32, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
