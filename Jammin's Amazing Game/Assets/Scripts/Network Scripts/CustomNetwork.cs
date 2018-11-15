@@ -85,9 +85,6 @@ public class CustomNetwork : NetworkManager {
         NetworkServer.Spawn(playerFab);
 
 		currentPrefabSpawning = playerFab;
-
-		 
-
     }
 
 	public GameObject returnCurrentPrefab(){

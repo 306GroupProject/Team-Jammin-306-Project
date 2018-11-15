@@ -8,7 +8,6 @@ public class PuddleCollision : NetworkBehaviour
 {
 
     [SerializeField, SyncVar]
-    private float damage = 0.0f;
     public float slowRate = 50.0f;
     PlayerManager Script;
     bool notelectric = true;

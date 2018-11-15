@@ -11,7 +11,7 @@ public class EPuddleCollison : NetworkBehaviour
     [SerializeField, SyncVar]
     private int damage = 1;
 
-    public float dotRate = 0.5f;
+    public float dotRate = 1.0f;
     float startTime;
 
     public void Awake() {
