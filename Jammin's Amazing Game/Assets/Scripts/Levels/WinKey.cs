@@ -20,6 +20,9 @@ public class WinKey : NetworkBehaviour {
      * When a player touches appropriate key, teleport the player into the next room.
      */
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (!isClient) {
+            return;
+        }
         // Center the camera into the second room when player touches key.
         if (winKeyID == 1)
         {

@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ae125b36fe00340b5ed26856d83ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
   damageRate: 1
   damageTick: 3
 --- !u!198 &198617403656778046
@@ -3688,7 +3689,7 @@ ParticleSystem:
     radiusScale: 0.0001
     collidesWith:
       serializedVersion: 2
-      m_Bits: 98304
+      m_Bits: 229376
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
