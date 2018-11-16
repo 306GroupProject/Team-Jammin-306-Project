@@ -187,8 +187,8 @@ MonoBehaviour:
   aiMovementSpeed: 10
   aiDmg: 5
   plyController: {fileID: 0}
-  spottingDistance: 15
-  comfortZone: 10
+  spottingDistance: 25
+  comfortZone: 20
 --- !u!114 &114596958572519790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84bab987c725db4c95e25549aafa790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiHP: 16
+  aiHP: 8
 --- !u!212 &212217894600913022
 SpriteRenderer:
   m_ObjectHideFlags: 1
