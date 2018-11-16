@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/**
+ * Supercharge Ability for Zapp. Inherits Abilities!
+ */
 public class SuperCharge : Abilities {
 
     [SerializeField, SyncVar]
@@ -45,6 +48,9 @@ public class SuperCharge : Abilities {
         duration = 100;
     }
 
+    /*
+     * Creates particle effects while the ability is active and restores normal speed once the ability expires
+     */
     private void charged()
     {
         if(duration > 0)
@@ -61,6 +67,9 @@ public class SuperCharge : Abilities {
         }
     }
 
+    /*
+     * Checks for enemy collision only when the ability is active 
+     */
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy" && duration > 0)

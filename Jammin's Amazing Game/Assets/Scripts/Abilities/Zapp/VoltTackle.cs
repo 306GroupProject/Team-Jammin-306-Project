@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/**
+ * Volt Tackle Ability for Zapp. Inherits Abilities!
+ */
 public class VoltTackle : Abilities {
 
+    [SerializeField, SyncVar]
     private float canAttack;
     public GameObject spark;
     GameObject particle;
@@ -25,6 +29,7 @@ public class VoltTackle : Abilities {
             }
         }
 
+        // Creates a trail of particle for a short duration during the dash
         if (trail)
         {
             particle = Instantiate(spark, transform.position, Quaternion.identity);
@@ -52,6 +57,9 @@ public class VoltTackle : Abilities {
         this.GetComponent<Rigidbody2D>().AddForce(direction * 10000.0f);
     }
 
+    /*
+     * Only checks for collision while the player is dashing more or less
+     */
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy" && trail)
