@@ -443,8 +443,9 @@ MonoBehaviour:
   velocity: 0
   manaCost: 0
   cooldown: 5
-  projectile: {fileID: 0}
-  spark: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
+  projectile: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
+  canAttack: 0
+  ePuddle: {fileID: 0}
 --- !u!114 &114333335150084574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -542,9 +543,8 @@ MonoBehaviour:
   velocity: 0
   manaCost: 0
   cooldown: 15
-  projectile: {fileID: 0}
+  projectile: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
   damage: 4
-  spark: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
 --- !u!114 &114506578186670748
 MonoBehaviour:
   m_ObjectHideFlags: 1

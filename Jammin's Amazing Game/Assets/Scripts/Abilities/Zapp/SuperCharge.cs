@@ -11,7 +11,6 @@ public class SuperCharge : Abilities {
     [SerializeField, SyncVar]
     private float damage = 5.0f;
     private float canAttack;
-    public GameObject spark;
     GameObject particle;
     PlayerManager Script;
     int duration = -1;
@@ -55,7 +54,7 @@ public class SuperCharge : Abilities {
     {
         if(duration > 0)
         {
-            particle = Instantiate(spark, transform.position, Quaternion.identity);
+            particle = Instantiate(projectile, transform.position, Quaternion.identity);
             particle.tag = "Bolt";
             Destroy(particle, 0.5f);
             duration = duration - 1;

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 114630221529327538}
   - component: {fileID: 114644169856954328}
   - component: {fileID: 114062926392838570}
+  - component: {fileID: 114067497888496930}
   m_Layer: 10
   m_Name: Lizz
   m_TagString: Player3
@@ -343,6 +344,23 @@ MonoBehaviour:
   cooldown: 10
   projectile: {fileID: 1027108284590840, guid: ff62bd42a7e1c7047a277d8924f092ed, type: 2}
   fireDuration: 0
+--- !u!114 &114067497888496930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298046741503160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da57c5467c65e5843bb44ad9e8695a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  velocity: 0
+  manaCost: 0
+  cooldown: 0
+  projectile: {fileID: 1842386962723758, guid: b3d3514ef8b120e4983a4afa2c247d2d, type: 2}
 --- !u!114 &114109463074688562
 MonoBehaviour:
   m_ObjectHideFlags: 1

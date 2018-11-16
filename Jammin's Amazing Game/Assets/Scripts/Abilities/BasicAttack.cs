@@ -3,24 +3,18 @@ using UnityEngine;
 
 public class BasicAttack : Abilities {
 
-    float startTime;
+    float canAttack;
     [SerializeField] float airTime = 1.0f;
 
-    /*
-     * When script is active, begin the timer
-     */ 
-    public void Awake() {
-        startTime = Time.time;
-    }
 
     /*
      * Allows the player to cast basic attack every cooldown seconds.
      */ 
     public void Update() {
         if (isLocalPlayer) {
-            if (Input.GetMouseButtonDown(0) && this.cooldown + startTime < Time.time) {
+            if (Input.GetMouseButtonDown(0) && Time.time > canAttack) {
                 this.CmdCast(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                startTime = Time.time;
+                canAttack = Time.time + cooldown;
             }
             
         }

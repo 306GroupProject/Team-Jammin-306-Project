@@ -60,7 +60,7 @@ public class RockWall : Abilities {
                 }
             }
             // If the player is shooting left between within a certain radius, create vertical wall downwards
-            else if (direction.x <= -0.7f) {
+            else if (direction.x <= -Mathf.Sqrt(2) / 2.0f) {
                 for (int i = 0; i < 3; i++) {
                     GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
                     mouseTransform.y -= wall.transform.localScale.y;

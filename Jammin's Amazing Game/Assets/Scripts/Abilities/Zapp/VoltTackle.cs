@@ -10,12 +10,12 @@ public class VoltTackle : Abilities {
 
     [SerializeField, SyncVar]
     private float canAttack;
-    public GameObject spark;
     GameObject particle;
     bool trail = false;
     private float duration = 0.3f;
     private float elapsed;
     private float damage = 10.0f;
+    public GameObject ePuddle;
 
     public void Update()
     {
@@ -32,7 +32,7 @@ public class VoltTackle : Abilities {
         // Creates a trail of particle for a short duration during the dash
         if (trail)
         {
-            particle = Instantiate(spark, transform.position, Quaternion.identity);
+            particle = Instantiate(projectile, transform.position, Quaternion.identity);
             particle.tag = "Bolt";
             Destroy(particle, 0.5f);
             if(elapsed < Time.time)
@@ -67,4 +67,5 @@ public class VoltTackle : Abilities {
             collision.gameObject.SendMessage("Damage", damage);
         }
     }
+
 }
