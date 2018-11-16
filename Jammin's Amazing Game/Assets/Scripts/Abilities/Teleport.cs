@@ -30,9 +30,6 @@ public class Teleport : NetworkBehaviour {
                         transform.position = point;
                         timeSinceTeleport = Time.time + teleportCooldown; // start the cooldown period
                     }
-                } else {
-                    //cooldownScript.TeleportBlocked(true);
-                    Debug.Log("Wall");
                 }
 
             }

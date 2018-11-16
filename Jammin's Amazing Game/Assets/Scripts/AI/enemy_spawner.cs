@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class enemy_spawner : NetworkBehaviour {
 	
-	public GameObject aiPrefab; // Select the AI prefab you want drag and drop it into this variable in unity..
-	public GameObject[] spawnPoints; // spawn points
-	public int numAI; // how many AI do we want to spawn? make sure it is the same size as the spawnPoints[].
-	
+	public GameObject meleePrefab; // Select the AI prefab you want drag and drop it into this variable in unity.
+	public GameObject rangePrefab; // select the Range AI prefab.
+	public GameObject[] MeleePoints; // spawn points
+	public GameObject[] RangePoints; // spawn Points
+	public int numMeleeAi; // how many AI do we want to spawn? make sure it is the same size as the spawnPoints[].
+	public int numRangeAi;
 
 
 	/**
@@ -20,15 +22,31 @@ public class enemy_spawner : NetworkBehaviour {
 	public override void OnStartServer(){
 		int counter = 0; 
 
-		while (counter < numAI) {
+		while (counter < numMeleeAi) {
 
-			GameObject enemy = Instantiate (aiPrefab, new Vector2(spawnPoints[counter].transform.position.x, spawnPoints[counter].transform.position.y), Quaternion.identity );
+			GameObject enemy = Instantiate (meleePrefab, new Vector2(MeleePoints[counter].transform.position.x, MeleePoints[counter].transform.position.y), Quaternion.identity );
 			
 			NetworkServer.Spawn (enemy); 
+
+
 			counter ++;
 		} 
+
+
+		counter = 0; 
+
+		while (counter <  numRangeAi) {
+
+			GameObject rngEnemy = Instantiate (rangePrefab, new Vector2(RangePoints[counter].transform.position.x, RangePoints[counter].transform.position.y), Quaternion.identity );
+
+			NetworkServer.Spawn(rngEnemy); 
+
+			counter ++; 
+
+
+		}
 		
-		
+
 	}
 
 

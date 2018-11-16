@@ -106,13 +106,10 @@ public class netWorkAssitant : NetworkBehaviour {
 
 			if(playerManager[counter].ply.gameObject.tag == tag){
 
-				print ("Found player, removing the following index:" + counter); 
+			//	print ("Found player, removing the following index:" + counter); 
 				playerManager.RemoveAt(counter);
 
-            } else{
-
-				print ("searching for player!");
-			}
+            }
 
 			counter ++; 
 		}
