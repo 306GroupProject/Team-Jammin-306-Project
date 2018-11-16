@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 50311874616263716}
   - component: {fileID: 61789304573115806}
   - component: {fileID: 58378368472123164}
-  - component: {fileID: 114565809949372768}
   - component: {fileID: 114716839963374700}
   - component: {fileID: 114108292568364362}
   - component: {fileID: 95404842186310916}
@@ -519,8 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c822c2224d6ba47489d1fe29a1d39dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: SuperCharge
+  description: Electrically charges the player to move faster
   velocity: 0
   manaCost: 0
   cooldown: 0
@@ -572,24 +571,6 @@ MonoBehaviour:
   projectile: {fileID: 1814027816955148, guid: 5cc9bd1c827e1eb47814eefb3ea2d575, type: 2}
   lifeTime: 0.1
   iteration: 0
---- !u!114 &114565809949372768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1506721537851016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea4ad6ed30e2944bb6b9b04f65bd726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillName: 
-  description: 
-  velocity: 0
-  manaCost: 0
-  cooldown: 0
-  projectile: {fileID: 1274004759208662, guid: ce7175a9a8e2c29448bfe02c11108723, type: 2}
-  lifeTime: 5
 --- !u!114 &114575065565575060
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ public class Puddle : Abilities
         // Only allow local player to cast, so that other players doesn't cast this ability as well
         if (isLocalPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha3) && Time.time > canAttack)
+            if (Input.GetKeyDown(KeyCode.Alpha1) && Time.time > canAttack)
             {
                 CmdCast(transform.position, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 canAttack = Time.time + cooldown;
