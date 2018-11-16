@@ -73,6 +73,19 @@ public class playerHealth : NetworkBehaviour {
 		}
 		
 	}
+
+    public void Heal(int heal) {
+        if (!isServer) {
+            return;
+        }
+
+        if (playerHP >= 16) {
+            return;
+        }
+
+        playerHP += heal;
+        
+    }
 	
 	
 	/**
