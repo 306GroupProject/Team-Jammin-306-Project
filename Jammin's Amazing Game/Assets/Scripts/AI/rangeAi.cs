@@ -231,8 +231,8 @@ public class rangeAi : ai {
 
 			// move away!
 			transform.Translate(moveDirection.normalized * aiMovementSpeed * Time.deltaTime);
-
-		}
+            anim.SetBool("IsMoving", true);
+        }
 
 	}
 	/**
@@ -247,7 +247,7 @@ public class rangeAi : ai {
 			this.aiMovementSpeed = 0f;
 
 			this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll; 
-//			anim.SetBool("IsMoving", false);
+			anim.SetBool("IsMoving", false);
 		}
 	}
 
@@ -313,8 +313,9 @@ public class rangeAi : ai {
 
 	// Use this for initialization
 	void Start () {
-	
-		plyerDmg = 6; 
+
+        anim = GetComponent<Animator>();
+        plyerDmg = 6; 
 		plyController = GameObject.FindGameObjectWithTag("assistantNet");
 		aiSavedSpeed = aiMovementSpeed; 
 		DecisionTree (); 
