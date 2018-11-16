@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 114187471735408312}
   - component: {fileID: 114518251867246098}
   - component: {fileID: 114492110737753336}
+  - component: {fileID: 114310479998204660}
   m_Layer: 11
   m_Name: Lightning
   m_TagString: Player4
@@ -426,6 +427,24 @@ MonoBehaviour:
   m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114310479998204660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506721537851016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dd56b855c6a6b418645db3950031b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: VoltTackle
+  description: Dashes foward dealing damage along the way
+  velocity: 0
+  manaCost: 0
+  cooldown: 5
+  projectile: {fileID: 0}
+  spark: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
 --- !u!114 &114333335150084574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -522,8 +541,9 @@ MonoBehaviour:
   description: Electrically charges the player to move faster
   velocity: 0
   manaCost: 0
-  cooldown: 0
+  cooldown: 15
   projectile: {fileID: 0}
+  damage: 4
   spark: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
 --- !u!114 &114506578186670748
 MonoBehaviour:
@@ -569,7 +589,7 @@ MonoBehaviour:
   manaCost: 0
   cooldown: 2
   projectile: {fileID: 1814027816955148, guid: 5cc9bd1c827e1eb47814eefb3ea2d575, type: 2}
-  lifeTime: 0.1
+  lifeTime: 0.3
   iteration: 0
 --- !u!114 &114575065565575060
 MonoBehaviour:

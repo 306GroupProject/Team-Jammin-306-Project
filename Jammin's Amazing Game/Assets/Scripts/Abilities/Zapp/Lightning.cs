@@ -12,8 +12,16 @@ public class Lightning : Abilities
     public float lifeTime = 1.0f;
     private float canAttack;
     GameObject bolt;
-    public int iteration;
+    public int iteration = -1;
+    float angle;
+    Vector2 direction;
+    Vector2 newPosition;
 
+
+    void Start()
+    {
+        InvokeRepeating("lightningStrike", 0.0f, 0.01f);
+    }
     /**
      *  Lightning ability for Zapp, activated using number 1
      */
@@ -41,9 +49,11 @@ public class Lightning : Abilities
     {
         // Spawns in a bolt, syncronized accross network!
         iteration = 0;
-        Vector2 direction = (mouseTransform - playerTransform).normalized * 40;
-        Vector2 newPosition = playerTransform;
-        float angle = AngleMath(playerTransform, mouseTransform) + 90.0f;
+        direction = (mouseTransform - playerTransform).normalized * 40;
+        newPosition = playerTransform;
+        angle = AngleMath(playerTransform, mouseTransform) + 90.0f;
+        iteration = 10;
+        /*
         while (iteration < 15)
         {
             bolt = Instantiate(this.projectile, newPosition, Quaternion.Euler(new Vector3(0f, 0f, angle)));
@@ -51,7 +61,18 @@ public class Lightning : Abilities
             iteration++;
             Destroy(bolt, lifeTime);
         }
-        
+        */
+    }
+
+    private void lightningStrike()
+    {
+        if (iteration > 0)
+        {
+            bolt = Instantiate(this.projectile, newPosition, Quaternion.Euler(new Vector3(0f, 0f, angle)));
+            newPosition = (Vector2)bolt.transform.position + direction / 15;
+            iteration--;
+            Destroy(bolt, lifeTime);
+        }
     }
 
     private float AngleMath(Vector2 player, Vector2 mouse)

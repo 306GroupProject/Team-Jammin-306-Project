@@ -5,15 +5,14 @@ using UnityEngine.Networking;
 
 public class SuperCharge : Abilities {
 
+    [SerializeField, SyncVar]
+    private float damage = 5.0f;
     private float canAttack;
     public GameObject spark;
     GameObject particle;
     PlayerManager Script;
     int duration = -1;
 
-    /**
-     *  Fireball ability for Lizz, activated using number 1
-     */
     void Start()
     {
         InvokeRepeating("charged", 0.0f, 0.1f);
@@ -26,12 +25,24 @@ public class SuperCharge : Abilities {
         {
             if (Input.GetKeyDown(KeyCode.Alpha2) && Time.time > canAttack)
             {
-                Script = this.gameObject.GetComponent<PlayerManager>();
-                Script.changeSpeed(200.0f);
-                duration = 100;
+                CmdCast(transform.position, (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 canAttack = Time.time + cooldown;
             }
         }
+    }
+
+    [Command]
+    void CmdCast(Vector2 playerTransform, Vector2 mouseTransform)
+    {
+        RpcCast(playerTransform, mouseTransform);
+    }
+
+    [ClientRpc]
+    void RpcCast(Vector2 playerTransform, Vector2 mouseTransform)
+    {
+        Script = this.gameObject.GetComponent<PlayerManager>();
+        Script.changeSpeed(400.0f);
+        duration = 100;
     }
 
     private void charged()
@@ -47,6 +58,14 @@ public class SuperCharge : Abilities {
         {
             Script.changeSpeed(100.0f);
             duration = duration - 1;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" && duration > 0)
+        {
+            collision.gameObject.SendMessage("Damage", damage);
         }
     }
 }
