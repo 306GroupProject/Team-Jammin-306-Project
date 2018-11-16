@@ -52,11 +52,19 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
 =======
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 41
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 41
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -74,25 +82,37 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
 =======
+<<<<<<< HEAD
     x: 1460
     y: 0
     width: 460
     height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 560
+    height: 947
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,16 +136,27 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
 =======
     y: 0
+<<<<<<< HEAD
     width: 257
     height: 676
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 404
+    height: 629
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,11 +181,19 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 4156
 =======
     y: 676
     width: 1460
     height: 271
+=======
+  controlID: 94
+=======
+    y: 629
+    width: 1360
+    height: 318
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 15}
@@ -163,7 +202,11 @@ MonoBehaviour:
   - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -292,6 +335,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     y: 573
     width: 1360
+<<<<<<< HEAD
     height: 374
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -302,14 +346,22 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 =======
+<<<<<<< HEAD
     y: 0
     width: 1460
     height: 676
+=======
+    height: 629
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
   controlID: 43
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,12 +379,14 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1360
     y: 0
+<<<<<<< HEAD
     width: 560
     height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
 =======
+<<<<<<< HEAD
     x: 257
     y: 0
     width: 1203
@@ -341,6 +395,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    width: 956
+    height: 629
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 18}
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
@@ -604,8 +666,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 406
     y: 92
-    width: 960
-    height: 553
+    width: 952
+    height: 577
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -616,6 +678,7 @@ MonoBehaviour:
     - {fileID: 1107563331695804330, guid: fb6fabae55402354588474e19ff761fa, type: 2}
     - {fileID: 1107003440610415964, guid: 1e2a5a9001cf598418885f53d9454376, type: 2}
     - {fileID: 1107616025434757432, guid: ca6d3a3798fdbf344aefd358ba384323, type: 2}
+    - {fileID: 1107911929567012792, guid: 600557dac559f334b86c422016f819fc, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.608421
       e01: 0
@@ -729,6 +792,25 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+<<<<<<< HEAD
+=======
+    - e00: 0.60210526
+      e01: 0
+      e02: 0
+      e03: -15.105255
+      e10: 0
+      e11: 0.60210526
+      e12: 0
+      e13: 219.82104
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -743,7 +825,68 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
+<<<<<<< HEAD
 --- !u!114 &17
+=======
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12157, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Services
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1370
+    y: 92
+    width: 550
+    height: 926
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  m_GlobalObjectTypeName: 
+  m_RegisteredViewURLs:
+  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/unet
+  m_RegisteredViewInstances:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 468
+    y: 181
+    width: 973
+    height: 501
+  m_PersistentViewDataDictionary: {fileID: 0}
+--- !u!114 &15
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -769,10 +912,17 @@ MonoBehaviour:
     width: 1358
     height: 353
 =======
+<<<<<<< HEAD
     y: 768
     width: 1458
     height: 250
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    y: 721
+    width: 1358
+    height: 297
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -787,6 +937,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scripts/Levels
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -799,8 +950,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs/Projectiles/Finn
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    - Assets/Prefabs/Projectiles
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs/Projectiles
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\nkind\Documents\GitHub\Team-Jammin-306-Project\Jammin's
+  m_LastProjectPath: C:\Users\Mark\Documents\GitHub\Team-Jammin-306-Project\Team-Jammin-306-Project\Jammin's
     Amazing Game
   m_LockTracker:
     m_IsLocked: 1
@@ -809,6 +967,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 20}
     m_SelectedIDs: f62a0000
     m_LastClickedID: 10998
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000722a0000982a00003a2b00005c2b0000022c0000ae2c00005a2d0000e82d00000a2e0000ca2e000020360000
 =======
     scrollPos: {x: 0, y: 75}
@@ -816,6 +975,15 @@ MonoBehaviour:
     m_LastClickedID: 11842
     m_ExpandedIDs: 00000000002c00002a2c0000ce2c0000922d0000f02d0000462e0000fc2e00008a2f0000ac2f000076300000d836000000ca9a3b
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    m_ExpandedIDs: 00000000722a0000982a00003a2b00005c2b0000022c0000ae2c00005a2d0000e82d00000a2e0000ca2e000096350000
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: de330000
+    m_LastClickedID: 13278
+    m_ExpandedIDs: 000000005a30000076300000e830000098310000ea31000030320000b2320000323300004c330000de3300000c37000000ca9a3b
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Lizz
@@ -844,10 +1012,17 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000722a0000982a00003a2b00005c2b0000022c0000ae2c00005a2d0000e82d00000a2e0000ca2e000020360000
 =======
     m_ExpandedIDs: 00000000002c00002a2c0000ce2c0000922d0000f02d0000462e0000fc2e00008a2f0000ac2f000076300000d8360000
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    m_ExpandedIDs: 00000000722a0000982a00003a2b00005c2b0000022c0000602c00005a2d0000e82d00000a2e0000ca2e000096350000
+=======
+    m_ExpandedIDs: 000000005a30000076300000e830000098310000ea31000030320000b2320000323300004c330000de3300000c370000
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -875,7 +1050,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
+<<<<<<< HEAD
     m_ExpandedInstanceIDs: c62300002e2d0000302e0000302f00002a0c00001c2f000028310000a82f0000c62d0000b42e0000ae310000
+=======
+    m_ExpandedInstanceIDs: c62300002e2d0000302e0000302f00002a0c00001c2f000028310000a82f0000c62d0000b42e0000ae3100000c2c00003c2f0000
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -929,9 +1108,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1462
     y: 92
     width: 458
+=======
+    x: 1362
+    y: 92
+    width: 558
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -965,6 +1150,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
+<<<<<<< HEAD
     width: 255
     height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -977,16 +1163,37 @@ MonoBehaviour:
       m_UserAcceptedRename: 0
       m_Name: HolyWater
       m_OriginalName: HolyWater
+=======
+    width: 402
+    height: 608
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 92f7ffff000000005a350000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
       m_UserData: -517594
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 4
+=======
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -996,7 +1203,11 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_CurrentSortingName: TransformSorting
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1024,6 +1235,7 @@ MonoBehaviour:
     height: 353
   m_PersistentViewDataDictionary: {fileID: 0}
 =======
+<<<<<<< HEAD
     x: 259
     y: 92
     width: 1199
@@ -1031,13 +1243,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 12823.489678599999
+=======
+    x: 406
+    y: 92
+    width: 952
+    height: 608
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 90.50199714555015
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -21.452202, y: 10.852234, z: -2.6731598}
     speed: 2
     m_Value: {x: -21.452202, y: 10.852234, z: -2.6731598}
+=======
+    m_Target: {x: 13.673253, y: 19.056267, z: -4.9478593}
+    speed: 2
+    m_Value: {x: 13.673253, y: 19.056267, z: -4.9478593}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1069,21 +1296,35 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 131.83452
     speed: 2
     m_Value: 131.83452
+=======
+    m_Target: 120.49723
+    speed: 2
+    m_Value: 120.49723
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
   m_ShowGlobalGrid: 1
+<<<<<<< HEAD
   m_LastSceneViewRotation: {x: 0.19600627, y: -0.09894629, z: 0.019883433, w: 0.9753952}
+=======
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1107,6 +1348,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1362
     y: 92
+<<<<<<< HEAD
     width: 558
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -1120,10 +1362,15 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
 =======
+<<<<<<< HEAD
     x: 259
     y: 92
     width: 1199
     height: 655
+=======
+    width: 952
+    height: 608
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -1135,10 +1382,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -599.5
     m_HBaseRangeMax: 599.5
     m_VBaseRangeMin: -319
     m_VBaseRangeMax: 319
+=======
+    m_HBaseRangeMin: -476
+    m_HBaseRangeMax: 476
+    m_VBaseRangeMin: -295.5
+    m_VBaseRangeMax: 295.5
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1156,30 +1410,52 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 1199
       height: 638
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 599.5, y: 319}
+=======
+      width: 952
+      height: 591
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 476, y: 295.5}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -599.5
       y: -319
       width: 1199
       height: 638
+=======
+      x: -476
+      y: -295.5
+      width: 952
+      height: 591
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1199, y: 655}
+=======
+  m_LastWindowPixelSize: {x: 952, y: 608}
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
   m_XRRenderMode: 0
+<<<<<<< HEAD
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1206,10 +1482,17 @@ MonoBehaviour:
     height: 926
 =======
     x: 0
+<<<<<<< HEAD
     y: 768
     width: 1458
     height: 250
 >>>>>>> 18a2b630fe254d81ec011b2a7c41aa4c4150c17c
+=======
+    y: 721
+    width: 1358
+    height: 297
+>>>>>>> cda8973a769e4825a6cbd048ae6cd8fe3652f06e
+>>>>>>> parent of ad3f4f1... Revert "Merge branch 'master' of https://github.com/306GroupProject/Team-Jammin-306-Project"
   m_PersistentViewDataDictionary: {fileID: 0}
   m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   m_GlobalObjectTypeName: 

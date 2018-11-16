@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class meleeAi : ai {
 
-	
+	public float spottingDistance;
+
 	/**
 	 *  void OnCollisionEnter2D():
 	 * When the player collides with the AI, the ai has attacked causing damage to the player.
@@ -137,14 +138,14 @@ public class meleeAi : ai {
 		if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 1) { // check to see if game is single player.
 			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject; // aquire the information on playerOne.
 			
-			if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f) { // if this player within a value of 10, then we will return true to spotting the enemy/player.
+			if (Vector2.Distance (this.transform.position, ply0.transform.position) < spottingDistance) { // if this player within a value of 10, then we will return true to spotting the enemy/player.
 				
 				this.playerSpotted = 0; 
 				return true;
 				
 			} else {
 				
-				return false; // else if the player is not within 10f then we return false.
+				return false; // else if the player is not within spottingDistance then we return false.
 			}
 			
 		} else if (plyController.GetComponent<netWorkAssitant> ().playerManager.Count == 2) { 	// check to see if the game has two players in the game.
@@ -152,13 +153,13 @@ public class meleeAi : ai {
 			GameObject ply1 = plyController.GetComponent<netWorkAssitant> ().playerManager [1].ply.gameObject;
 			GameObject ply0 = plyController.GetComponent<netWorkAssitant> ().playerManager [0].ply.gameObject;
 			
-			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f) { // determine which player is closer to the melee AI.
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance) { // determine which player is closer to the melee AI.
 				
 				this.playerSpotted = 1;  // if player 2, then lets go towards that player.
 				return true;
 				
 				
-			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f) {
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < spottingDistance) {
 				
 				this.playerSpotted = 0;  // else if it player one is closer lets head towards player One.
 				return true;
@@ -177,18 +178,18 @@ public class meleeAi : ai {
 			
 
 			// check to see which player is closer to the AI, that being either player1,player2,orplayer3.
-			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f) {
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply2.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 1; 
 				return true;
 				
 				
-			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f) {
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply1.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply2.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 0; 
 				return true;
 				
-			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f) {
+			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply1.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 2; 
 				return true;
@@ -208,23 +209,23 @@ public class meleeAi : ai {
 			GameObject ply3 = plyController.GetComponent<netWorkAssitant> ().playerManager [3].ply.gameObject;
 			
 			
-			if (Vector2.Distance (this.transform.position, ply1.transform.position) < 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
+			if (Vector2.Distance (this.transform.position, ply1.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply2.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply3.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 1; 
 				return true;
 				
 				
-			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
+			} else if (Vector2.Distance (this.transform.position, ply0.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply1.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply2.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply3.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 0; 
 				return true;
 				
-			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply3.transform.position) > 10f) {
+			} else if (Vector2.Distance (this.transform.position, ply2.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply1.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply3.transform.position) > spottingDistance) {
 				
 				this.playerSpotted = 2; 
 				return true;
 				
-			} else if (Vector2.Distance (this.transform.position, ply3.transform.position) < 10f && Vector2.Distance (this.transform.position, ply1.transform.position) > 10f && Vector2.Distance (this.transform.position, ply0.transform.position) > 10f && Vector2.Distance (this.transform.position, ply2.transform.position) > 10f ){ 
+			} else if (Vector2.Distance (this.transform.position, ply3.transform.position) < spottingDistance && Vector2.Distance (this.transform.position, ply1.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply0.transform.position) > spottingDistance && Vector2.Distance (this.transform.position, ply2.transform.position) > spottingDistance ){ 
 				
 				this.playerSpotted = 3;
 				return true; 
