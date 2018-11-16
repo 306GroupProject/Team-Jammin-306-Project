@@ -350,7 +350,7 @@ MonoBehaviour:
   manaCost: 0
   cooldown: 20
   projectile: {fileID: 1077290495075354, guid: e3554f98d835f5f4587fc61e1a6a0229, type: 2}
-  damageMultiplier: 16
+  damageMultiplier: 2
   activationTime: 1
 --- !u!114 &114130038237702000
 MonoBehaviour:

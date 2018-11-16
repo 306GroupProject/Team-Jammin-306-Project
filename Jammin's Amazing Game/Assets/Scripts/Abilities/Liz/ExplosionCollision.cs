@@ -33,6 +33,10 @@ public class ExplosionCollision : NetworkBehaviour {
         if (collision.gameObject.tag == "Enemy" && Time.time > canDamage) {
             canDamage = Time.time + damageRate;
             collision.SendMessage("Damage", damageTick, SendMessageOptions.DontRequireReceiver);
+        } else if ((collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" 
+            || collision.gameObject.tag == "Player4") && Time.time > canDamage) {
+            canDamage += Time.time + damageRate + 2;
+            collision.SendMessage("Damage", 1, SendMessageOptions.DontRequireReceiver);
         }
 
         // If explosion hits a boulder, combine!
