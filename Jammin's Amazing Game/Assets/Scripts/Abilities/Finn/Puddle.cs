@@ -7,7 +7,7 @@ using System.Collections;
  */
 public class Puddle : Abilities
 {
-    public float lifeTime = 10.0f;
+    public float lifeTime = 5.0f;
     private float canAttack;
     GameObject puddle;
 
@@ -39,9 +39,5 @@ public class Puddle : Abilities
         // Spawns in a puddle, syncronized accross network!
 
         puddle = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
-
-        Destroy(puddle, lifeTime);
-        PlayerManager Script = this.gameObject.GetComponent<PlayerManager>();
-        Script.changeSpeed(100.0f);
     }
 }
