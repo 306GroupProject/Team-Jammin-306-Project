@@ -28,6 +28,7 @@ public class VoltTackle : Abilities {
         if (trail)
         {
             particle = Instantiate(spark, transform.position, Quaternion.identity);
+            particle.tag = "Bolt";
             Destroy(particle, 0.5f);
             if(elapsed < Time.time)
             {
