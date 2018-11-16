@@ -37,6 +37,7 @@ public class PuddleCollision : NetworkBehaviour
         {
             notelectric = false;
             GameObject EPuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
+            Script.changeSpeed(100.0f);
             Destroy(EPuddle, 5.0f);
             Destroy(this.gameObject);
         }
