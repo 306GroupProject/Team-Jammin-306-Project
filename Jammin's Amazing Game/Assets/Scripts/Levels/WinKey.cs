@@ -45,6 +45,7 @@ public class WinKey : NetworkBehaviour {
             }
         }
 
+        // Room 3
         if (winKeyID == 2)
         {
             GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Room3 Center").transform.position;
@@ -65,6 +66,30 @@ public class WinKey : NetworkBehaviour {
             if (collision.gameObject.tag == "Player4")
             {
                 collision.gameObject.transform.position = thirdSpawn.spawnPoints[3].transform.position;
+            }
+        }
+
+        // Room 4
+        if (winKeyID == 3)
+        {
+            GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Room4 Center").transform.position;
+            SpawnPoints fourthSpawn = GameObject.Find("Spawn4").GetComponent<SpawnPoints>();
+
+            if (collision.gameObject.tag == "Player1")
+            {
+                collision.gameObject.transform.position = fourthSpawn.spawnPoints[0].transform.position;
+            }
+            if (collision.gameObject.tag == "Player2")
+            {
+                collision.gameObject.transform.position = fourthSpawn.spawnPoints[1].transform.position;
+            }
+            if (collision.gameObject.tag == "Player3")
+            {
+                collision.gameObject.transform.position = fourthSpawn.spawnPoints[2].transform.position;
+            }
+            if (collision.gameObject.tag == "Player4")
+            {
+                collision.gameObject.transform.position = fourthSpawn.spawnPoints[3].transform.position;
             }
         }
     }
