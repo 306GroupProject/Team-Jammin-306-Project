@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/**
+ * ThunderStorm Ability for Zapp. Inherits Abilities!
+ */
 public class ThunderStorm : Abilities {
 
     [SerializeField, SyncVar]
@@ -13,6 +16,7 @@ public class ThunderStorm : Abilities {
 
     // Update is called once per frame
     void Update () {
+        // Only allow local player to cast, so that other players doesn't cast this ability as well
         if (isLocalPlayer)
         {
             if (Input.GetKeyDown(KeyCode.Alpha4) && Time.time > canAttack)
@@ -37,6 +41,7 @@ public class ThunderStorm : Abilities {
         InvokeRepeating("storm", 0.0f, 0.2f);
     }
 
+    // Creates lightning particles in a area at random for a set duration
     private void storm()
     {
         if(duration > 0)
