@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58281028280641898}
   - component: {fileID: 114680827686041524}
   - component: {fileID: 114099517315488446}
-  m_Layer: 23
+  m_Layer: 21
   m_Name: aiAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,22 +114,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 227
-    i1: 163
-    i2: 127
-    i3: 111
-    i4: 151
-    i5: 169
-    i6: 152
-    i7: 100
-    i8: 139
-    i9: 85
-    i10: 11
-    i11: 165
-    i12: 125
-    i13: 151
-    i14: 37
-    i15: 24
+    i0: 137
+    i1: 73
+    i2: 250
+    i3: 157
+    i4: 156
+    i5: 234
+    i6: 134
+    i7: 52
+    i8: 91
+    i9: 156
+    i10: 104
+    i11: 243
+    i12: 202
+    i13: 100
+    i14: 50
+    i15: 252
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!212 &212226537428780020

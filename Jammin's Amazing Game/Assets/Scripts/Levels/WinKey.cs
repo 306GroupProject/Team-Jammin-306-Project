@@ -20,9 +20,6 @@ public class WinKey : NetworkBehaviour {
      * When a player touches appropriate key, teleport the player into the next room.
      */
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (!isClient) {
-            return;
-        }
         // Center the camera into the second room when player touches key.
         if (winKeyID == 1)
         {
@@ -95,30 +92,5 @@ public class WinKey : NetworkBehaviour {
                 collision.gameObject.transform.position = fourthSpawn.spawnPoints[3].transform.position;
             }
         }
-
-        // Boss Room
-        if (winKeyID == 4)
-        {
-            GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("BossRoomCenter").transform.position;
-            SpawnPoints bossSpawn = GameObject.Find("SpawnBossRoom").GetComponent<SpawnPoints>();
-
-            if (collision.gameObject.tag == "Player1")
-            {
-                collision.gameObject.transform.position = bossSpawn.spawnPoints[0].transform.position;
-            }
-            if (collision.gameObject.tag == "Player2")
-            {
-                collision.gameObject.transform.position = bossSpawn.spawnPoints[1].transform.position;
-            }
-            if (collision.gameObject.tag == "Player3")
-            {
-                collision.gameObject.transform.position = bossSpawn.spawnPoints[2].transform.position;
-            }
-            if (collision.gameObject.tag == "Player4")
-            {
-                collision.gameObject.transform.position = bossSpawn.spawnPoints[3].transform.position;
-            }
-        }
-
     }
 }

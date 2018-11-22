@@ -17,8 +17,6 @@ TagManager:
   - Pebbles
   - assistantNet
   - Bolt
-  - barrel
-  - FlameThrower
   layers:
   - Default
   - TransparentFX
@@ -43,7 +41,7 @@ TagManager:
   - FireFrag
   - TPKey
   - Geyser
-  - ArcaneShot
+  - 
   - 
   - 
   - 

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fc6c4da962e184f9bd189262ecc4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 4
   airtime: 1
   splashRate: 5
   pebble: {fileID: 1452411878856366, guid: bcbbc57cc7d315b43af8667340541d98, type: 2}

@@ -15,6 +15,7 @@ public class VoltTackle : Abilities {
     private float duration = 0.3f;
     private float elapsed;
     private float damage = 10.0f;
+    public GameObject ePuddle;
 
     public void Update()
     {
