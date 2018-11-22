@@ -10,6 +10,7 @@ public class FireBall : Abilities
     
     private float canAttack;
     GameObject fireball;
+    public GameObject barrelExplosion;
 
     /**
      *  Fireball ability for Lizz, activated using number 1

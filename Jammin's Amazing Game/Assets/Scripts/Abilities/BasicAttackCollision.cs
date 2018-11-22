@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 public class BasicAttackCollision : NetworkBehaviour {
 
-    [SerializeField] int damage = 1;
+    public int damage = 1;
 
     private void OnCollisionEnter2D(Collision2D collision) {
         collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
