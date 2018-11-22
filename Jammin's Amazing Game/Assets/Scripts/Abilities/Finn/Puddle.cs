@@ -39,5 +39,6 @@ public class Puddle : Abilities
         // Spawns in a puddle, syncronized accross network!
 
         puddle = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
+        Destroy(puddle, 5.0f);
     }
 }

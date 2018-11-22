@@ -359,7 +359,7 @@ MonoBehaviour:
   description: 
   velocity: 0
   manaCost: 0
-  cooldown: 0
+  cooldown: 5
   projectile: {fileID: 1842386962723758, guid: b3d3514ef8b120e4983a4afa2c247d2d, type: 2}
 --- !u!114 &114109463074688562
 MonoBehaviour:
