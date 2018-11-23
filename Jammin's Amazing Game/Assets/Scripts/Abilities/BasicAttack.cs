@@ -36,6 +36,10 @@ public class BasicAttack : Abilities {
         Vector2 direction = (mouseTransform - playerTransform).normalized;
         GameObject bullet = Instantiate(this.projectile, playerTransform, Quaternion.identity);
         bullet.GetComponent<Rigidbody2D>().AddForce(this.velocity * direction);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Rotate the sprite
+        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         Destroy(bullet, airTime);  // Destroy bullet after 1s midair!
     }
 
