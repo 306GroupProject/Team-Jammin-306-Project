@@ -312,7 +312,7 @@ MonoBehaviour:
   cooldown: 6
   projectile: {fileID: 1575287516553782, guid: 56a849006f6ea724aacb594ff8428648, type: 2}
   range: 1000
-  timer: 6
+  timer: 3
   speed: 2000
 --- !u!114 &114077574248342896
 MonoBehaviour:

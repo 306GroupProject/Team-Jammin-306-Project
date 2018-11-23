@@ -11,17 +11,19 @@ public class PuddleCollision : NetworkBehaviour
     public float slowRate = 50.0f;
     PlayerManager Script;
     bool notelectric = true;
-    bool triggered = false;
+    bool triggered;
     int lifeTime = 7;
 
     public GameObject electricPuddle;
+    public GameObject tar;
 
     /*
-    * Slows a player when they enter the puddle, and electrifies the puddle if hit by a bolt
-    */
+     * Slows a player when they enter the puddle, and electrifies the puddle if hit by a bolt
+     */
     void Start()
     {
         InvokeRepeating("restoreSpeed", 0.0f, 1.0f);
+        triggered = false;
     }
     
     public void OnTriggerStay2D(Collider2D collision)
@@ -41,6 +43,13 @@ public class PuddleCollision : NetworkBehaviour
             Destroy(EPuddle, 5.0f);
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.tag == "Boulder") {
+            Instantiate(tar, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+
 
     }
 

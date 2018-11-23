@@ -40,12 +40,16 @@ public class GeyserWall : Abilities {
             if (direction.y >= Mathf.Sqrt(3) / 2.0f || direction.y <= -Mathf.Sqrt(3) / 2.0f) {
                 GameObject geyser = Instantiate(this.projectile, playerTransform, Quaternion.Euler(new Vector3(0,0,90)));
                 geyser.GetComponent<Rigidbody2D>().AddForce(direction * speed);
+                geyser.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+                geyser.GetComponent<Rigidbody2D>().freezeRotation = true;
                 Destroy(geyser, timer);
             }
             // If the player is shooting right between within a certain radius, create vertical wall upwards
             else if (direction.x >= Mathf.Sqrt(3) / 2.0f || direction.x <= -Mathf.Sqrt(3) / 2.0f) {
                 GameObject geyser = Instantiate(this.projectile, playerTransform, Quaternion.identity);
                 geyser.GetComponent<Rigidbody2D>().AddForce(direction * speed);
+                geyser.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+                geyser.GetComponent<Rigidbody2D>().freezeRotation = true;
                 Destroy(geyser, timer);               
             }
             // Check if player is pointing at NE or SW positions, for rotating wall in appropriate position.

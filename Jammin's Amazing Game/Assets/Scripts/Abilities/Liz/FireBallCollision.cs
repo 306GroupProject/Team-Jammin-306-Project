@@ -11,6 +11,8 @@ public class FireBallCollision : NetworkBehaviour {
     float startTime;
     public GameObject meteor;
     public GameObject explosion;
+    public GameObject steam;
+
     public float airTime = 1.0f;
 
     private void Awake() {
@@ -38,6 +40,11 @@ public class FireBallCollision : NetworkBehaviour {
     public void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy") {
             collision.gameObject.SendMessage("Damage", damage);
+        } else if (collision.gameObject.tag == "Water") {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            GameObject steamer = Instantiate(steam, this.transform.position, Quaternion.identity);
+            Destroy(steamer.gameObject, steamer.GetComponent<ParticleSystem>().main.duration / 2.0f);
         }
         Vector2 save = transform.position;
         Destroy(this.gameObject);
@@ -45,5 +52,17 @@ public class FireBallCollision : NetworkBehaviour {
         // Spawn explosion particle effect
         GameObject explode = Instantiate(explosion, save, Quaternion.identity);
         Destroy(explode, 2.0f);
+    }
+
+    /*
+     * Special interaction when it collides with puddle.
+     */ 
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Water") {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            GameObject steamer = Instantiate(steam, this.transform.position, Quaternion.identity);
+            Destroy(steamer.gameObject, steamer.GetComponent<ParticleSystem>().main.duration / 2.0f);
+        }
     }
 }

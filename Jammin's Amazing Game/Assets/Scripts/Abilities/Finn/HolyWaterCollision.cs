@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HolyWaterCollision : NetworkBehaviour {
 
-    ParticleSystem holyWater;
+
     public float airTime = 2.0f;
     public float startTime;
     public GameObject splashes;
@@ -12,7 +12,7 @@ public class HolyWaterCollision : NetworkBehaviour {
     // Use this for initialization
     void Start () {
         startTime = Time.time;
-        holyWater = GetComponent<ParticleSystem>();
+
 	}
 
     /*
@@ -20,7 +20,7 @@ public class HolyWaterCollision : NetworkBehaviour {
      */ 
     private void OnParticleCollision(GameObject other) {
         Destroy(this.gameObject);
-        GameObject splash = Instantiate(splashes, transform.position, Quaternion.identity);
+        Instantiate(splashes, transform.position, Quaternion.identity);
         SendMessage("Heal", directHeal, SendMessageOptions.DontRequireReceiver);
     }
 
@@ -28,7 +28,7 @@ public class HolyWaterCollision : NetworkBehaviour {
     void Update () {
         if (Time.time - startTime > airTime) {
             Destroy(this.gameObject);
-            GameObject splash = Instantiate(splashes, transform.position, Quaternion.identity);
+            Instantiate(splashes, transform.position, Quaternion.identity);
         }
     }
 }

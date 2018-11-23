@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 public class Teleport : NetworkBehaviour {
 
-    [SyncVar(hook = "MovePlayer")] private Transform playerTransform; // the player's position
+
     public float teleportCooldown = 3f;
     private float timeSinceTeleport = 0f;
     private Vector2 point; // the point where the mouse is clicked for a teleport
@@ -11,9 +11,6 @@ public class Teleport : NetworkBehaviour {
     public LayerMask wallMask; // a masking layer for walls that the player CANNOT teleport through
     public float teleportDistance = 10.0f;
 
-    private void Awake() {
-        playerTransform = this.transform;
-    }
 
     private void Update() {
         if (isLocalPlayer) {

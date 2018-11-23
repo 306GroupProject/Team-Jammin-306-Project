@@ -19,6 +19,11 @@ TagManager:
   - Bolt
   - barrel
   - FlameThrower
+  - Water
+  - Fire
+  - RockWall
+  - FireWall
+  - Tar
   layers:
   - Default
   - TransparentFX
@@ -44,9 +49,9 @@ TagManager:
   - TPKey
   - Geyser
   - ArcaneShot
-  - 
-  - 
-  - 
+  - RockWall
+  - FireWall
+  - Tar
   - 
   - 
   - 

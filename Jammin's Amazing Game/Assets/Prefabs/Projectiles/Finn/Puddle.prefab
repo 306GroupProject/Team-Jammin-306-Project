@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 95884682180487826}
   m_Layer: 12
   m_Name: Puddle
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 0
+  m_TransformSyncMode: 2
   m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
+  m_SyncRotationAxis: 3
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
@@ -176,6 +176,7 @@ MonoBehaviour:
   slowRate: 50
   electricPuddle: {fileID: 1287708331063640, guid: 5e89ac46584188742968cdb46f6f07d5,
     type: 2}
+  tar: {fileID: 1284119404948840, guid: 381fbd4303c8d5348a58d57c3039994c, type: 2}
 --- !u!212 &212840977132221040
 SpriteRenderer:
   m_ObjectHideFlags: 1

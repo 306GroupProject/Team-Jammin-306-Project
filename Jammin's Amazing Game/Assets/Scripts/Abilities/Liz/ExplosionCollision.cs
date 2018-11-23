@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ExplosionCollision : NetworkBehaviour {
 
-    ParticleSystem explosion;
+
     public GameObject meteor;
     float canDamage;
     public float damageRate = 1.0f;
@@ -13,18 +13,8 @@ public class ExplosionCollision : NetworkBehaviour {
     float[] rotations = { 90.0f, -90.0f, 0.0f, 180.0f };
 
     // Trajectory directions
-    static Vector2 diagLeft = new Vector2(-Mathf.Sqrt(2) / 2, Mathf.Sqrt(2) / 2);
-    static Vector2 diagRight = new Vector2(Mathf.Sqrt(2) / 2, -Mathf.Sqrt(2) / 2);
-    static Vector2 diagDLeft = new Vector2(-Mathf.Sqrt(2) / 2, -Mathf.Sqrt(2) / 2);
-    static Vector2 diagDRight = new Vector2(Mathf.Sqrt(2) / 2, Mathf.Sqrt(2) / 2);
-
-    Vector2[] crossPositions = { Vector2.up, diagLeft, Vector2.left, diagDLeft, Vector2.down, diagRight, Vector2.right, diagDRight };
 
 
-    // Use this for initialization
-    void Start () {
-        explosion = GetComponent<ParticleSystem>();
-	}
 
     /*
      * Checks particle collision to handle enemy damage.

@@ -47,7 +47,7 @@ public class SpikeWings : Abilities {
      */ 
     [ClientRpc]
     void RpcCast(Vector2 playerTransform) {
-        wings = Instantiate(projectile, playerTransform, Quaternion.identity);
+        wings = Instantiate(projectile, playerTransform, projectile.transform.rotation);
         wings.transform.parent = this.gameObject.transform;
         duration = activationTime * 100;
 

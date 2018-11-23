@@ -196,6 +196,8 @@ MonoBehaviour:
   damage: 4
   meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
   explosion: {fileID: 1976845950909830, guid: 3fe3d0ca223481a48860f94f032fd45c, type: 2}
+  steam: {fileID: 1640065724837678, guid: 8f28013457cf0684d9cd6edbb26d1252, type: 2}
+  airTime: 1
 --- !u!114 &114773532194492732
 MonoBehaviour:
   m_ObjectHideFlags: 1

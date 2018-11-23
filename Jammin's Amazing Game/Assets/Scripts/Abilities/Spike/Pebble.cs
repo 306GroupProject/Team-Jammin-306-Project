@@ -44,11 +44,12 @@ public class Pebble : NetworkBehaviour {
                 frag.GetComponent<Rigidbody2D>().AddForce(crossPositions[i] * fireFragVelocity);
             }
         }
-
-        collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+        if (collision.gameObject.tag == "Enemy") {
+            collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+        } // Do nothing if it collides with zap
+          else if (collision.gameObject.tag == "Player4") { }
         Vector2 save = transform.position;
         Destroy(this.gameObject);
-
         GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
         smoker.transform.localScale /= 6;
         Destroy(smoker.gameObject, 1.0f);

@@ -3,7 +3,8 @@ guid: b750af45a4de01641b2997eafd7ea0fb
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - steam: {fileID: 1640065724837678, guid: 8f28013457cf0684d9cd6edbb26d1252, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

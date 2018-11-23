@@ -37,35 +37,25 @@ public class RockWall : Abilities {
 
             // If the player is shooting forward between within a certain radius, create horizontal wall to the right
             if (direction.y >= Mathf.Sqrt(2)/2.0f) {
-                for (int i = 0; i < 3; i++) {
-                    GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
-                    mouseTransform.x += wall.transform.localScale.x;
-                    Destroy(wall, timer);
-                }
+                GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
+                Destroy(wall, timer);
+
             }
             // If the player is shooting behind between within a certain radius, create horizontal wall to the left
             else if (direction.y <= -Mathf.Sqrt(2) / 2.0f) {
-                for (int i = 0; i < 3; i++) {
-                    GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
-                    mouseTransform.x -= wall.transform.localScale.x;
-                    Destroy(wall, timer);
-                }
+                GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
+                Destroy(wall, timer);
+
             }
             // If the player is shooting right between within a certain radius, create vertical wall upwards
             else if (direction.x >= Mathf.Sqrt(2)/2.0f) {
-                for (int i = 0; i < 3; i++) {
-                    GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
-                    mouseTransform.y += wall.transform.localScale.y;
-                    Destroy(wall, timer);
-                }
+                GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.Euler(new Vector3(0, 0, 90)));
+                Destroy(wall, timer);
             }
             // If the player is shooting left between within a certain radius, create vertical wall downwards
             else if (direction.x <= -Mathf.Sqrt(2) / 2.0f) {
-                for (int i = 0; i < 3; i++) {
-                    GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.identity);
-                    mouseTransform.y -= wall.transform.localScale.y;
-                    Destroy(wall, timer);
-                }
+                GameObject wall = Instantiate(this.projectile, mouseTransform, Quaternion.Euler(new Vector3(0, 0, 90)));
+                Destroy(wall, timer);
             }
         }    
     }

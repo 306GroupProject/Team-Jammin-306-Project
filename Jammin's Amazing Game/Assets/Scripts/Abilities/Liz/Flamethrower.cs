@@ -45,10 +45,7 @@ public class Flamethrower : Abilities {
         fire = Instantiate(this.projectile, transform.position, Quaternion.Euler(new Vector3(-fireTowards, 90, 90)));
     }
 
-    private float AngleMath(Vector2 player, Vector2 mouse) {
-        return Mathf.Atan2(player.y - mouse.y, player.x - mouse.x) * Mathf.Rad2Deg;
-    }
-
+    // Sync rotation across clients!
     [Command]
     void CmdSyncRotate(Vector2 playerTransform, Vector2 mouseTransform) {
         RpcSyncRotate(playerTransform, mouseTransform);

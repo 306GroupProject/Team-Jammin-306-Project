@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-/**
+/*
  * Volt Tackle Ability for Zapp. Inherits Abilities!
  */
 public class VoltTackle : Abilities {
@@ -41,12 +41,18 @@ public class VoltTackle : Abilities {
         }
     }
 
+    /*
+     * Cast on server so it gets casted across all connected clients
+     */ 
     [Command]
     void CmdCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
         RpcCast(playerTransform, mouseTransform);
     }
 
+    /*
+     * Cast on client locally.
+     */ 
     [ClientRpc]
     void RpcCast(Vector2 playerTransform, Vector2 mouseTransform)
     {
@@ -64,6 +70,11 @@ public class VoltTackle : Abilities {
         if (collision.gameObject.tag == "Enemy" && trail)
         {
             collision.gameObject.SendMessage("Damage", damage);
+        } if (collision.gameObject.tag == "RockWall" || collision.gameObject.tag == "Pebbles") {
+            this.gameObject.SendMessage("Damage", 1);   // Added light self damage if zap tackles earthwall
+        } if (collision.gameObject.tag == "FireWall" || collision.gameObject.tag == "Boulder") {
+            this.gameObject.SendMessage("Damage", 3);   // Added heavy self damage if zap tackles firewall
+            Destroy(collision.gameObject);
         }
     }
 

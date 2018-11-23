@@ -641,7 +641,7 @@ MonoBehaviour:
   velocity: 0
   manaCost: 0
   cooldown: 5
-  projectile: {fileID: 1102473295691354, guid: 5ae84fbe3446198489dc245d1bf979a5, type: 2}
+  projectile: {fileID: 1256341068547786, guid: 625c7e4da22f29046b3e7180c3119d88, type: 2}
   range: 20
   timer: 4
 --- !u!114 &114708981331847288

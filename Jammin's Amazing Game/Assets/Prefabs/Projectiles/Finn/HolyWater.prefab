@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114303261713700800}
   m_Layer: 0
   m_Name: HolyWater
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   airTime: 2
   startTime: 0
   splashes: {fileID: 1196935218346112, guid: c870982cee8810e48b03e14fb270c80d, type: 2}
+  directHeal: 2
 --- !u!198 &198339394288001460
 ParticleSystem:
   m_ObjectHideFlags: 1

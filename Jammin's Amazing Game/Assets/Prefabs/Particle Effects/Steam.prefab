@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4166913701240660}
   - component: {fileID: 198494404413870068}
   - component: {fileID: 199405363861368440}
+  - component: {fileID: 114736162632703056}
   m_Layer: 0
-  m_Name: Fog
+  m_Name: Steam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,6 +42,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114736162632703056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640065724837678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 143
+    i1: 40
+    i2: 1
+    i3: 52
+    i4: 87
+    i5: 207
+    i6: 6
+    i7: 132
+    i8: 217
+    i9: 205
+    i10: 110
+    i11: 219
+    i12: 178
+    i13: 109
+    i14: 18
+    i15: 82
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!198 &198494404413870068
 ParticleSystem:
   m_ObjectHideFlags: 1
