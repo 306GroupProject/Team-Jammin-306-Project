@@ -12,7 +12,7 @@ public class PuddleCollision : NetworkBehaviour
     PlayerManager Script;
     bool notelectric = true;
     bool triggered;
-    int lifeTime = 7;
+    int lifeTime;
 
     public GameObject electricPuddle;
     public GameObject tar;
@@ -24,6 +24,7 @@ public class PuddleCollision : NetworkBehaviour
     {
         InvokeRepeating("restoreSpeed", 0.0f, 1.0f);
         triggered = false;
+        lifeTime = 7;
     }
     
     public void OnTriggerStay2D(Collider2D collision)
@@ -40,7 +41,6 @@ public class PuddleCollision : NetworkBehaviour
             notelectric = false;
             GameObject EPuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
             Script.changeSpeed(100.0f);
-            Destroy(EPuddle, 5.0f);
             Destroy(this.gameObject);
         }
 

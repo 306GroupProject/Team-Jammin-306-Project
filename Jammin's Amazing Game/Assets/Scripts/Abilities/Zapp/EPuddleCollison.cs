@@ -16,6 +16,7 @@ public class EPuddleCollison : NetworkBehaviour
 
     public void Awake() {
         startTime = Time.time;
+        Destroy(this.gameObject, 5.0f);
     }
 
     public void OnTriggerStay2D(Collider2D collision) {
