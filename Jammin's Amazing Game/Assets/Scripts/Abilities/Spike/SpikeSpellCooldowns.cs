@@ -5,25 +5,34 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 public class SpikeSpellCooldowns : MonoBehaviour {
 
-    //public GameObject playerController;
-
+    // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
     float teleportCooldown;
     bool teleportCooldownActive;
-    bool blocked = false; // Was the teleport blocked by a wall bein in the way? (NOT USED, IN PROGRESS!)
+    bool blocked = false; // Was the teleport blocked by a wall bein in the way?
     Teleport teleportScript;
 
+    // Rock Throw
     public Image rockThrowCooldownImage;
     float rockThrowCooldown;
-    RockThrow rockThrowScript;
     bool rockThrowCooldownActive;
+
+    // Rock Wall
+    public Image rockWallCooldownImage;
+    float rockWallCooldown;
+    bool rockWallCooldownActive;
+
+    // Spike Wings
+    public Image spikeWingsCooldownImage;
+    float spikeWingsCooldown;
+    bool spikeWingsCooldownActive;
 
     void Start()
     {
-        
-
-        teleportCooldown = 3;//teleportScript.teleportCooldown;
-        rockThrowCooldown = 3;//rockThrowScript.cooldown; // get the cooldown for Spike's RockThrow Ability
+        teleportCooldown = 3;
+        rockThrowCooldown = 3;
+        rockWallCooldown = 5;
+        spikeWingsCooldown = 20;
     }
 
     // Update is called once per frame
@@ -50,7 +59,7 @@ public class SpikeSpellCooldowns : MonoBehaviour {
         }
 
 
-        // 
+        // Code for Rock Throw (currently mapped to 1)
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             rockThrowCooldownActive = true;
@@ -64,6 +73,42 @@ public class SpikeSpellCooldowns : MonoBehaviour {
             {
                 rockThrowCooldownImage.fillAmount = 0;
                 rockThrowCooldownActive = false;
+            }
+        }
+
+
+        // Code for Rock Wall (currently mapped to 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            rockWallCooldownActive = true;
+        }
+
+        if (rockWallCooldownActive)
+        {
+            rockWallCooldownImage.fillAmount += 1 / rockWallCooldown * Time.deltaTime;
+
+            if (rockWallCooldownImage.fillAmount >= 1)
+            {
+                rockWallCooldownImage.fillAmount = 0;
+                rockWallCooldownActive = false;
+            }
+        }
+
+
+        // Code for Spike Wings (currently mapped to 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            spikeWingsCooldownActive = true;
+        }
+
+        if (spikeWingsCooldownActive)
+        {
+            spikeWingsCooldownImage.fillAmount += 1 / spikeWingsCooldown * Time.deltaTime;
+
+            if (spikeWingsCooldownImage.fillAmount >= 1)
+            {
+                spikeWingsCooldownImage.fillAmount = 0;
+                spikeWingsCooldownActive = false;
             }
         }
 

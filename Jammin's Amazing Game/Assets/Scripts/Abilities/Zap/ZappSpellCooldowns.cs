@@ -5,26 +5,34 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 public class ZappSpellCooldowns : MonoBehaviour
 {
-
-    //public GameObject playerController;
-
+    // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
     float teleportCooldown;
     bool teleportCooldownActive;
-    bool blocked = false; // Was the teleport blocked by a wall bein in the way? (NOT USED, IN PROGRESS!)
+    bool blocked = false; // Was the teleport blocked by a wall bein in the way?
     Teleport teleportScript;
 
+    // Lightning Bolt
     public Image lightningBoltCooldownImage;
     float lightningBoltCooldown;
-    // LightningBolt rockThrowScript;
     bool lightningBoltCooldownActive;
+
+    // Super Charge
+    public Image superChargeCooldownImage;
+    float superChargeCooldown;
+    bool superChargeCooldownActive;
+
+    // Volt Tackle
+    public Image voltTackleCooldownImage;
+    float voltTackleCooldown;
+    bool voltTackleCooldownActive;
 
     void Start()
     {
-
-
-        teleportCooldown = 3;//teleportScript.teleportCooldown;
-        lightningBoltCooldown = 3;//rockThrowScript.cooldown; // get the cooldown for Spike's RockThrow Ability
+        teleportCooldown = 3;
+        lightningBoltCooldown = 3;
+        superChargeCooldown = 15;
+        voltTackleCooldown = 5;
     }
 
     // Update is called once per frame
@@ -52,7 +60,7 @@ public class ZappSpellCooldowns : MonoBehaviour
         }
 
 
-        // 
+        // Code for Lightning Bolt (currently mapped to 1)
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             lightningBoltCooldownActive = true;
@@ -66,6 +74,41 @@ public class ZappSpellCooldowns : MonoBehaviour
             {
                 lightningBoltCooldownImage.fillAmount = 0;
                 lightningBoltCooldownActive = false;
+            }
+        }
+
+
+        // Code for Super Charge (currently mapped to 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            superChargeCooldownActive = true;
+        }
+
+        if (superChargeCooldownActive)
+        {
+            superChargeCooldownImage.fillAmount += 1 / superChargeCooldown * Time.deltaTime;
+
+            if (superChargeCooldownImage.fillAmount >= 1)
+            {
+                superChargeCooldownImage.fillAmount = 0;
+                superChargeCooldownActive = false;
+            }
+        }
+
+        // Code for Volt Tackle (currently mapped to 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            voltTackleCooldownActive = true;
+        }
+
+        if (voltTackleCooldownActive)
+        {
+            voltTackleCooldownImage.fillAmount += 1 / voltTackleCooldown * Time.deltaTime;
+
+            if (voltTackleCooldownImage.fillAmount >= 1)
+            {
+                voltTackleCooldownImage.fillAmount = 0;
+                voltTackleCooldownActive = false;
             }
         }
 
