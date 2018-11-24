@@ -16,6 +16,7 @@ public class TarCollision : NetworkBehaviour {
     void Start() {
         InvokeRepeating("restoreSpeed", 0.0f, 1.0f);
         triggered = false;
+        Destroy(this.gameObject, tarFire.GetComponent<ParticleSystem>().main.duration);
     }
 
 

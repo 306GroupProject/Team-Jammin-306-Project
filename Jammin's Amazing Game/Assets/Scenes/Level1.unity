@@ -622,7 +622,7 @@ MonoBehaviour:
     i14: 0
     i15: 0
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &184205546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4995,7 +4995,7 @@ MonoBehaviour:
     i14: 0
     i15: 0
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &681927856
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7292,7 +7292,7 @@ MonoBehaviour:
     i14: 0
     i15: 0
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &1192344268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8323,7 +8323,7 @@ MonoBehaviour:
     i14: 0
     i15: 0
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!212 &1391276775
 SpriteRenderer:
   m_ObjectHideFlags: 0
