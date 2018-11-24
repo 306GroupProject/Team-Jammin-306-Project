@@ -38,7 +38,7 @@ public class FireBallCollision : NetworkBehaviour {
      * Send Damage message if the enemy is struct by fireball. 
      */
     public void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Enemy") {
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.layer == 15) {
             collision.gameObject.SendMessage("Damage", damage);
         } else if (collision.gameObject.tag == "Water") {
             Destroy(this.gameObject);

@@ -77,7 +77,7 @@ public class Splatter : NetworkBehaviour {
                 meteor.GetComponent<Meteor>().damage = this.damage;
             }
 
-        } else if (collision.gameObject.tag == "Enemy") {
+        } else if (collision.gameObject.tag == "Enemy" || collision.gameObject.layer == 15) {
             collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
 
         }

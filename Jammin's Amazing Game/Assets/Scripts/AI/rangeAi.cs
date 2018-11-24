@@ -201,7 +201,7 @@ public class rangeAi : ai {
 
 			Vector2 myTarget = new Vector2(x, y);
 			Vector2 myPos = this.gameObject.transform.position; 
-			this.gameObject.GetComponent<basicAttackAI> ().CmdCast (myPos, myTarget); 
+			this.gameObject.GetComponent<basicAttackAI> ().CmdCast (myPos, myTarget, false); 
 		}
 
 	}

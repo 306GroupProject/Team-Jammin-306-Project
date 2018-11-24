@@ -44,6 +44,17 @@ public class PuddleCollision : NetworkBehaviour
             Destroy(this.gameObject);
         }
 
+
+		
+		if (collision.gameObject.tag.Equals ("bossL")) {
+			
+			GameObject.FindGameObjectWithTag("bossL").GetComponent<bossAi>().castAttackSpeed = true; 
+			
+			
+		}
+
+
+
         if (collision.gameObject.tag == "Boulder") {
             Instantiate(tar, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);

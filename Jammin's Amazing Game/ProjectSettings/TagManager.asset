@@ -24,6 +24,12 @@ TagManager:
   - RockWall
   - FireWall
   - Tar
+  - rockWall
+  - bossL
+  - bossW
+  - bossF
+  - bossR
+  - deathPudMan
   layers:
   - Default
   - TransparentFX
