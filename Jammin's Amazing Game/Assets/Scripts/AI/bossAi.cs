@@ -285,45 +285,54 @@ public class bossAi : ai {
 	
 	
 	//----------------------------------------[[Actions: Void]]----------------------------------------------------------------//
-	
+
+	/**
+	 * changeType():
+	 * 
+	 * randomly Changes the boss to a new power type, will cycle through
+	 * the main four elements in the game. Once it changes the boss is able to 
+	 * cast a new set of counter spells at players. 
+	 * 
+	 * return: Nothing.
+	 * 
+	 */ 
+
 	public void changeType(){
-		
+
+		// randomly get a number between 0-3, depending on the number that will change the power type.
 		int powerType = Random.Range(0, 4);
 		
 		if (powerType == 0) {
-			
-			print ("we are changing! to fire!");
-			
+
+			// changethe color, and the tag of what type of boss he is now.
 			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.red;  
 			
 			this.gameObject.tag = "bossF"; 
 			//prefabOfChoice = fireBallPrefab; 
 			
 		} else if (powerType == 1) {
-			
-			print ("we are changing! to Water!"); 
+
 			
 			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.blue; 
 			
 			this.gameObject.tag = "bossW";
 			
 		} else if (powerType == 2) {
-			
-			print ("we are changing to rock!");
+
 			
 			this.gameObject.GetComponent<SpriteRenderer>().color = Color.gray; 
 			
 			this.gameObject.tag = "bossR";
 			
 		}else if(powerType == 3){
-			print ("we are changing to Lighting!"); 
+
 			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.yellow; 
 			this.gameObject.tag = "bossL"; 
 			
 		}
 		
 		
-		
+		// set the time before we can change types again.
 		time = CoolDownBeforeChange; 
 	}
 	
@@ -389,11 +398,13 @@ public class bossAi : ai {
 				
 				
 			}
-			
+			// is it time to cast some death puddles?
 		} else if (waterPuddlesCasted == true) {
-			
+
+			// aquire all the spawn points around the map were death puddles can spawn.
 			GameObject [] puddleSpawn = GameObject.FindGameObjectWithTag ("deathPudMan").GetComponent<deathPudManager> ().returnPuddleSpawnPoints (); 
-			
+
+			// get the positions of each puddle.
 			Vector2 [] pudPos = new Vector2[puddleSpawn.Length]; 
 			
 			for (int i = 0; i < puddleSpawn.Length; i ++) {
@@ -405,16 +416,21 @@ public class bossAi : ai {
 				
 			}
 			
-			
+			 // randomly select how many puddles to spawn.
 			numberWaterPuddlestoSpawn = Random.Range (0, 16); 
-			
+
+			// cast the spell. 
 			this.gameObject.GetComponent<puddleOfDoom> ().CmdCast (pudPos); 
+
 			
-			
+			// re-shuffle which the spawn points in the array.
 			GameObject.FindGameObjectWithTag ("deathPudMan").GetComponent<deathPudManager> ().randomizeLocation (); 
-			
+
+		// cast a protective rock wall.
 		} else if (castRockWall == true) {
-			
+
+			// check the time before we set the casting of this ability
+			// to false. We want to ensure the rock walls are around for a little bit.
 			if (rockWallTimer == 0) {
 				
 				int counter = 0;
@@ -430,7 +446,8 @@ public class bossAi : ai {
 				}
 				
 				rockWallTimer = 3.0f;
-				
+
+				// once we finished casting the, count down until we reach 0 on the timer.
 			} else {
 				
 				if (rockWallTimer != 0) {
@@ -442,7 +459,8 @@ public class bossAi : ai {
 						rockWallTimer = 0; 
 					}
 				}
-				
+
+				// once we are at 0, lets hide the rock walls and finish casting this spell .
 				if (rockWallTimer == 0) {
 					
 					int k = 0; 
@@ -462,9 +480,11 @@ public class bossAi : ai {
 			
 			
 			
-			
+			// change the AI attack speed.
 		} else if (castAttackSpeed == true) {
-			
+
+			// how many times have we fired? 
+			// we want to make the spell look like it has been increased!
 			if (newSpeedTimeFired < cycles) {
 				
 				
@@ -504,6 +524,7 @@ public class bossAi : ai {
 				
 				
 			}else {
+				// once we are done, set this spell to false, because we are done casting.
 				
 				castAttackSpeed = false; 
 				newSpeedTimeFired = 0; 
@@ -518,7 +539,19 @@ public class bossAi : ai {
 		
 		
 	}
-	
+
+	/**
+	 * basicAtk():
+	 * 
+	 * if the AI is not currently casting spells it needs to be doing something. 
+	 * It will be attacking the players if they are within a range. Shoots
+	 * a basic attack AI projectle at players.
+	 * 
+	 * return: Nothing.
+	 * 
+	 * 
+	 * 
+	 */ 
 	
 	public void basicAtk(){
 		// wait the timer before attacking the player again.
@@ -552,17 +585,37 @@ public class bossAi : ai {
 		
 	}
 	
-	
+
+	/**
+	 * returnPlayerSpotted():
+	 * 
+	 * accessor Function to access which player has been spotted.
+	 * 
+	 * return: a integer, which player was spotted by the AI? 
+	 * 
+	 * 
+	 */ 
 	public int returnPlayerSpotted(){
 		
 		
 		return this.playerSpotted; 
 		
 	}
-	
+
+	/**
+	 * 
+	 * CastSpellAtRandom():
+	 * 
+	 * randomly casts one spell after 6 seconds of wait time. 
+	 * If the Ai is not attacking with a basic attack it will cast 
+	 * a random spell at the players. 
+	 * 
+	 * return: Nothing.
+	 * 
+	 */ 
 	public void castSpellAtRandom(){
 		
-		
+		// wait before we can cast again!
 		if (waitBeforeRandCast != 0) {
 			
 			waitBeforeRandCast -= Time.deltaTime;
@@ -575,12 +628,13 @@ public class bossAi : ai {
 		}
 		
 		
-		
+		// if we can cast:
 		if (waitBeforeRandCast == 0) {
 			
-			
+			// select a spell to cast:
 			int powerType = Random.Range (0, 4);
-			
+
+			// select our spell based on our decision!
 			if (powerType == 0) {
 				
 				this.fireBoulderCasted = true;
@@ -662,7 +716,8 @@ public class bossAi : ai {
 		plyController = GameObject.FindGameObjectWithTag("assistantNet"); 
 		
 		rockWallPosition = GameObject.FindGameObjectsWithTag("rockWall");
-		
+
+		// set up the rockwall for when the boss fight happens!
 		int counter = 0;
 		while (counter < rockWallPosition.Length) {
 			
@@ -676,6 +731,7 @@ public class bossAi : ai {
 		fireBoulderCasted = false; 
 		waterPuddlesCasted = false;
 		castRockWall = false; 
+		castAttackSpeed = false; 
 		
 		
 		
