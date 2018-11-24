@@ -6,6 +6,8 @@ using UnityEngine.Networking;
 public class RedBarrel : NetworkBehaviour {
 
     public GameObject explosion;
+
+    // destroys gate for room2 after destroyed by fireball
     public GameObject winGate2;
 
     private void OnCollisionEnter2D(Collision2D other)
