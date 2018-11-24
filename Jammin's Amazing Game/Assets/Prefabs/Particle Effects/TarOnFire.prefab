@@ -20,7 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4766727132847018}
   - component: {fileID: 198854396644586758}
+  - component: {fileID: 114884757422509220}
   - component: {fileID: 199490182323853204}
+  - component: {fileID: 114818771297141350}
+  - component: {fileID: 50612461403960288}
   m_Layer: 0
   m_Name: TarOnFire
   m_TagString: Untagged
@@ -41,6 +44,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!50 &50612461403960288
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365369966753276}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &114818771297141350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365369966753276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 202
+    i1: 49
+    i2: 56
+    i3: 127
+    i4: 225
+    i5: 8
+    i6: 125
+    i7: 244
+    i8: 171
+    i9: 107
+    i10: 43
+    i11: 234
+    i12: 86
+    i13: 37
+    i14: 230
+    i15: 123
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114884757422509220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365369966753276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa7ea289250d09438557f35df6fa7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flames: {fileID: 198387717627908516, guid: ff62bd42a7e1c7047a277d8924f092ed, type: 2}
+  damageOverTime: 2
+  damageRate: 1
+  flameWall: {fileID: 1649526938734276, guid: 02b54316c4d5f4d4e8c1cdf728c2c95d, type: 2}
 --- !u!198 &198854396644586758
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3441,10 +3511,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
@@ -3619,11 +3689,11 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 100651063
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

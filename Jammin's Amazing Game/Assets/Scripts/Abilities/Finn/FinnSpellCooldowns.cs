@@ -3,28 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+
 public class FinnSpellCooldowns : MonoBehaviour
 {
-
-    //public GameObject playerController;
-
+    // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
     float teleportCooldown;
     bool teleportCooldownActive;
-    bool blocked = false; // Was the teleport blocked by a wall bein in the way? (NOT USED, IN PROGRESS!)
+    bool blocked = false; // Was the teleport blocked by a wall being in the way?
     Teleport teleportScript;
 
+    // Puddle
     public Image puddleCooldownImage;
     float puddleCooldown;
-    // Puddle puddleScript;  // UN-COMMENT WHEN THIS EXISTS
     bool puddleCooldownActive;
+
+    // Holy Water
+    public Image holyWaterCooldownImage;
+    float holyWaterCooldown;
+    bool holyWaterCooldownActive;
+
+    // Geyser Wall
+    public Image geyserWallCooldownImage;
+    float geyserWallCooldown;
+    bool geyserWallCooldownActive;
 
     void Start()
     {
-
-
-        teleportCooldown = 3;//teleportScript.teleportCooldown;
-        puddleCooldown = 3;//puddleScript.cooldown; // get the cooldown for Spike's RockThrow Ability
+        teleportCooldown = 3;
+        puddleCooldown = 3;
+        holyWaterCooldown = 5;
+        geyserWallCooldown = 6;
     }
 
     // Update is called once per frame
@@ -52,7 +61,7 @@ public class FinnSpellCooldowns : MonoBehaviour
         }
 
 
-        // 
+        // Code for Puddle (currently mapped to 1)
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             puddleCooldownActive = true;
@@ -66,6 +75,42 @@ public class FinnSpellCooldowns : MonoBehaviour
             {
                 puddleCooldownImage.fillAmount = 0;
                 puddleCooldownActive = false;
+            }
+        }
+
+
+        // Code for Holy Water (currently mapped to 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            holyWaterCooldownActive = true;
+        }
+
+        if (holyWaterCooldownActive)
+        {
+            holyWaterCooldownImage.fillAmount += 1 / holyWaterCooldown * Time.deltaTime;
+
+            if (holyWaterCooldownImage.fillAmount >= 1)
+            {
+                holyWaterCooldownImage.fillAmount = 0;
+                holyWaterCooldownActive = false;
+            }
+        }
+
+
+        // Code for Geyser Wall (currently mapped to 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            geyserWallCooldownActive = true;
+        }
+
+        if (geyserWallCooldownActive)
+        {
+            geyserWallCooldownImage.fillAmount += 1 / geyserWallCooldown * Time.deltaTime;
+
+            if (geyserWallCooldownImage.fillAmount >= 1)
+            {
+                geyserWallCooldownImage.fillAmount = 0;
+                geyserWallCooldownActive = false;
             }
         }
 
