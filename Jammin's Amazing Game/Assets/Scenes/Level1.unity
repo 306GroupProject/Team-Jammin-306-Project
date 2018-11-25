@@ -10609,7 +10609,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1192344263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.9, y: 153.6, z: 0}
+  m_LocalPosition: {x: -32.9, y: 110.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021244989}
@@ -12488,7 +12488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowRate: 50
-  lifeTime: 0
+  lifeTime: 999999999
   electricPuddle: {fileID: 1287708331063640, guid: 5e89ac46584188742968cdb46f6f07d5,
     type: 2}
   tar: {fileID: 1284119404948840, guid: 381fbd4303c8d5348a58d57c3039994c, type: 2}

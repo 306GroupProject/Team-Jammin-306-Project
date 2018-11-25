@@ -40,28 +40,21 @@ public class PuddleCollision : NetworkBehaviour
             notelectric = false;
             GameObject ePuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
             Script.changeSpeed(100.0f);
-            Destroy(this.gameObject);
-            
+            Destroy(this.gameObject);          
         }
-
 
 		
 		if (collision.gameObject.tag.Equals ("bossL")) {
 			
 			GameObject.FindGameObjectWithTag("bossL").GetComponent<bossAi>().castAttackSpeed = true; 
-			
-			
+
 		}
-
-
 
         if (collision.gameObject.tag == "Boulder") {
             Instantiate(tar, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
-
-
     }
 
     /*
@@ -78,8 +71,9 @@ public class PuddleCollision : NetworkBehaviour
     private void restoreSpeed()
     {
         lifeTime = lifeTime - 1;
-        if (lifeTime == 0)
+        if (lifeTime < 0)
         {
+            Script.changeSpeed(100.0f);
             Destroy(this.gameObject);
         }
     }
