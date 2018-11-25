@@ -11,8 +11,9 @@ public class PuddleCollision : NetworkBehaviour
     public float slowRate = 50.0f;
     PlayerManager Script;
     bool notelectric = true;
-    bool triggered;
+
     int lifeTime;
+    
 
     public GameObject electricPuddle;
     public GameObject tar;
@@ -23,7 +24,6 @@ public class PuddleCollision : NetworkBehaviour
     void Start()
     {
         InvokeRepeating("restoreSpeed", 0.0f, 1.0f);
-        triggered = false;
         lifeTime = 7;
     }
     
@@ -34,14 +34,14 @@ public class PuddleCollision : NetworkBehaviour
             
             Script = collision.gameObject.GetComponent<PlayerManager>();
             Script.changeSpeed(slowRate);
-            triggered = true;
         }
         if (collision.gameObject.tag == "Bolt" && notelectric)
         {
             notelectric = false;
-            GameObject EPuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
+            GameObject ePuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
             Script.changeSpeed(100.0f);
             Destroy(this.gameObject);
+            Destroy(ePuddle, 10);
         }
 
 
@@ -80,7 +80,6 @@ public class PuddleCollision : NetworkBehaviour
         lifeTime = lifeTime - 1;
         if (lifeTime == 0)
         {
-            Script.changeSpeed(100);
             Destroy(this.gameObject);
         }
     }

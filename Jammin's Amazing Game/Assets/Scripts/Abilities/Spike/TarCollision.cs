@@ -6,7 +6,7 @@ public class TarCollision : NetworkBehaviour {
     [SerializeField, SyncVar]
     public float slowRate = 100.0f;
     PlayerManager Script;
-    bool triggered;
+
     int lifeTime = 7;
     public GameObject tarFire;
 
@@ -15,7 +15,7 @@ public class TarCollision : NetworkBehaviour {
     */
     void Start() {
         InvokeRepeating("restoreSpeed", 0.0f, 1.0f);
-        triggered = false;
+
         Destroy(this.gameObject, tarFire.GetComponent<ParticleSystem>().main.duration);
     }
 
@@ -28,7 +28,7 @@ public class TarCollision : NetworkBehaviour {
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "Player3" || collision.gameObject.tag == "Player4") {
             Script = collision.gameObject.GetComponent<PlayerManager>();
             Script.changeSpeed(slowRate);
-            triggered = true;
+ 
         }
         // If a fireball collides with tar, set it on fire!
         if (collision.gameObject.tag == "Fireball") {
@@ -49,6 +49,9 @@ public class TarCollision : NetworkBehaviour {
         }
     }
 
+    /*
+     * Restore player speed
+     */ 
     private void restoreSpeed() {
         lifeTime = lifeTime - 1;
         if (lifeTime == 0 && Script != null) {

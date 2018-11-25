@@ -15,8 +15,7 @@ public class enemy_spawner : NetworkBehaviour {
 	
 	public int numMeleeAi; // how many AI do we want to spawn? make sure it is the same size as the spawnPoints[].
 	public int numRangeAi;
-	public int bossAI; 
-	
+	public int bossAI;
 	
 	/**
 	 * Spawns a enemy at the position on the map that you put down IE game object. 
@@ -30,8 +29,8 @@ public class enemy_spawner : NetworkBehaviour {
 			while (counter < numMeleeAi) {
 				
 				GameObject enemy = Instantiate (meleePrefab, new Vector2 (MeleePoints [counter].transform.position.x, MeleePoints [counter].transform.position.y), Quaternion.identity);
-				
-				NetworkServer.Spawn (enemy); 
+                enemy.transform.parent = GameObject.Find("melee").gameObject.transform;
+                NetworkServer.Spawn (enemy); 
 				
 				
 				counter ++;
@@ -45,7 +44,7 @@ public class enemy_spawner : NetworkBehaviour {
 			while (counter <  numRangeAi) {
 				
 				GameObject rngEnemy = Instantiate (rangePrefab, new Vector2 (RangePoints [counter].transform.position.x, RangePoints [counter].transform.position.y), Quaternion.identity);
-				
+                rngEnemy.transform.parent = GameObject.Find("ranged").gameObject.transform;
 				NetworkServer.Spawn (rngEnemy); 
 				
 				counter ++; 
@@ -55,13 +54,12 @@ public class enemy_spawner : NetworkBehaviour {
 		}
 		
 		if (bossAI != 0) {
-			
 			counter = 0;
 			
 			while (counter < bossAI) {
 				
 				GameObject boss = Instantiate (bossPrefab, new Vector2 (bossSpawnPoint.transform.position.x, bossSpawnPoint.transform.position.y), Quaternion.identity);
-				NetworkServer.Spawn (boss);
+                NetworkServer.Spawn (boss);
 				
 				counter ++; 
 			}
@@ -72,7 +70,6 @@ public class enemy_spawner : NetworkBehaviour {
 	
 	
 	void Start(){
-		
 	}
 	
 }

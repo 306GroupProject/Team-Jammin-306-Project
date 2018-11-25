@@ -9,7 +9,12 @@ public class fireBoulder : Abilities {
 	
 	public float attackTime;  // the attackTime, when can we cast our spell again?
 	public int numFireBallSpawned = 0; // how many fire balls need to be spawned.
-	private Vector2[] position = {Vector2.left, Vector2.right, Vector2.up, Vector2.down}; // which way to shoot our fire balls. 
+	private Vector2[] position = {Vector2.left, Vector2.right, Vector2.up, Vector2.down,
+                                  new Vector2(Mathf.Sqrt(2)/2, Mathf.Sqrt(2)/2),    // NE Direction
+                                  new Vector2(-Mathf.Sqrt(2)/2, Mathf.Sqrt(2)/2),   // NW
+                                  new Vector2(-Mathf.Sqrt(2)/2, -Mathf.Sqrt(2)/2),  // SW
+                                  new Vector2(Mathf.Sqrt(2)/2, -Mathf.Sqrt(2)/2),}; // SE 
+    private int[] rotations = { 90, -90, 0, 180,-45, 45, 135, -135 };
 	private int layerChanged = -1; // which layer did we change when damaging players.
 
 	/**
@@ -56,7 +61,7 @@ public class fireBoulder : Abilities {
 		for (int i =0; i < position.Length; i ++) {
 			
 			// create a fire meteor.	
-			GameObject spawnFB = Instantiate(this.projectile, bossPos, Quaternion.identity); 
+			GameObject spawnFB = Instantiate(this.projectile, bossPos, Quaternion.Euler(new Vector3(0,0,rotations[i]))); 
 			
 			spawnFB.GetComponent<Meteor> ().isThisBossMan = true; 
 	

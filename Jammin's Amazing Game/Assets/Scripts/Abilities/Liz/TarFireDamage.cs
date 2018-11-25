@@ -51,6 +51,7 @@ public class TarFireDamage : NetworkBehaviour {
                 GameObject flame5 = Instantiate(flames.gameObject, fireWall.transform.position - (Vector3.left * 2), Quaternion.Euler(new Vector3(-90, 90, 0)));
                 flame5.transform.localScale = new Vector3(flame5.transform.localScale.x, flame5.transform.localScale.y, flame5.transform.localScale.z);
 
+                // Destroy each of the flame instantiated after half the time the particle effect plays for.
                 Destroy(flame, flame.GetComponent<ParticleSystem>().main.duration / 2);
                 Destroy(flame1, flame1.GetComponent<ParticleSystem>().main.duration / 2);
                 Destroy(flame2, flame2.GetComponent<ParticleSystem>().main.duration / 2);
