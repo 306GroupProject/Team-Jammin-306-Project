@@ -13,7 +13,7 @@ public class RedBarrel : NetworkBehaviour {
     private void OnCollisionEnter2D(Collision2D other)
     {
         // Red Barrel can only be destroyed by Fireball
-        if (other.gameObject.tag == "Fireball")
+        if (other.gameObject.tag == "Fireball" || other.gameObject.tag == "FireFrags")
         {
             GameObject potato = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(winGate2);

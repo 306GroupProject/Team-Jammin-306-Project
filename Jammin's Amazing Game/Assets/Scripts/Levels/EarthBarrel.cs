@@ -11,7 +11,7 @@ public class EarthBarrel : NetworkBehaviour {
     // Destroy one of the gates after barrel collides with Boulder
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Boulder")
+        if (other.gameObject.tag == "Boulder" || other.gameObject.tag == "FireFrags")
         {
             Destroy(this.gameObject);
             Destroy(winGate1);
