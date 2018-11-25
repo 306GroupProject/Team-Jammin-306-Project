@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 3369
+  controlID: 1124
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 3370
+  controlID: 1125
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 3371
+  controlID: 1126
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,10 +366,10 @@ MonoBehaviour:
     height: 514
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 368}
-    m_SelectedIDs: ca310000
-    m_LastClickedID: 12746
-    m_ExpandedIDs: e6fbffff00000000ca31000032320000363200003a3200006c3200001e33000046330000a8340000f23400001a350000f235000030360000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 242e0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -534,11 +534,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/PCs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/PCs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\nkind\Documents\GitHub\Team-Jammin-306-Project\Jammin's
     Amazing Game
@@ -546,9 +546,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 102b0000
-    m_LastClickedID: 11024
-    m_ExpandedIDs: 00000000a62a0000
+    m_SelectedIDs: 642b0000
+    m_LastClickedID: 11108
+    m_ExpandedIDs: 00000000c42a00002e2d0000b02d0000922e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -576,7 +576,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a62a0000
+    m_ExpandedIDs: 00000000c42a00002e2d0000b02d0000922e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
