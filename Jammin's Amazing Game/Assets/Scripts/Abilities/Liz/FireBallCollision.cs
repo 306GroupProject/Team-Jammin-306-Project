@@ -39,7 +39,7 @@ public class FireBallCollision : NetworkBehaviour {
      */
     public void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.layer == 15) {
-            collision.gameObject.SendMessage("Damage", damage);
+            collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
         } else if (collision.gameObject.tag == "Water") {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);

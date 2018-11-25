@@ -7,6 +7,7 @@ public class WinKey : NetworkBehaviour {
 
     [SerializeField]
     private int winKeyID; //use ID for distinguishing which room to jump to next
+    public GameObject bossReference;
 
     /*
      * Center the camera into the first room once the game has started.  
@@ -101,6 +102,7 @@ public class WinKey : NetworkBehaviour {
         {
             GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("BossRoomCenter").transform.position;
             SpawnPoints bossSpawn = GameObject.Find("SpawnBossRoom").GetComponent<SpawnPoints>();
+            this.bossReference.SetActive(true);
 
             if (collision.gameObject.tag == "Player1")
             {

@@ -891,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107110156}
   m_Layer: 0
-  m_Name: meleeRm2 (1)
+  m_Name: meleeRm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248375955}
   m_Layer: 0
-  m_Name: meleeRm1 (5)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2339,7 +2339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349802525}
   m_Layer: 0
-  m_Name: meleeRm1 (1)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2879,7 +2879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385148917}
   m_Layer: 0
-  m_Name: meleeRm1 (3)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3440,6 +3440,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &399059970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114108196477400708, guid: ce6f9c32d910745469efda88d1f7f78b,
+    type: 2}
+  m_PrefabInternal: {fileID: 598624613}
+  m_Script: {fileID: 11500000, guid: 6d48ddd29a491dc4fa54ec200aa6e13a, type: 3}
 --- !u!1 &421985934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,7 +4878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490681359}
   m_Layer: 0
-  m_Name: meleeRm1 (10)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5387,6 +5393,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 114108196477400708, guid: ce6f9c32d910745469efda88d1f7f78b,
+        type: 2}
+      propertyPath: bossReference
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce6f9c32d910745469efda88d1f7f78b, type: 2}
   m_IsPrefabAsset: 0
@@ -5399,7 +5410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599736682}
   m_Layer: 0
-  m_Name: meleeRm1 (7)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7456,7 +7467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750626066}
   m_Layer: 0
-  m_Name: meleeRm1 (8)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7740,6 +7751,7 @@ MonoBehaviour:
   numMeleeAi: 34
   numRangeAi: 14
   bossAI: 1
+  winkey: {fileID: 399059970}
 --- !u!1001 &823712719
 Prefab:
   m_ObjectHideFlags: 0
@@ -10853,7 +10865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204063829}
   m_Layer: 0
-  m_Name: meleeRm1 (6)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11436,7 +11448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285602323}
   m_Layer: 0
-  m_Name: meleeRm1 (9)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11940,7 +11952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1327059832}
   m_Layer: 0
-  m_Name: meleeRm1 (4)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11968,7 +11980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1336594837}
   m_Layer: 0
-  m_Name: meleeRm2 (2)
+  m_Name: meleeRm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12075,7 +12087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360412027}
   m_Layer: 0
-  m_Name: rangeRm1 (1)
+  m_Name: rangeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13577,34 +13589,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c537645a9878fc7459a1a37d1e4c9df0, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1468977774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1468977775}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1468977775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1468977774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2005528041}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481925880
 GameObject:
   m_ObjectHideFlags: 0
@@ -14073,7 +14057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549907455}
   m_Layer: 0
-  m_Name: rangeRm1 (2)
+  m_Name: rangeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15660,7 +15644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680696340}
   m_Layer: 0
-  m_Name: meleeRm1 (11)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16165,7 +16149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734200890}
   m_Layer: 0
-  m_Name: rangeRm2 (1)
+  m_Name: rangeRm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19104,7 +19088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965129041}
   m_Layer: 0
-  m_Name: meleeRm1 (2)
+  m_Name: meleeRm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19734,7 +19718,6 @@ Transform:
   - {fileID: 1734200890}
   - {fileID: 107110156}
   - {fileID: 1336594837}
-  - {fileID: 1468977775}
   m_Father: {fileID: 972413844}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

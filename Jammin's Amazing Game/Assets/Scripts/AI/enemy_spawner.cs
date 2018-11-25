@@ -16,14 +16,16 @@ public class enemy_spawner : NetworkBehaviour {
 	public int numMeleeAi; // how many AI do we want to spawn? make sure it is the same size as the spawnPoints[].
 	public int numRangeAi;
 	public int bossAI;
-	
-	/**
+
+    public WinKey winkey;
+
+    /**
 	 * Spawns a enemy at the position on the map that you put down IE game object. 
 	 * This will be later added on I am thinking a List of gameobjects which are placed around 
 	 * the map, this will allow for a quick spawning of enemies. 
 	 * 
-	 */ 
-	public override void OnStartServer(){
+	 */
+    public override void OnStartServer(){
 		int counter = 0; 
 		if (numMeleeAi != 0) {
 			while (counter < numMeleeAi) {
@@ -31,7 +33,6 @@ public class enemy_spawner : NetworkBehaviour {
 				GameObject enemy = Instantiate (meleePrefab, new Vector2 (MeleePoints [counter].transform.position.x, MeleePoints [counter].transform.position.y), Quaternion.identity);
                 enemy.transform.parent = GameObject.Find("melee").gameObject.transform;
                 NetworkServer.Spawn (enemy); 
-				
 				
 				counter ++;
 			} 
@@ -52,24 +53,31 @@ public class enemy_spawner : NetworkBehaviour {
 				
 			}
 		}
-		
-		if (bossAI != 0) {
-			counter = 0;
-			
-			while (counter < bossAI) {
-				
-				GameObject boss = Instantiate (bossPrefab, new Vector2 (bossSpawnPoint.transform.position.x, bossSpawnPoint.transform.position.y), Quaternion.identity);
-                NetworkServer.Spawn (boss);
-				
-				counter ++; 
-			}
-			
-		}
-		
-	}
-	
-	
-	void Start(){
+
+        if (bossAI != 0) {
+            counter = 0;
+
+            while (counter < bossAI) {
+
+                GameObject boss = Instantiate(bossPrefab, new Vector2(bossSpawnPoint.transform.position.x, bossSpawnPoint.transform.position.y), Quaternion.identity);
+                winkey.bossReference = boss.gameObject;
+                boss.transform.name = "elementalBoss";
+                boss.SetActive(false);
+
+                NetworkServer.Spawn(boss);
+                
+
+                counter++;
+            }
+
+        }
+
+    }
+
+
+    void Start(){
+            
+    
 	}
 	
 }
