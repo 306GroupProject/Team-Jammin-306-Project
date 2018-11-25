@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114130997781904064}
   - component: {fileID: 61992761157138504}
   - component: {fileID: 50372433976878846}
+  - component: {fileID: 114189581094792956}
   m_Layer: 22
   m_Name: Geyser
   m_TagString: Water
@@ -175,6 +176,18 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114189581094792956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575287516553782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e94a16b3f6b7404aa4c6cdd098cf039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 1581024456305462, guid: 06eaff0b6667c954998fe10dddc4f0e6, type: 2}
 --- !u!114 &114524213220880758
 MonoBehaviour:
   m_ObjectHideFlags: 1

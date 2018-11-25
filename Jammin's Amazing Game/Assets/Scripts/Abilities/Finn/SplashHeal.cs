@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SplashHeal : NetworkBehaviour {
 
+    public GameObject particle;
     ParticleSystem fireWork;
     public int healRate = 1;
 
@@ -19,6 +20,8 @@ public class SplashHeal : NetworkBehaviour {
     float startTime2;
     float startTime3;
     float startTime4;
+
+    
 
     private void Start() {
         startTime1 = Time.time;
@@ -47,7 +50,6 @@ public class SplashHeal : NetworkBehaviour {
             other.gameObject.SendMessage("Heal", healRate, SendMessageOptions.DontRequireReceiver);
             startTime4 = Time.time + healRate4;
         }
-
     }
 
     public void Update() {
