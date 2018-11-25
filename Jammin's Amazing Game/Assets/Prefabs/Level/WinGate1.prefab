@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 4139313855365780}
   - component: {fileID: 212623737819559682}
   - component: {fileID: 61024542161335222}
-  - component: {fileID: 114701231461578190}
   m_Layer: 0
   m_Name: Gate1 (1)
   m_TagString: Untagged
@@ -363,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233969153550356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 219.45, y: -19.916712, z: 1}
+  m_LocalPosition: {x: 244.69952, y: -241.71754, z: 1}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4601341833682282}
@@ -550,38 +549,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233969153550356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 157
-    i1: 198
-    i2: 106
-    i3: 135
-    i4: 129
-    i5: 172
-    i6: 253
-    i7: 4
-    i8: 249
-    i9: 226
-    i10: 235
-    i11: 26
-    i12: 6
-    i13: 30
-    i14: 81
-    i15: 252
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114701231461578190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277022277570370}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}

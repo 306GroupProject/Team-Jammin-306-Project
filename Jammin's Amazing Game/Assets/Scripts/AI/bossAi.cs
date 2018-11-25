@@ -632,7 +632,7 @@ public class bossAi : ai {
 		if (waitBeforeRandCast == 0) {
 			
 			// select a spell to cast:
-			int powerType = Random.Range (0, 4);
+			int powerType = Random.Range (0, 3);
 
 			// select our spell based on our decision!
 			if (powerType == 0) {
@@ -644,11 +644,13 @@ public class bossAi : ai {
 				this.waterPuddlesCasted = true; 
 				
 			}
+			// currently, this will call basic attack which wont work because it has no enemies to fire at.
+			// cant randomly call it.
+			//if (powerType == 2) {
+			//	this.castAttackSpeed = true;
+
+			//}
 			if (powerType == 2) {
-				this.castAttackSpeed = true;
-				
-			}
-			if (powerType == 3) {
 				this.castRockWall = true; 
 				
 			}
@@ -719,6 +721,7 @@ public class bossAi : ai {
 
 		// set up the rockwall for when the boss fight happens!
 		int counter = 0;
+
 		while (counter < rockWallPosition.Length) {
 			
 			rockWallPosition[counter].SetActive(false);

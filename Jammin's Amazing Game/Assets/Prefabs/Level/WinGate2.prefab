@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4744872764064252}
   - component: {fileID: 212241723008656008}
   - component: {fileID: 61654867258808586}
-  - component: {fileID: 114430381678164182}
   m_Layer: 0
   m_Name: Gate1 (1)
   m_TagString: Untagged
@@ -247,7 +246,6 @@ GameObject:
   - component: {fileID: 4492479984366402}
   - component: {fileID: 212983431473779908}
   - component: {fileID: 61311213908672328}
-  - component: {fileID: 114806557393916258}
   m_Layer: 0
   m_Name: WinGate2
   m_TagString: Untagged
@@ -395,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795977712432534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 218.21, y: -21.92, z: 1}
+  m_LocalPosition: {x: 238.8338, y: -240.35559, z: 1}
   m_LocalScale: {x: 0.23, y: 0.19999999, z: 1}
   m_Children:
   - {fileID: 4835536541989892}
@@ -544,70 +542,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 77.58775, y: 10}
   m_EdgeRadius: 0
---- !u!114 &114430381678164182
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1022064128192706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 38
-    i1: 129
-    i2: 192
-    i3: 202
-    i4: 184
-    i5: 57
-    i6: 148
-    i7: 116
-    i8: 233
-    i9: 74
-    i10: 230
-    i11: 216
-    i12: 214
-    i13: 252
-    i14: 87
-    i15: 114
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114806557393916258
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1795977712432534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 38
-    i1: 129
-    i2: 192
-    i3: 202
-    i4: 184
-    i5: 57
-    i6: 148
-    i7: 116
-    i8: 233
-    i9: 74
-    i10: 230
-    i11: 216
-    i12: 214
-    i13: 252
-    i14: 87
-    i15: 114
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!212 &212011820999649866
 SpriteRenderer:
   m_ObjectHideFlags: 1
