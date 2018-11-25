@@ -1265,11 +1265,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158753752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96, y: 996.4, z: -1}
+  m_LocalPosition: {x: -114.100006, y: 990, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 972413844}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &158753754
 MonoBehaviour:
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 245009797}
   - component: {fileID: 245009799}
   - component: {fileID: 245009798}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2675,7 +2675,7 @@ GameObject:
   - component: {fileID: 393446718}
   - component: {fileID: 393446717}
   - component: {fileID: 393446716}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5488,7 +5488,7 @@ GameObject:
   - component: {fileID: 633361665}
   - component: {fileID: 633361667}
   - component: {fileID: 633361666}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5657,7 +5657,7 @@ GameObject:
   - component: {fileID: 658414829}
   - component: {fileID: 658414828}
   - component: {fileID: 658414827}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7860,7 +7860,7 @@ Transform:
   - {fileID: 1279713749}
   - {fileID: 1838322163}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &964431691 stripped
 Transform:
@@ -7929,7 +7929,6 @@ Transform:
   - {fileID: 2005528041}
   - {fileID: 636625108}
   - {fileID: 144957429}
-  - {fileID: 158753753}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7947,7 +7946,7 @@ GameObject:
   - component: {fileID: 993221626}
   - component: {fileID: 993221625}
   - component: {fileID: 993221624}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8565,7 +8564,7 @@ GameObject:
   - component: {fileID: 1010181178}
   - component: {fileID: 1010181180}
   - component: {fileID: 1010181179}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11351,7 +11350,7 @@ GameObject:
   - component: {fileID: 1367735429}
   - component: {fileID: 1367735431}
   - component: {fileID: 1367735430}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12977,7 +12976,7 @@ GameObject:
   - component: {fileID: 1541399332}
   - component: {fileID: 1541399334}
   - component: {fileID: 1541399333}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
