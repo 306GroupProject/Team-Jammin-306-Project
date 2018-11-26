@@ -1265,11 +1265,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158753752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96, y: 996.4, z: -1}
+  m_LocalPosition: {x: -114.100006, y: 990, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 972413844}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &158753754
 MonoBehaviour:
@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 245009797}
   - component: {fileID: 245009799}
   - component: {fileID: 245009798}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1651,7 +1651,6 @@ GameObject:
   m_Component:
   - component: {fileID: 258787369}
   - component: {fileID: 258787370}
-  - component: {fileID: 258787371}
   m_Layer: 0
   m_Name: Dungeon Tile (9x9)
   m_TagString: Untagged
@@ -1719,38 +1718,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &258787371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 258787368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1 &276785152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2675,7 @@ GameObject:
   - component: {fileID: 393446718}
   - component: {fileID: 393446717}
   - component: {fileID: 393446716}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5521,7 +5488,7 @@ GameObject:
   - component: {fileID: 633361665}
   - component: {fileID: 633361667}
   - component: {fileID: 633361666}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5690,7 +5657,7 @@ GameObject:
   - component: {fileID: 658414829}
   - component: {fileID: 658414828}
   - component: {fileID: 658414827}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7893,7 +7860,7 @@ Transform:
   - {fileID: 1279713749}
   - {fileID: 1838322163}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &964431691 stripped
 Transform:
@@ -7962,7 +7929,6 @@ Transform:
   - {fileID: 2005528041}
   - {fileID: 636625108}
   - {fileID: 144957429}
-  - {fileID: 158753753}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7980,7 +7946,7 @@ GameObject:
   - component: {fileID: 993221626}
   - component: {fileID: 993221625}
   - component: {fileID: 993221624}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Tilemap_Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8598,7 +8564,7 @@ GameObject:
   - component: {fileID: 1010181178}
   - component: {fileID: 1010181180}
   - component: {fileID: 1010181179}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10599,7 +10565,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1273837920}
   - component: {fileID: 1273837921}
-  - component: {fileID: 1273837922}
   m_Layer: 0
   m_Name: Dungeon Tile (9x9) (1)
   m_TagString: Untagged
@@ -10666,38 +10631,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1273837922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1273837919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 0
-    i1: 0
-    i2: 0
-    i3: 0
-    i4: 0
-    i5: 0
-    i6: 0
-    i7: 0
-    i8: 0
-    i9: 0
-    i10: 0
-    i11: 0
-    i12: 0
-    i13: 0
-    i14: 0
-    i15: 0
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!1 &1279713748
 GameObject:
   m_ObjectHideFlags: 0
@@ -11417,7 +11350,7 @@ GameObject:
   - component: {fileID: 1367735429}
   - component: {fileID: 1367735431}
   - component: {fileID: 1367735430}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13043,7 +12976,7 @@ GameObject:
   - component: {fileID: 1541399332}
   - component: {fileID: 1541399334}
   - component: {fileID: 1541399333}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Dungeon_Wall_1x9 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13566,6 +13499,38 @@ Prefab:
         type: 2}
       propertyPath: m_AssetId.i15
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834984727479728, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -182.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834984727479728, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 159.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732474090738484, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 157.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732474090738484, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -186.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658293291033734, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 167.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658293291033734, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542045135703548, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -187.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542045135703548, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 166.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a3ab2c54d69c32489b32a6ae565a006, type: 2}
