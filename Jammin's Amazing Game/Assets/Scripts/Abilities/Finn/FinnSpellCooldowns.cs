@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class FinnSpellCooldowns : NetworkBehaviour
+public class FinnSpellCooldowns : MonoBehaviour
 {
     // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
@@ -28,8 +28,18 @@ public class FinnSpellCooldowns : NetworkBehaviour
     float geyserWallCooldown;
     bool geyserWallCooldownActive;
 
+    GameObject spikeCooldownCanvas;
+    GameObject assistantMan;
+
+    int playerCount;
+
     void Start()
     {
+        spikeCooldownCanvas = GameObject.FindGameObjectWithTag("SpikeCdCanvas");
+
+        assistantMan = GameObject.FindGameObjectWithTag("assistantNet");
+        playerCount = 0;
+
         teleportCooldown = 3;
         puddleCooldown = 3;
         holyWaterCooldown = 5;
@@ -39,6 +49,18 @@ public class FinnSpellCooldowns : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerCount < assistantMan.GetComponent<netWorkAssitant>().playerManager.Count)
+        {
+            for (int i = 0; i < assistantMan.GetComponent<netWorkAssitant>().playerManager.Count; i++)
+            {
+                playerCount++;
+                if (assistantMan.GetComponent<netWorkAssitant>().playerManager[i].ply.gameObject.tag.Equals("Player1"))
+                {
+                    spikeCooldownCanvas.SetActive(false);
+                }
+            }
+        }
+
         // Code for Teleport (currently mapped to RMB)
         if (!blocked)
         {

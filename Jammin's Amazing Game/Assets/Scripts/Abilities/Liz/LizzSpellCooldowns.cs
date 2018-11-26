@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 // The Cooldown UI for all of Liz's spells and abilities
 
-public class LizzSpellCooldowns : NetworkBehaviour
+public class LizzSpellCooldowns : MonoBehaviour
 {
     // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
@@ -31,11 +31,8 @@ public class LizzSpellCooldowns : NetworkBehaviour
     float explosionCooldown;
     bool explosionCooldownActive;
 
-    GameObject finnCooldownCanvas;
-
     void Start()
     {
-        finnCooldownCanvas = GameObject.FindGameObjectWithTag("FinnCdCanvas");
         teleportCooldown = 3;
         fireBallCooldown = 2;
         flamethrowerCooldown = 10;
@@ -45,10 +42,6 @@ public class LizzSpellCooldowns : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isLocalPlayer)
-        {
-            finnCooldownCanvas.SetActive(false);
-        }
 
         // Code for Teleport (currently mapped to RMB)
         if (!blocked)
