@@ -60,21 +60,34 @@ public class Meteor : NetworkBehaviour {
 			collision.gameObject.SendMessage ("Damage", damage, SendMessageOptions.DontRequireReceiver);
 			
 		} else if (isThisBossMan == true) { // this is the case were the caster is the boss and not a player.
-			
 			Physics2D.IgnoreCollision (collision.gameObject.GetComponent<BoxCollider2D> (), this.gameObject.GetComponent<CircleCollider2D> (), false); 
 			
-			if (collision.gameObject.tag.Equals ("Player1") || collision.gameObject.tag.Equals ("Player2") || collision.gameObject.tag.Equals ("Player3") || collision.gameObject.tag.Equals ("Player4")) {
+            // Do individual checks for each meteor collision. we need to check if the meteor collider collides
+            // with a player. If so, send a damage message.
+			if (collision.gameObject.tag.Equals ("Player1")) {
 				
 				
 				collision.gameObject.SendMessage ("Damage", damage);
 			}
+            if (collision.gameObject.tag.Equals("Player2")) {
+
+
+                collision.gameObject.SendMessage("Damage", damage);
+            }
+            if (collision.gameObject.tag.Equals("Player3")) {
+
+
+                collision.gameObject.SendMessage("Damage", damage);
+            }
+            if (collision.gameObject.tag.Equals("Player4")) {
+
+
+                collision.gameObject.SendMessage("Damage", damage);
+            }
+
+            isThisBossMan = false; 
 			
-			
-			
-			
-			isThisBossMan = false; 
-			
-		}else {
+		} else {
 			// Otherwise, if the meteor collides with anything else, spawn meteor frags in a circular projectile.
 			for (int i = 0; i < crossPositions.Length; i++) {
 				GameObject fragements = Instantiate(meteorFragments, transform.position, Quaternion.Euler(new Vector3(0, 0, rotations[i])));

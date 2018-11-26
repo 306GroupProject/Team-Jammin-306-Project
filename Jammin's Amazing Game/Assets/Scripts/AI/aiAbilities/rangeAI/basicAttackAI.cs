@@ -27,7 +27,7 @@ public class basicAttackAI : Abilities {
 
 		this.RpcCast (myPos, playerSpotted, isThisBossMan); 
 	}
-
+     
 
 	/**
 	 * RpcCast(myPos, playerSpotted):

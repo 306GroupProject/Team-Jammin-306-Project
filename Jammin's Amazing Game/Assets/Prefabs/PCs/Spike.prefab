@@ -592,7 +592,8 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 65536
-  teleportDistance: 10
+  teleportDistance: 20
+  TeleportRange: {x: 0, y: 0, z: 0}
 --- !u!114 &114447160452787568
 MonoBehaviour:
   m_ObjectHideFlags: 1
