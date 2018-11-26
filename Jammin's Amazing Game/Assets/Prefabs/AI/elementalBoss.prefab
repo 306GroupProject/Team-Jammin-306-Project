@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.033333335
+  m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   velocity: 0
   manaCost: 0
   cooldown: 0
-  projectile: {fileID: 1287708331063640, guid: 5e89ac46584188742968cdb46f6f07d5, type: 2}
+  projectile: {fileID: 1683644606906398, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
 --- !u!212 &212554821336797562
 SpriteRenderer:
   m_ObjectHideFlags: 1

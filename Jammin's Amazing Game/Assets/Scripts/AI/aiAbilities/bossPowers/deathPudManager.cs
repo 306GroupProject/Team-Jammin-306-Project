@@ -18,9 +18,9 @@ public class deathPudManager : NetworkBehaviour {
 	public void randomizeLocation(){
 		
 		int counter = 0;
-		while (counter < 100) {
-			int randNum = Random.Range(0, 16);
-			int randNum2 = Random.Range(0,16); 
+		while (counter < 50) {
+			int randNum = Random.Range(0, 10);
+			int randNum2 = Random.Range(0,10); 
 			
 			
 			GameObject holder = deathPudSpawner[randNum];

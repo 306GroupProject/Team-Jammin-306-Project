@@ -1326,6 +1326,132 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4117817984297222, guid: e3ca31f950ac5af4697c461ad584ce73,
     type: 2}
   m_PrefabInternal: {fileID: 1822718467}
+--- !u!1001 &168566059
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -7.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325989738349566, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i0
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i1
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i2
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i3
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i4
+      value: 222
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i5
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i6
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i7
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i8
+      value: 232
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i9
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i10
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i11
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i12
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i13
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i14
+      value: 227
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368464435450864, guid: 40dd5c2bde314f24e82b43580a55e3f7,
+        type: 2}
+      propertyPath: m_AssetId.i15
+      value: 247
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683644606906398, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+      propertyPath: m_Name
+      value: bosselectricPuddle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40dd5c2bde314f24e82b43580a55e3f7, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!4 &170161552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4859372198257602, guid: a9d8711a1879bf74fb0ed173e0f28f68,
