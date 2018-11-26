@@ -53,16 +53,4 @@ public class FireBallCollision : NetworkBehaviour {
         GameObject explode = Instantiate(explosion, save, Quaternion.identity);
         Destroy(explode, 2.0f);
     }
-
-    /*
-     * Special interaction when it collides with puddle.
-     */ 
-    public void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "Water") {
-            Destroy(this.gameObject);
-            Destroy(collision.gameObject);
-            GameObject steamer = Instantiate(steam, this.transform.position, Quaternion.identity);
-            Destroy(steamer.gameObject, steamer.GetComponent<ParticleSystem>().main.duration / 2.0f);
-        }
-    }
 }

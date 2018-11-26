@@ -13,8 +13,8 @@ public class PuddleCollision : NetworkBehaviour
     bool notelectric = true;
 
     public int lifeTime;
-    
 
+    public GameObject steam;
     public GameObject electricPuddle;
     public GameObject tar;
 
@@ -50,9 +50,7 @@ public class PuddleCollision : NetworkBehaviour
 
 		
 		if (collision.gameObject.tag.Equals ("bossL")) {
-			
 			GameObject.FindGameObjectWithTag("bossL").GetComponent<bossAi>().castAttackSpeed = true; 
-
 		}
 
         if (collision.gameObject.tag == "Boulder") {
@@ -70,6 +68,22 @@ public class PuddleCollision : NetworkBehaviour
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2" || collision.gameObject.tag == "Player3" || collision.gameObject.tag == "Player4") {
             Script = collision.gameObject.GetComponent<PlayerManager>();
             Script.changeSpeed(100.0f);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Fireball")
+        { 
+            Destroy(collision.gameObject);
+            GameObject steamer = Instantiate(steam, this.transform.position, Quaternion.identity);
+            Destroy(steamer.gameObject, steamer.GetComponent<ParticleSystem>().main.duration / 2.0f);
+            if (Script)
+            {
+                Script.changeSpeed(100.0f);
+            }
+            
+            Destroy(this.gameObject);
         }
     }
 

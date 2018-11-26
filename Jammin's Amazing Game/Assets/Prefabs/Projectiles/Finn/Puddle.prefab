@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowRate: 50
   lifeTime: 7
+  steam: {fileID: 1640065724837678, guid: 8f28013457cf0684d9cd6edbb26d1252, type: 2}
   electricPuddle: {fileID: 1287708331063640, guid: 5e89ac46584188742968cdb46f6f07d5,
     type: 2}
   tar: {fileID: 1284119404948840, guid: 381fbd4303c8d5348a58d57c3039994c, type: 2}
