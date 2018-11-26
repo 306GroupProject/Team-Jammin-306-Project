@@ -15119,7 +15119,7 @@ MonoBehaviour:
   - {fileID: 1827817593611174, guid: 604f71d4b97918c4cb6c2cc5c9bb52c0, type: 2}
   - {fileID: 1380923625012918, guid: ddb891083f9adac45bd3650ba59a8ef0, type: 2}
   - {fileID: 1995247047753436, guid: a9d8711a1879bf74fb0ed173e0f28f68, type: 2}
-  m_CustomConfig: 1
+  m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1440
