@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 114841360522910212}
   - component: {fileID: 114574716461977696}
   - component: {fileID: 114820878304954176}
+  - component: {fileID: 114185905877923742}
   m_Layer: 5
   m_Name: Finn Cooldown Canvas
   m_TagString: FinnCdCanvas
@@ -482,6 +483,38 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: RMB
+--- !u!114 &114185905877923742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801518608524460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 172
+    i1: 172
+    i2: 248
+    i3: 73
+    i4: 88
+    i5: 119
+    i6: 124
+    i7: 228
+    i8: 219
+    i9: 27
+    i10: 137
+    i11: 251
+    i12: 218
+    i13: 86
+    i14: 5
+    i15: 41
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114224685650495130
 MonoBehaviour:
   m_ObjectHideFlags: 1
