@@ -61,7 +61,7 @@ public class basicAttackAI : Abilities {
 				
 				//	print (this.gameObject.GetComponent<rangeAi> ().returnPlayerSpotted ()); 
 				
-				coll.giveAi (this.gameObject, this.gameObject.GetComponent<bossAi> ().returnPlayerSpotted (), true);
+				coll.giveAi (this.gameObject, true);
 			}
 			
 			
@@ -97,7 +97,7 @@ public class basicAttackAI : Abilities {
 
 			//	print (this.gameObject.GetComponent<rangeAi> ().returnPlayerSpotted ()); 
 
-				coll.giveAi (this.gameObject, this.gameObject.GetComponent<rangeAi> ().returnPlayerSpotted (), false);
+				coll.giveAi (this.gameObject, false);
 			}
 
 
