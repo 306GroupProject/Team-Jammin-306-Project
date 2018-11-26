@@ -30,72 +30,110 @@ public class fireBoulder : Abilities {
 	 * 
 	 * 
 	 */ 
-	[Command]
+	//[Command]
 	public void CmdCast(Vector2 bossPos){
-		
-		
-		this.RpcCast (bossPos);
-		
-		
-	}
 
-	/**
-	 * RpcCast(bosspos, playerSpotted):
-	 * param:	Vector2 BossPos, this is the boss position.
-	 * 			Vector2 playerSPotted, this the player that is spell is targeted towards
-	 * updates the player of whats happening on the screen. Casts four different meteors 
-	 * in four different directions. 
-	 * 
-	 * return: Nothing void.
-	 */
+
+        // turn of collision of meteor and players, we need to gather all the players currently in the game.
+        //		netWorkAssitant players = this.gameObject.GetComponent<bossAi> ().plyController.GetComponent<netWorkAssitant> ();
+
+
+
+        for (int i = 0; i < position.Length; i++) {
+
+            // create a fire meteor.	
+            GameObject spawnFB = Instantiate(this.projectile, bossPos, Quaternion.Euler(new Vector3(0, 0, rotations[i])));
+
+            spawnFB.GetComponent<Meteor>().isThisBossMan = true;
+
+            // turn of collision with its self, so the meteor can actually travel through its self.
+            Physics2D.IgnoreCollision(spawnFB.GetComponent<CircleCollider2D>(), this.gameObject.GetComponent<BoxCollider2D>(), true);
+
+            //for(int j = 0; j < this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager.Count; j++){
+            // ensure that the player can be hit by this meteor that is spawned by the AI.
+
+            //	Physics2D.IgnoreLayerCollision(spawnFB.layer, this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager[j].ply.layer, false);
+            //}
+
+            // store which layer was changed.
+            layerChanged = spawnFB.layer;
+
+            // spawn.
+            spawnFB.GetComponent<Rigidbody2D>().AddForce(position[i] * velocity);
+
+
+
+
+
+
+        }
+
+
+
+        attackTime = cooldown;
+
+        numFireBallSpawned++;
+
+
+    }
+
+//	/**
+//	 * RpcCast(bosspos, playerSpotted):
+//	 * param:	Vector2 BossPos, this is the boss position.
+//	 * 			Vector2 playerSPotted, this the player that is spell is targeted towards
+//	 * updates the player of whats happening on the screen. Casts four different meteors 
+//	 * in four different directions. 
+//	 * 
+//	 * return: Nothing void.
+//	 */
 	
-	[ClientRpc]
-	public void RpcCast(Vector2 bossPos){
+//	[ClientRpc]
+//	public void RpcCast(Vector2 bossPos){
 	
 
-		// turn of collision of meteor and players, we need to gather all the players currently in the game.
-//		netWorkAssitant players = this.gameObject.GetComponent<bossAi> ().plyController.GetComponent<netWorkAssitant> ();
+//		// turn of collision of meteor and players, we need to gather all the players currently in the game.
+////		netWorkAssitant players = this.gameObject.GetComponent<bossAi> ().plyController.GetComponent<netWorkAssitant> ();
 
 
 
-		for (int i =0; i < position.Length; i ++) {
+//		for (int i =0; i < position.Length; i ++) {
 			
-			// create a fire meteor.	
-			GameObject spawnFB = Instantiate(this.projectile, bossPos, Quaternion.Euler(new Vector3(0,0,rotations[i]))); 
+//			// create a fire meteor.	
+//			GameObject spawnFB = Instantiate(this.projectile, bossPos, Quaternion.Euler(new Vector3(0,0,rotations[i]))); 
 			
-			spawnFB.GetComponent<Meteor> ().isThisBossMan = true; 
+//			spawnFB.GetComponent<Meteor> ().isThisBossMan = true; 
 	
-			// turn of collision with its self, so the meteor can actually travel through its self.
-			Physics2D.IgnoreCollision(spawnFB.GetComponent<CircleCollider2D>(), this.gameObject.GetComponent<BoxCollider2D>(), true); 
+//			// turn of collision with its self, so the meteor can actually travel through its self.
+//			Physics2D.IgnoreCollision(spawnFB.GetComponent<CircleCollider2D>(), this.gameObject.GetComponent<BoxCollider2D>(), true); 
 
-			//for(int j = 0; j < this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager.Count; j++){
-				// ensure that the player can be hit by this meteor that is spawned by the AI.
+//			//for(int j = 0; j < this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager.Count; j++){
+//				// ensure that the player can be hit by this meteor that is spawned by the AI.
 
-			//	Physics2D.IgnoreLayerCollision(spawnFB.layer, this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager[j].ply.layer, false);
-			//}
+//			//	Physics2D.IgnoreLayerCollision(spawnFB.layer, this.gameObject.GetComponent<bossAi>().plyController.GetComponent<netWorkAssitant>().playerManager[j].ply.layer, false);
+//			//}
 
-			// store which layer was changed.
-			layerChanged = spawnFB.layer; 
+//			// store which layer was changed.
+//			layerChanged = spawnFB.layer; 
 
-			// spawn.
-			spawnFB.GetComponent<Rigidbody2D>().AddForce(position[i] * velocity);
+//			// spawn.
+//			spawnFB.GetComponent<Rigidbody2D>().AddForce(position[i] * velocity);
 
 
 
 			
 			
 			
-		}
+//		}
 
 
 		
-		attackTime = cooldown; 
+//		attackTime = cooldown; 
 		
-		numFireBallSpawned ++; 
+//		numFireBallSpawned ++; 
 		
 		
 		
-	}
+//	}
 
 
 	/**
