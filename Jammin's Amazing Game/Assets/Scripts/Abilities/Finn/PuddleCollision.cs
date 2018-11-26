@@ -39,10 +39,10 @@ public class PuddleCollision : NetworkBehaviour
             Destroy(collision.gameObject);
             notelectric = false;
 
-			#pragma warning disable
+
 			// we are just creating the ePuddle, does not mean we need to use the variable. 
-            GameObject ePuddle = Instantiate(electricPuddle, transform.position, Quaternion.identity);
-			#pragma warning enable
+            Instantiate(electricPuddle, transform.position, Quaternion.identity);
+		
 
             Script.changeSpeed(100.0f);
             Destroy(this.gameObject);          
