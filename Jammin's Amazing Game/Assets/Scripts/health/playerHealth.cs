@@ -16,7 +16,6 @@ public class playerHealth : NetworkBehaviour {
     private float speedStorage;
     private float Timer;
     private Animator anim;
-	private GameObject plyManager;
 
 
     //-------------------[[Hooks]]---------------------------------//
@@ -70,6 +69,14 @@ public class playerHealth : NetworkBehaviour {
 
     }
 
+
+	/**
+	 * CmdTurnOff(): 
+	 * 
+	 * server calls this command to update our clients that they cant move anymore!
+	 * 
+	 * return: Nothing.
+	 */ 
 	[Command]
 	public void CmdTurnOff(){
 
@@ -77,10 +84,18 @@ public class playerHealth : NetworkBehaviour {
 
 	}
 
+	
+	/**
+	 * RpcTurnOn():
+	 * 
+	 * Client gets updated when player dies turning off all old scripts. 
+	 * 
+	 * return: Nothing
+	 */
+
 	[ClientRpc]
 	public void RpcTurnOff(){
-
-		plyManager = GameObject.FindGameObjectWithTag("assistantNet");
+		
 
 		int counter = 0; 
 		// we want to ensure that players cannot attack or teleport!
@@ -115,13 +130,26 @@ public class playerHealth : NetworkBehaviour {
 		}
 	}
 
-
+	/**
+	 * CmdTurnOn(): 
+	 * 
+	 * server calls this command to update our clients that they can move now!
+	 * 
+	 * return: Nothing.
+	 */
 	[Command]
 	public void CmdTurnOn(){
 		RpcTurnOn (); 
 	}
 
 
+	/**
+	 * RpcTurnOn():
+	 * 
+	 * Client gets updated when player respawns turning on all old scripts. 
+	 * 
+	 * return: Nothing
+	 */
 	[ClientRpc]
 	public void RpcTurnOn(){ 
 
