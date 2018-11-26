@@ -347,7 +347,7 @@ public class bossAi : ai {
 	 * 
 	 */ 
 	public void castSpell(){
-		
+		if (!isLocalPlayer) { return; }
 		
 		// check the timer, is it time to cast the next firemeteor?
 		if (fireBoulderCasted == true) {
