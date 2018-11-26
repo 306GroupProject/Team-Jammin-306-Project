@@ -5,36 +5,32 @@ using UnityEngine.Networking;
 
 public class basicAtkColl : NetworkBehaviour {
 	public GameObject rngAi;
-	public int playerSpotted;
 	public bool isBossman;
 
-	public void giveAi(GameObject rngAI, int spotted, bool isBossMan){
+	public void giveAi(GameObject rngAI, bool isBossMan){
 
 		this.rngAi = rngAI;
-		playerSpotted = spotted;
 		isBossman = isBossMan;
 
 	}
 
 	public void OnCollisionEnter2D(Collision2D collision){
+		
 
-		GameObject plyAttacking = GameObject.FindGameObjectWithTag("assistantNet").GetComponent<netWorkAssitant>().playerManager[playerSpotted].ply.gameObject;
-
-
-		if (plyAttacking.name.Equals (collision.gameObject.name)) {
+		if (collision.gameObject.tag.Equals("Player1")|| collision.gameObject.tag.Equals("Player2")|| collision.gameObject.tag.Equals("Player3")|| collision.gameObject.tag.Equals("Player4")) {
 
 			if(isBossman == true){
 
-				plyAttacking.GetComponent<playerHealth> ().Damage (rngAi.GetComponent<bossAi> ().aiDmg);
+				collision.gameObject.SendMessage ("Damage", rngAi.GetComponent<bossAi>().aiDmg);
 
 			}else{
+				collision.gameObject.SendMessage ("Damage", rngAi.GetComponent<rangeAi>().aiDmg);
 
-				plyAttacking.GetComponent<playerHealth> ().Damage (rngAi.GetComponent<rangeAi> ().aiDmg);
 			}
 
 		} 
 
-		if (!collision.gameObject.tag.Equals ("Enemy")) {
+		if (collision.gameObject.layer == 16 || !collision.gameObject.tag.Equals("Enemy")) {
 
 
 			Destroy (this.gameObject);

@@ -16,6 +16,7 @@ public class playerHealth : NetworkBehaviour {
     private float speedStorage;
     private float Timer;
     private Animator anim;
+	private GameObject plyManager;
 
 
     //-------------------[[Hooks]]---------------------------------//
@@ -49,30 +50,113 @@ public class playerHealth : NetworkBehaviour {
     public void Damage(int dmg) {
 
         if (!isServer) { // this is to ensure that damage is to only be applied on the server.
-            return;
-
+			return; 
         }
-
-
 
         anim.SetTrigger("Hurt"); // play the hurt animation when the player is damaged
 
         playerHP = playerHP - dmg; // do the damage against this player.
 
-        //if (isLocalPlayer) {
-        // update the text on the health.
-        //}
-
 
         if (playerHP <= 0) {
 
             isDead = true;
-            Timer = 2f;
-            this.GetComponent<PlayerManager>().speed = 0;
-            print("your dead! Wait the timer!" + Timer);
+            Timer = 3f;
+
+			this.gameObject.GetComponent<PlayerManager>().speed = 0; 
+
+			CmdTurnOff(); 
         }
 
     }
+
+	[Command]
+	public void CmdTurnOff(){
+
+		RpcTurnOff (); 
+
+	}
+
+	[ClientRpc]
+	public void RpcTurnOff(){
+
+		plyManager = GameObject.FindGameObjectWithTag("assistantNet");
+
+		int counter = 0; 
+		// we want to ensure that players cannot attack or teleport!
+		// so lets turn off all abilites and teleport so they cant move or attack!
+		// aquire all components on this gameObject.
+		while(counter < this.gameObject.GetComponents(typeof(Component)).Length){
+					
+			//print( "Length of playerArray:"+ this.gameObject.GetComponents(typeof(Component)).Length); 
+					
+			// count through all componts, if any of them ahve a subClass of Abilites, then lets turn it off.
+			if(this.gameObject.GetComponents(typeof(Component))[counter].GetType ().IsSubclassOf(typeof(Abilities))){
+						
+				Abilities compToTurnOff = (Abilities)this.gameObject.GetComponents(typeof(Component))[counter];
+						
+				compToTurnOff.enabled = false; 
+						
+			// else, if the component is equal to Teleport then lets turn it off. 
+			}else if (this.gameObject.GetComponents(typeof(Component))[counter].Equals(this.gameObject.GetComponent<Teleport>())){
+						
+						
+				Teleport compToTurnOff = (Teleport)this.gameObject.GetComponents(typeof(Component))[counter];
+						
+				compToTurnOff.enabled = false; 
+						
+			}
+					
+					
+			//this.gameObject.GetComponents(typeof(Abilities))[counter].gameObject.name;  
+					
+			counter ++;
+					
+		}
+	}
+
+
+	[Command]
+	public void CmdTurnOn(){
+		RpcTurnOn (); 
+	}
+
+
+	[ClientRpc]
+	public void RpcTurnOn(){ 
+
+		int counter = 0; 
+		
+		// now that powers are off, lets turn them back on once the player "respawns"
+		while(counter < this.gameObject.GetComponents(typeof(Component)).Length){
+			
+			//print( "Length of playerArray:"+ this.gameObject.GetComponents(typeof(Component)).Length); 
+			
+			// count through all componts, if any of them ahve a subClass of Abilites, then lets turn it on.
+			if(this.gameObject.GetComponents(typeof(Component))[counter].GetType ().IsSubclassOf(typeof(Abilities))){
+				
+				Abilities compToTurnOff = (Abilities)this.gameObject.GetComponents(typeof(Component))[counter];
+				compToTurnOff.enabled = true; 
+				
+				// else, if the component is equal to Teleport then lets turn it on. 
+			}else if (this.gameObject.GetComponents(typeof(Component))[counter].Equals(this.gameObject.GetComponent<Teleport>())){
+				
+				
+				Teleport compToTurnOff = (Teleport)this.gameObject.GetComponents(typeof(Component))[counter];
+				
+				compToTurnOff.enabled = true; 
+				
+			}
+			
+			
+			//this.gameObject.GetComponents(typeof(Abilities))[counter].gameObject.name;  
+			
+			counter ++;
+			
+		}
+
+	}
+
 
     public void Heal(int heal) {
         if (!isServer) {
@@ -105,6 +189,7 @@ public class playerHealth : NetworkBehaviour {
 
             return;
         }
+
         if (Timer != 0) {
 
             Timer -= Time.deltaTime;
@@ -124,6 +209,7 @@ public class playerHealth : NetworkBehaviour {
 
                 isDead = false;
 
+				this.CmdTurnOn(); 
                 // change animation from dead back to alive!
 
             }
@@ -140,7 +226,6 @@ public class playerHealth : NetworkBehaviour {
 
         speedStorage = this.GetComponent<PlayerManager>().speed;
         this.GetComponentsInChildren<Text>()[0].text += this.gameObject.GetComponent<ChangePlayerIdentity>().playerName + " Hp: " + playerHP;
-
     }
 
 
