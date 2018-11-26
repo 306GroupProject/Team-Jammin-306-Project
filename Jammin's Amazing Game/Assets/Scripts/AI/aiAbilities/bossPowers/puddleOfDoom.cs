@@ -6,42 +6,48 @@ using UnityEngine.Networking;
 
 public class puddleOfDoom : Abilities {
 
-
-
-
-
-
-
-	[Command]
+	//[Command]
 	public void CmdCast(Vector2 [] playersPos){
 
 
-		RpcCast (playersPos); 
-
-	}
+        for (int i = 0; i < this.gameObject.GetComponent<bossAi>().numberWaterPuddlestoSpawn; i++) {
 
 
+            GameObject newEPuddle = Instantiate(this.projectile, playersPos[i], Quaternion.identity);
 
-	[ClientRpc]
-	public void RpcCast(Vector2 [] playerPos){
-
-		for (int i =0; i < this.gameObject.GetComponent<bossAi>().numberWaterPuddlestoSpawn; i ++) {
+            newEPuddle.GetComponent<EPuddleCollison>().isThisBossMan = true;
 
 
-			GameObject newEPuddle = Instantiate(this.projectile, playerPos[i], Quaternion.identity);
+            Destroy(newEPuddle, 2f);
 
-			newEPuddle.GetComponent<EPuddleCollison>().isThisBossMan = true; 
+        }
+
+        this.gameObject.GetComponent<bossAi>().waterPuddlesCasted = false;
+
+    }
 
 
-			Destroy(newEPuddle, 2f); 
 
-		}
+	//[ClientRpc]
+	//public void RpcCast(Vector2 [] playerPos){
 
-		this.gameObject.GetComponent<bossAi> ().waterPuddlesCasted = false;
+	//	for (int i =0; i < this.gameObject.GetComponent<bossAi>().numberWaterPuddlestoSpawn; i ++) {
+
+
+	//		GameObject newEPuddle = Instantiate(this.projectile, playerPos[i], Quaternion.identity);
+
+	//		newEPuddle.GetComponent<EPuddleCollison>().isThisBossMan = true; 
+
+
+	//		Destroy(newEPuddle, 2f); 
+
+	//	}
+
+	//	this.gameObject.GetComponent<bossAi> ().waterPuddlesCasted = false;
 			
 
 
-	}
+	//}
 
 	// Use this for initialization
 	void Start () {
