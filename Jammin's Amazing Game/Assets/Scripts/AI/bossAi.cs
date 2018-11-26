@@ -369,9 +369,10 @@ public class bossAi : ai {
 				netWorkAssitant players = plyController.GetComponent<netWorkAssitant> ();
 				
 				for (int i = 0; i < players.playerManager.Count; i ++) {
-					
-					Physics2D.IgnoreLayerCollision (this.gameObject.GetComponent<fireBoulder> ().returnProjectileLayer (), players.playerManager [i].ply.layer, false);
-				}
+                    if (players.playerManager[i].ply != null) {
+                        Physics2D.IgnoreLayerCollision(this.gameObject.GetComponent<fireBoulder>().returnProjectileLayer(), players.playerManager[i].ply.layer, false);
+                    }
+                }
 				
 				
 				

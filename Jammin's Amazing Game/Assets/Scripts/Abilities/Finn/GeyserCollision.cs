@@ -11,6 +11,9 @@ public class GeyserCollision : MonoBehaviour
         if (collision.gameObject.tag == "Bolt")
         {
             InvokeRepeating("charged", 0.0f, 0.2f);
+        } if (collision.gameObject.tag == "Bolt") {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
