@@ -30,6 +30,7 @@ TagManager:
   - bossF
   - bossR
   - deathPudMan
+  - FinnCdCanvas
   layers:
   - Default
   - TransparentFX
