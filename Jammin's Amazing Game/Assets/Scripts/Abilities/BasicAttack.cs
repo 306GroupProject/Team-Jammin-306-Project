@@ -12,7 +12,7 @@ public class BasicAttack : Abilities {
      */ 
     public void Update() {
         if (isLocalPlayer) {
-            if (Input.GetMouseButtonDown(0) && Time.time > canAttack) {
+            if (Input.GetMouseButton(0) && Time.time > canAttack) {
                 this.CmdCast(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 canAttack = Time.time + cooldown;
             }

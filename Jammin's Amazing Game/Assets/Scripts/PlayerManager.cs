@@ -22,6 +22,20 @@ public class PlayerManager : NetworkBehaviour {
 	}
 
     void Start() {
+        Canvas[] canvases;
+        if (!isLocalPlayer) {
+            canvases = this.GetComponentsInChildren<Canvas>();
+            canvases[0].enabled = false;
+            canvases[1].enabled = false;
+            return;
+        }
+
+        // Ensures that corresponding canvases attached to players only spawn on current player, and not
+        // everyone else's screens
+        canvases = this.GetComponentsInChildren<Canvas>();
+        canvases[0].enabled = true;
+        canvases[1].enabled = true;
+
         rb = GetComponent<Rigidbody2D>();   // Obtain rigid body component to whom this script is attached to
         anim = GetComponent<Animator>();    // Obtain animator to access varibles set to player animator
         flipMe = GetComponent<SyncFlip>();

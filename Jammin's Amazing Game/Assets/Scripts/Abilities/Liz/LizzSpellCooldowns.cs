@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 // The Cooldown UI for all of Liz's spells and abilities
 
-public class LizzSpellCooldowns : MonoBehaviour
-{
+public class LizzSpellCooldowns : MonoBehaviour {
     // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
     float teleportCooldown;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class FinnSpellCooldowns : NetworkBehaviour
+public class FinnSpellCooldowns : MonoBehaviour
 {
     // Teleport
     public Image teleportCooldownImage; // The mask used for the radial cooldown UI
@@ -30,6 +30,7 @@ public class FinnSpellCooldowns : NetworkBehaviour
 
     void Start()
     {
+        
         teleportCooldown = 3;
         puddleCooldown = 3;
         holyWaterCooldown = 5;
