@@ -528,7 +528,7 @@ MonoBehaviour:
   description: Just a plain ol' attack
   velocity: 2000
   manaCost: 0
-  cooldown: 0.5
+  cooldown: 1
   projectile: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
   airTime: 1
 --- !u!114 &114198156898526508
