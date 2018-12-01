@@ -184,38 +184,6 @@ Prefab:
       propertyPath: m_Name
       value: Gate2
       objectReference: {fileID: 0}
-    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -9509,38 +9477,6 @@ Prefab:
       propertyPath: m_Name
       value: Gate5
       objectReference: {fileID: 0}
-    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -9825,38 +9761,6 @@ Prefab:
     - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
       propertyPath: m_Name
       value: Gate3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
@@ -12707,38 +12611,6 @@ Prefab:
       propertyPath: m_Name
       value: Gate4
       objectReference: {fileID: 0}
-    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -14215,38 +14087,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1022639638247068, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175606147626242, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559073753494314, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1032093750316764, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248114033571978, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1053762453722232, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362492081239428, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
-      propertyPath: m_Layer
-      value: 16
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
   m_IsPrefabAsset: 0
@@ -14426,7 +14266,7 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
-  m_OfflineScene: 
+  m_OfflineScene: Level1
   m_OnlineScene: Level1
   m_SpawnPrefabs:
   - {fileID: 1289061748266242, guid: d08ac1c1922622c4486aca9570845ee8, type: 2}
@@ -14449,6 +14289,8 @@ MonoBehaviour:
   - {fileID: 1827817593611174, guid: 604f71d4b97918c4cb6c2cc5c9bb52c0, type: 2}
   - {fileID: 1380923625012918, guid: ddb891083f9adac45bd3650ba59a8ef0, type: 2}
   - {fileID: 1995247047753436, guid: a9d8711a1879bf74fb0ed173e0f28f68, type: 2}
+  - {fileID: 1352116642758958, guid: 6541332ea4d617644a4d34eb97a8852c, type: 2}
+  - {fileID: 1430456420352866, guid: e3a37f6f97a998648b550ba57d972518, type: 2}
   m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:

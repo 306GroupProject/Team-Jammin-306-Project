@@ -25,6 +25,7 @@ public class Key : NetworkBehaviour {
         {
             if (keyID == 0)
             {
+                
                 Destroy(Gate2);
             }
             

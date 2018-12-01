@@ -61,7 +61,7 @@ public class playerHealth : NetworkBehaviour {
 
             isDead = true;
             Timer = 3f;
-
+            playerHP = 0;
 			this.gameObject.GetComponent<PlayerManager>().speed = 0; 
 
 			CmdTurnOff(); 

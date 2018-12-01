@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.NetworkSystem;
+using UnityEngine.SceneManagement;
 
 public class CustomNetwork : NetworkManager {
 
@@ -47,13 +48,17 @@ public class CustomNetwork : NetworkManager {
         
         IntegerMessage msg = new IntegerMessage(character.classIndex);
         ClientScene.AddPlayer(conn, 0, msg);
+
+        GetComponent<NetworkManagerHUD>().enabled = false;
+        showPlayerButtons = false;
+        
     }
 
 
     /*
      * Overrides the built in OnServerAddPlayer, to instead use a custom script that allows us to select
      * a character, instead of using the single built-in playerPrefab tab in the default net manager.
-     */ 
+     */
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extra) {
         this.playerSpawnMethod = PlayerSpawnMethod.RoundRobin;
 		// Obtain the message stored in the server containing the selected player character
@@ -129,7 +134,8 @@ public class CustomNetwork : NetworkManager {
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            showPlayerButtons = true;
+            GetComponent<NetworkManagerHUD>().enabled = !showPlayerButtons;
+            showPlayerButtons = !showPlayerButtons;
         }
     }
 }
