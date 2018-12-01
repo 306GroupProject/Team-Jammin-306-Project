@@ -26,7 +26,8 @@ public class bossAi : ai {
 	//---------------------[[Rock Mode:]]----------------------------------------------//
 	private bool castRockWall = false; 
 	private GameObject[] rockWallPosition;
-	private float rockWallTimer; 
+	private float rockWallTimer;
+    private Color brown = new Color(0.5f, 0.3036f, 0f, 1f);
 	
 	//------------------------[[Lighting Mode:]]----------------------------------------------------//
 	
@@ -320,7 +321,7 @@ public class bossAi : ai {
 		} else if (powerType == 2) {
 
 			
-			this.gameObject.GetComponent<SpriteRenderer>().color = Color.gray; 
+			this.gameObject.GetComponent<SpriteRenderer>().color = brown; 
 			
 			this.gameObject.tag = "bossR";
 			
