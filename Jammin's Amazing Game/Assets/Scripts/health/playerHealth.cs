@@ -60,7 +60,7 @@ public class playerHealth : NetworkBehaviour {
         if (playerHP <= 0) {
 
             isDead = true;
-            Timer = 3f;
+            Timer = 1f;
             playerHP = 0;
 			this.gameObject.GetComponent<PlayerManager>().speed = 0; 
 
@@ -232,7 +232,7 @@ public class playerHealth : NetworkBehaviour {
 
                 this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
 
-                playerHP = 1;
+                playerHP = 16;
 
 
                 isDead = false;
