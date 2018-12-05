@@ -45,10 +45,13 @@ public class basicAttackAI : Abilities {
 	public void RpcCast(Vector2 myPos, Vector2 playerSpotted, bool isThisBossMan){
 
 		Vector2 direction = (playerSpotted - myPos).normalized;	// the direction in which the basic attack was shoot.
+        
 		GameObject spell = Instantiate (this.projectile, myPos, Quaternion.identity); // build the spell. 
-		
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        spell.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-		if (isThisBossMan == true) {
+
+        if (isThisBossMan == true) {
 
 			// ensure that the spell does not get, stuck or clump up on the AI it's self.
 			Physics2D.IgnoreCollision (spell.GetComponent<CircleCollider2D> (), this.gameObject.GetComponent<BoxCollider2D> (), true);

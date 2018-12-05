@@ -143,12 +143,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 1500
   airTime: 1
-  damage: 4
+  damage: 15
   meteorFragments: {fileID: 1775679875289528, guid: af9b6761e0a4d7b45aa86979bc687a2f,
     type: 2}
   spreadRate: 2
   fragForce: 500
   explosion: {fileID: 1976845950909830, guid: 3fe3d0ca223481a48860f94f032fd45c, type: 2}
+  isThisBossMan: 0
 --- !u!114 &114297456088268274
 MonoBehaviour:
   m_ObjectHideFlags: 1
