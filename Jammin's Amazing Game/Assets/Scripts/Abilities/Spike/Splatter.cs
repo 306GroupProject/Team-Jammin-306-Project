@@ -79,13 +79,9 @@ public class Splatter : NetworkBehaviour {
 
         } else if (collision.gameObject.tag == "Enemy" || collision.gameObject.layer == 15) {
             collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
-
         }
-        // Do nothing if it collides with zap
-          else if (collision.gameObject.tag == "Player4") {
-            
 
-        } else {
+       else {
             // Sends damage message to the object rock collided with
             
             // Splash pebbles.

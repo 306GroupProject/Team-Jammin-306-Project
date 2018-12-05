@@ -232,7 +232,7 @@ public class playerHealth : NetworkBehaviour {
 
                 this.GetComponent<PlayerManager>().speed = speedStorage;  // restore speed of player.
 
-                playerHP = 1;
+                playerHP = 5;
 
 
                 isDead = false;
