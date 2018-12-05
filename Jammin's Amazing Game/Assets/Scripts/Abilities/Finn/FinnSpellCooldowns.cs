@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -32,9 +33,9 @@ public class FinnSpellCooldowns : MonoBehaviour
     {
         
         teleportCooldown = 3;
-        puddleCooldown = 3;
-        holyWaterCooldown = 5;
-        geyserWallCooldown = 6;
+        puddleCooldown = 6;
+        holyWaterCooldown = 4;
+        geyserWallCooldown = 3;
     }
 
     // Update is called once per frame

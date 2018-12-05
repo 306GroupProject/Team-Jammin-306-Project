@@ -409,11 +409,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e7d8e604895a149a8d2cf1ef64389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: Geyser Wall
+  description: Sends out a wall of water that pushes enemies back
   velocity: 0
   manaCost: 0
-  cooldown: 6
+  cooldown: 3
   projectile: {fileID: 1575287516553782, guid: 56a849006f6ea724aacb594ff8428648, type: 2}
   range: 1000
   timer: 3
@@ -653,11 +653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea4ad6ed30e2944bb6b9b04f65bd726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: Puddle
+  description: A puddle of water that slows characters that move through it
   velocity: 0
   manaCost: 0
-  cooldown: 2
+  cooldown: 6
   projectile: {fileID: 1274004759208662, guid: ce7175a9a8e2c29448bfe02c11108723, type: 2}
   lifeTime: 10
 --- !u!114 &114358783460118470
@@ -1064,11 +1064,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36564f870915d348813f52e1a4f1942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: Holy Water
+  description: Shoots a orb of water that explodes into healing water
   velocity: 0
   manaCost: 0
-  cooldown: 5
+  cooldown: 4
   projectile: {fileID: 1011014948391356, guid: 74923e7c41dba4148888747fa4f0fe2a, type: 2}
   speed: 1000
 --- !u!114 &114931273457940288
