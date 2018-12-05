@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking; 
 
 public class bossAi : ai {
 	//--------------[[GeneralBoss Instance Variables:]]--------------------//
@@ -10,7 +11,10 @@ public class bossAi : ai {
 	//private GameObject prefabOfChoice; // the current basic Attack the the Boss AI wants to use on the players.
 	public float spottingDistance;		// the spotting distance that the AI can see players(the bosses will be the size of the entire room.)
 	public float waitBeforeRandCast; 
-	
+
+	private int powerType; 				// the current powerType of our enemyAI.
+	[SerializeField]private float forceCast; 			// time to do a force cast, if the player is forcing AI to just shoot players.
+
 	
 	
 	//--------------------[[FireMode]]------------------------//
@@ -36,7 +40,8 @@ public class bossAi : ai {
 	private int newSpeedTimeFired; 
 	
 	
-	
+	//--------------------[[hooks:]]-----------------------------------//
+
 	
 	
 	
@@ -206,6 +211,46 @@ public class bossAi : ai {
 		
 		
 	}
+
+	/**
+	 * forceCastSpell():
+	 * 
+	 * force cast spell checks to see how long the boss as been shooting a 
+	 * basic attack. If the boss is just shooting for seven seconds
+	 * the boss will force a random spell.
+	 * 
+	 * return: true if time to cast a random spell, false if not time to cast random spell.
+	 */ 
+
+	public bool forceCastSpell(){
+
+		if (forceCast != 0) {
+
+			forceCast -= Time.deltaTime; 
+
+			if(forceCast <= 0){
+				forceCast = 0;
+
+				return false; 
+			}
+
+			return false; 
+		}
+
+		if (forceCast == 0) {
+
+			waitBeforeRandCast = 0; 
+			forceCast = 7.0f; 
+
+			return true; 
+
+
+		}
+
+		return false; 
+
+
+	}
 	
 	
 	/**
@@ -288,6 +333,76 @@ public class bossAi : ai {
 	//----------------------------------------[[Actions: Void]]----------------------------------------------------------------//
 
 	/**
+	 * CmdchangePower():
+	 * 
+	 * runs a server command to tell the server that it is now time to change powers.
+	 * 
+	 * return: Nothing void.
+	 * 
+	 * 
+	 */ 
+	[Command]
+	public void CmdchangePower(){
+
+
+	
+		// we need to get our random spell type, lets randomly select it.
+		powerType = Mathf.FloorToInt(UnityEngine.Random.Range(0, 3));
+
+		RpcchangePower (powerType); 
+
+	
+	}
+
+	/**
+	 * RpcChangePower(intPower):
+	 * 
+	 * param: 	powerType: Integer, the randomly called numbe to change the bosses color to.
+	 * 
+	 * updates the clients when the boss changes his color.
+	 * 
+	 * return : Nothing.
+	 * 
+	 */ 
+	[ClientRpc]
+	public void RpcchangePower(int powerType){
+
+		
+		if (powerType == 0) {
+			
+			// changethe color, and the tag of what type of boss he is now.
+			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.red;  
+			
+			this.gameObject.tag = "bossF"; 
+			//prefabOfChoice = fireBallPrefab; 
+			
+		} else if (powerType == 1) {
+			
+			
+			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.blue; 
+			
+			this.gameObject.tag = "bossW";
+			
+		} else if (powerType == 2) {
+			
+			
+			this.gameObject.GetComponent<SpriteRenderer>().color = brown; 
+			
+			this.gameObject.tag = "bossR";
+			
+		}else if(powerType == 3){
+			
+			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.yellow; 
+			this.gameObject.tag = "bossL"; 
+			
+		}
+		
+		
+		time = CoolDownBeforeChange; 
+	}
+
+
+	/**
 	 * changeType():
 	 * 
 	 * randomly Changes the boss to a new power type, will cycle through
@@ -297,46 +412,19 @@ public class bossAi : ai {
 	 * return: Nothing.
 	 * 
 	 */ 
-
 	public void changeType(){
 
-		// randomly get a number between 0-3, depending on the number that will change the power type.
-		int powerType = Random.Range(0, 4);
-		
-		if (powerType == 0) {
-
-			// changethe color, and the tag of what type of boss he is now.
-			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.red;  
-			
-			this.gameObject.tag = "bossF"; 
-			//prefabOfChoice = fireBallPrefab; 
-			
-		} else if (powerType == 1) {
-
-			
-			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.blue; 
-			
-			this.gameObject.tag = "bossW";
-			
-		} else if (powerType == 2) {
-
-			
-			this.gameObject.GetComponent<SpriteRenderer>().color = brown; 
-			
-			this.gameObject.tag = "bossR";
-			
-		}else if(powerType == 3){
-
-			this.gameObject.GetComponent<SpriteRenderer> ().color = Color.yellow; 
-			this.gameObject.tag = "bossL"; 
-			
+		if (!isServer) {
+			return;
 		}
+
+			CmdchangePower ();
 		
-		
-		// set the time before we can change types again.
-		time = CoolDownBeforeChange; 
 	}
-	
+
+
+
+
 	
 	/**
 	 * castSpell():
@@ -387,15 +475,7 @@ public class bossAi : ai {
 				// we have now casted the spell!
 				fireBoulderCasted = false; 
 				
-				// ensure that if a player casts a fire meteor that it does not collide with them.(friendly meteor.)
-				int layerChanged = this.gameObject.GetComponent<fireBoulder> ().returnLayerChanged (); 
-				
-				netWorkAssitant players = plyController.GetComponent<netWorkAssitant> ();
-				
-				for (int i = 0; i < players.playerManager.Count; i ++) {
-					
-					Physics2D.IgnoreLayerCollision (layerChanged, players.playerManager [i].ply.layer, true);
-				}
+			
 				
 				
 				
@@ -605,6 +685,62 @@ public class bossAi : ai {
 	}
 
 	/**
+	 * cmdCastAtRandom():
+	 * 
+	 * runs a server command telling the server that the boss AI
+	 * is now going to randomly cast one spell. 
+	 * 
+	 * return: Nothing, void.
+	 * 
+	 * 
+	 */ 
+	[Command]
+
+	public void CmdcastAtRandom(){
+
+		int powerType = Random.Range (0, 3);
+
+		RpccastAtRandom (powerType); 
+	}
+
+
+	/**
+	 * RpcCastAtRandom(powerType):
+	 * 
+	 * param: powerType: integer, the spell that we are going to randomly cast.
+	 * 
+	 * updates the clients when a spell is being casted by the Boss AI.
+	 * 
+	 * return: Nothing, void. 
+	 * 
+	 */ 
+	[ClientRpc]
+	public void RpccastAtRandom(int powerType){
+		
+			// select our spell based on our decision!
+			if (powerType == 0) {
+				
+				this.fireBoulderCasted = true;
+				
+			}
+			if (powerType == 1) {
+				this.waterPuddlesCasted = true; 
+				
+			}
+			// currently, this will call basic attack which wont work because it has no enemies to fire at.
+			// cant randomly call it.
+			//if (powerType == 2) {
+			//	this.castAttackSpeed = true;
+			
+			//}
+			if (powerType == 2) {
+				this.castRockWall = true; 
+				
+			}
+			
+			waitBeforeRandCast = 6.0f; 
+	}
+	/**
 	 * 
 	 * CastSpellAtRandom():
 	 * 
@@ -616,7 +752,12 @@ public class bossAi : ai {
 	 * 
 	 */ 
 	public void castSpellAtRandom(){
-		
+
+		if (!isServer) {
+
+			return;
+		}
+
 		// wait before we can cast again!
 		if (waitBeforeRandCast != 0) {
 			
@@ -633,33 +774,13 @@ public class bossAi : ai {
 		// if we can cast:
 		if (waitBeforeRandCast == 0) {
 			
-			// select a spell to cast:
-			int powerType = Random.Range (0, 3);
-
-			// select our spell based on our decision!
-			if (powerType == 0) {
-				
-				this.fireBoulderCasted = true;
-				
-			}
-			if (powerType == 1) {
-				this.waterPuddlesCasted = true; 
-				
-			}
-			// currently, this will call basic attack which wont work because it has no enemies to fire at.
-			// cant randomly call it.
-			//if (powerType == 2) {
-			//	this.castAttackSpeed = true;
-
-			//}
-			if (powerType == 2) {
-				this.castRockWall = true; 
-				
-			}
-			
-			waitBeforeRandCast = 6.0f; 
+			CmdcastAtRandom ();
 		}
+
+	
 	}
+
+
 	
 	
 	//---------------------[[buildDecision: ]]----------------------------------//
@@ -681,7 +802,10 @@ public class bossAi : ai {
 		
 		decisionTree inRange = new decisionTree ();
 		inRange.buildDecision (enemySpottedAndShoot); 
-		
+
+		decisionTree forceCast = new decisionTree ();
+		forceCast.buildDecision (forceCastSpell); 
+
 		//-------------------[[actions to build:]]---------------------------//
 		decisionTree changeType = new decisionTree (); 
 		changeType.buildAction (this.changeType);
@@ -709,9 +833,12 @@ public class bossAi : ai {
 		needCast.Right (cast);
 		needCast.Left (inRange);
 		
-		inRange.Right (basicAtck); // bsicAttack here.
+		inRange.Right (forceCast); 
 		inRange.Left (castSpellAtRandom);
-		
+
+		forceCast.Right (castSpellAtRandom);
+		forceCast.Left (basicAtck); 
+
 		rootOfTree = powerType; 
 	}
 	
@@ -737,8 +864,7 @@ public class bossAi : ai {
 		waterPuddlesCasted = false;
 		castRockWall = false; 
 		castAttackSpeed = false; 
-		
-		
+
 		
 		DecisionTree ();
 	}

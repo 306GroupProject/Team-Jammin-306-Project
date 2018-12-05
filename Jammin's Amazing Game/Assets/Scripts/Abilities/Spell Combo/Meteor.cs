@@ -87,7 +87,12 @@ public class Meteor : NetworkBehaviour {
 
             isThisBossMan = false; 
 			
-		} else {
+		}else if (isThisBossMan == false){
+			Physics2D.IgnoreCollision (collision.gameObject.GetComponent<BoxCollider2D> (), this.gameObject.GetComponent<CircleCollider2D> (), true); 
+
+
+
+		}else {
 			// Otherwise, if the meteor collides with anything else, spawn meteor frags in a circular projectile.
 			for (int i = 0; i < crossPositions.Length; i++) {
 				GameObject fragements = Instantiate(meteorFragments, transform.position, Quaternion.Euler(new Vector3(0, 0, rotations[i])));
