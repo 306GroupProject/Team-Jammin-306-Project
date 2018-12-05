@@ -117,11 +117,11 @@ GameObject:
   - component: {fileID: 114356520464550344}
   - component: {fileID: 114854936851304124}
   - component: {fileID: 114072013315003760}
-  - component: {fileID: 114318244421875192}
   - component: {fileID: 114278106869560274}
   - component: {fileID: 114130038237702000}
   - component: {fileID: 114379172762204352}
   - component: {fileID: 114264730518823524}
+  - component: {fileID: 114318244421875192}
   - component: {fileID: 114687333238741684}
   - component: {fileID: 114089070503748488}
   m_Layer: 9
@@ -448,10 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f39d8fcf724cc4e82d864c870cd6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
-  description: 
+  skillName: Spike Wings
+  description: Buffs spike increasing the damage of all his abilities
   velocity: 0
-  manaCost: 0
   cooldown: 20
   projectile: {fileID: 1077290495075354, guid: e3554f98d835f5f4587fc61e1a6a0229, type: 2}
   damageMultiplier: 2
@@ -500,7 +499,6 @@ MonoBehaviour:
   skillName: Basic Attack
   description: Just a plain ol' attack
   velocity: 2000
-  manaCost: 0
   cooldown: 1
   projectile: {fileID: 1291852083213004, guid: 014dcb0f57789674fa61020aa6f1b9b5, type: 2}
   airTime: 0.7
@@ -562,7 +560,6 @@ MonoBehaviour:
   skillName: Rock Throw
   description: Hurl a Boulder that causes direct and splash damage
   velocity: 1000
-  manaCost: 0
   cooldown: 3
   projectile: {fileID: 1253025402657162, guid: 9ef3164097a09fc46a75aab704319692, type: 2}
 --- !u!114 &114356520464550344
@@ -806,7 +803,6 @@ MonoBehaviour:
   skillName: Rock Wall
   description: Spawns a Wall that blocks enemies.
   velocity: 0
-  manaCost: 0
   cooldown: 5
   projectile: {fileID: 1256341068547786, guid: 625c7e4da22f29046b3e7180c3119d88, type: 2}
   range: 20

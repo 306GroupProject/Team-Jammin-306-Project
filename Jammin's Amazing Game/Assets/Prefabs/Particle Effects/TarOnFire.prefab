@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flames: {fileID: 198387717627908516, guid: ff62bd42a7e1c7047a277d8924f092ed, type: 2}
-  damageOverTime: 2
-  damageRate: 1
+  damageOverTime: 5
+  damageRate: 0.5
   flameWall: {fileID: 1649526938734276, guid: 02b54316c4d5f4d4e8c1cdf728c2c95d, type: 2}
 --- !u!198 &198854396644586758
 ParticleSystem:

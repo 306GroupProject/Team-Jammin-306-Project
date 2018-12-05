@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5125519095666a248abbc6837783c0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airTime: 1
-  damage: 1
+  airTime: 0.4
+  damage: 4
   fireFragments: {fileID: 1775679875289528, guid: af9b6761e0a4d7b45aa86979bc687a2f,
     type: 2}
   smoke: {fileID: 1648525985903002, guid: de55f5c043f1c64428ccc03ef69b1ff5, type: 2}

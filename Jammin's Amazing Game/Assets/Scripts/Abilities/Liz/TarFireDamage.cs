@@ -6,8 +6,8 @@ using UnityEngine.Networking;
 public class TarFireDamage : NetworkBehaviour {
 
     public ParticleSystem flames;  // We need to access the particle effect attached to this to access collisions with it.
-    public int damageOverTime = 2;
-    public float damageRate = 1.0f;
+    public int damageOverTime;
+    public float damageRate;
     public GameObject flameWall;
     float startTime;
 

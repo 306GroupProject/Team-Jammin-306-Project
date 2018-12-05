@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 public class TarCollision : NetworkBehaviour {
 
     [SerializeField, SyncVar]
-    public float slowRate = 100.0f;
+    public float slowRate = 50.0f;
     PlayerManager Script;
 
     int lifeTime = 7;
