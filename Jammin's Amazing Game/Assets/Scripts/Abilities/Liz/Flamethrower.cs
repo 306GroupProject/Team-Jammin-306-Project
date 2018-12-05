@@ -7,7 +7,7 @@ using UnityEngine.Networking;
  */
 public class Flamethrower : Abilities {
 
-    public float fireDuration;
+    private float fireDuration;
     private float canAttack;
     GameObject fire;
 

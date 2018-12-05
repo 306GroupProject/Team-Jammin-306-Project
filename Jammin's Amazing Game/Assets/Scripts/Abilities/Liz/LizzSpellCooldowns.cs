@@ -34,8 +34,8 @@ public class LizzSpellCooldowns : MonoBehaviour {
     {
         teleportCooldown = 3;
         fireBallCooldown = 2;
-        flamethrowerCooldown = 10;
-        explosionCooldown = 5;
+        flamethrowerCooldown = 6;
+        explosionCooldown = 3;
     }
 
     // Update is called once per frame

@@ -6,8 +6,8 @@ public class ExplosionCollision : NetworkBehaviour {
 
     public GameObject meteor;
     float canDamage;
-    public float damageRate = 1.0f;
-    public int damageTick = 3;
+    public float damageRate;
+    public int damageTick;
     float startTime;
     Vector2[] positions = { Vector2.left, Vector2.right, Vector2.up, Vector2.down };
     float[] rotations = { 90.0f, -90.0f, 0.0f, 180.0f };

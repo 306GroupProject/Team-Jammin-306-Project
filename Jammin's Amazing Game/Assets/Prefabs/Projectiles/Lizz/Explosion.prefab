@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteor: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
-  damageRate: 1
-  damageTick: 3
+  damageRate: 5
+  damageTick: 25
 --- !u!198 &198617403656778046
 ParticleSystem:
   m_ObjectHideFlags: 1

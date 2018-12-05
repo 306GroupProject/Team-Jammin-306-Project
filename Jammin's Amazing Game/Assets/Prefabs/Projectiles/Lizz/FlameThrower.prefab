@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageOverTime: 2
-  damageRate: 1
+  damageRate: 0.2
   flameWall: {fileID: 1649526938734276, guid: 02b54316c4d5f4d4e8c1cdf728c2c95d, type: 2}
   tarFire: {fileID: 1365369966753276, guid: ca31387fe1087df4ab6b2bea5625e67b, type: 2}
 --- !u!198 &198387717627908516
@@ -191,7 +191,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
