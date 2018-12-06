@@ -38,16 +38,17 @@ public class Pebble : NetworkBehaviour {
 
     // If the pebble collides with a fragment, instantiate more fire fragments. Also send damage if hits a Damagable object,
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "FireFrags") {
+        if (collision.gameObject.tag.Equals( "Fireball") || collision.gameObject.tag.Equals( "FireFrags")) {
+
             for (int i = 0; i < rotations.Length; i++) {
                 GameObject frag = Instantiate(fireFragments, transform.position, Quaternion.Euler(new Vector3(0,0,rotations[i])));
                 frag.GetComponent<Rigidbody2D>().AddForce(crossPositions[i] * fireFragVelocity);
             }
         }
-        if (collision.gameObject.tag == "Enemy") {
+        if (collision.gameObject.tag.Equals( "Enemy")) {
             collision.gameObject.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
         } // Do nothing if it collides with zap
-          else if (collision.gameObject.tag == "Player4") { }
+          
         Vector2 save = transform.position;
         Destroy(this.gameObject);
         GameObject smoker = Instantiate(smoke, save, Quaternion.identity);
