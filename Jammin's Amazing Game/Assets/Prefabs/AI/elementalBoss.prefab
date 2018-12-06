@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224314626026052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.585815, y: 16.157898, z: -0.6432247}
+  m_LocalPosition: {x: -118.38298, y: -74.75085, z: -0.6432247}
   m_LocalScale: {x: 0.80832154, y: 0.7233408, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,7 +107,6 @@ MonoBehaviour:
   skillName: Fire meteor
   description: Shoots fire meteors at players.
   velocity: 2000
-  manaCost: 0
   cooldown: 0.5
   projectile: {fileID: 1688056578352840, guid: f9b5597598a19dd41b94c4e39f3780ec, type: 2}
   attackTime: 0
@@ -147,7 +146,6 @@ MonoBehaviour:
   skillName: arcane Bolt
   description: shoots a magic missle!
   velocity: 2000
-  manaCost: 0
   cooldown: 0.5
   projectile: {fileID: 1430456420352866, guid: e3a37f6f97a998648b550ba57d972518, type: 2}
   attackTime: 0
@@ -212,7 +210,7 @@ MonoBehaviour:
   CoolDownBeforeChange: 5
   spottingDistance: 25
   waitBeforeRandCast: 0
-  powerType: 0
+  forceCast: 0
   numberFireBallsToSpawn: 4
   numberWaterPuddlestoSpawn: 0
   waterPuddlesCasted: 0
@@ -251,7 +249,6 @@ MonoBehaviour:
   skillName: puddle of doom
   description: puddle of lighting
   velocity: 0
-  manaCost: 0
   cooldown: 0
   projectile: {fileID: 1287708331063640, guid: 5e89ac46584188742968cdb46f6f07d5, type: 2}
 --- !u!212 &212554821336797562
